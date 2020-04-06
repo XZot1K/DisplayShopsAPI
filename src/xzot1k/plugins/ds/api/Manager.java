@@ -8,15 +8,18 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.World;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.potion.PotionType;
 import org.bukkit.scheduler.BukkitTask;
+import org.bukkit.util.Vector;
 import xzot1k.plugins.ds.api.enums.ChatInteractionType;
 import xzot1k.plugins.ds.api.events.EconomyCallEvent;
 import xzot1k.plugins.ds.api.events.EconomyCallType;
 import xzot1k.plugins.ds.api.handlers.ActionBarHandler;
-import xzot1k.plugins.ds.api.handlers.JsonHandler;
+import xzot1k.plugins.ds.api.handlers.JItemHandler;
 import xzot1k.plugins.ds.api.handlers.ParticleHandler;
 import xzot1k.plugins.ds.api.objects.MarketRegion;
 import xzot1k.plugins.ds.api.objects.Region;
@@ -28,6 +31,17 @@ import java.util.List;
 import java.util.UUID;
 
 public interface Manager {
+
+    /**
+     * Ray traces from the provided vectors to obtain a shop from the locations it passes through.
+     *
+     * @param worldName       The world to ray trace in.
+     * @param eyeVector       The eye location of the entity or just the general origin location.
+     * @param directionVector The direction at which the vector should go.
+     * @param distance        The distance at which the ray should travel.
+     * @return The found shop, returns NULL if NOT found.
+     */
+    Shop getShopRayTraced(String worldName, Vector eyeVector, Vector directionVector, double distance);
 
     /**
      * Initiates a withdraw/deposit transaction directed at an investor and owner automating messages, taxing, and more (The stopInTacks() method must be called still).
@@ -134,6 +148,46 @@ public interface Manager {
      * @return The translated version.
      */
     String getTranslatedName(Material material);
+
+    /**
+     * Obtains any translation created for the passed enchantment found in the "lang.yml".
+     *
+     * @param enchantment The enchantment to obtain the translation for.
+     * @return The translated version.
+     */
+    String getTranslatedName(Enchantment enchantment);
+
+    /**
+     * Obtains any translation created for the passed potion type found in the "translation.yml".
+     *
+     * @param potionType The potion type to obtain the translation for.
+     * @return The translated version.
+     */
+    String getTranslatedName(PotionType potionType);
+
+    /**
+     * Gets the names of the enchantments and formats them into a neat format.
+     *
+     * @param itemStack The item to get the enchants from.
+     * @return The new formatted line.
+     */
+    String getEnchantmentLine(ItemStack itemStack);
+
+    /**
+     * Gets the names of the potion effects and formats them into a neat format.
+     *
+     * @param itemStack The item to get the potion effects from.
+     * @return The new formatted line.
+     */
+    String getPotionLine(ItemStack itemStack);
+
+    /**
+     * Gets roman numeral value from 1 - 10.
+     *
+     * @param number The number between 1 and 10.
+     * @return The roman numeral.
+     */
+    String getRomanNumeral(int number);
 
     /**
      * Colors the text passed.
@@ -344,9 +398,11 @@ public interface Manager {
 
     ParticleHandler getParticleHandler();
 
-    Inventory getShopEditMenu();
+    JItemHandler getJItemHandler();
 
     ActionBarHandler getActionBarHandler();
+
+    Inventory getShopEditMenu();
 
     List<MarketRegion> getMarketRegions();
 
@@ -357,7 +413,5 @@ public interface Manager {
     SimpleDateFormat getDateFormat();
 
     HashMap<UUID, BukkitTask> getPersonalChatTasks();
-
-    JsonHandler getJsonHandler();
 
 }

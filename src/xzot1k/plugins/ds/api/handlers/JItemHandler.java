@@ -4,13 +4,16 @@
 
 package xzot1k.plugins.ds.api.handlers;
 
-import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-public interface JsonHandler {
+public interface JItemHandler {
 
-    void sendJsonMessage(Player player, String JsonString);
-
+    /**
+     * Gets an item as a JSON string.
+     *
+     * @param itemStack The item to get as a JSON.
+     * @return The JSON string.
+     */
     String getJsonItem(ItemStack itemStack);
 
 }
