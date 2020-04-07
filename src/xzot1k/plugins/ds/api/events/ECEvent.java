@@ -44,20 +44,6 @@ public interface ECEvent {
 
     Shop getShop();
 
-    /**
-     * If this is enabled, everything called after this event will not be reached.
-     *
-     * @return Whether it stops in it's tracks or not.
-     */
-    boolean stopInTracks();
-
-    /**
-     * If this is enabled, everything called after this event will not be reached.
-     *
-     * @param stopInTracks Whether it should stop in it's tracks.
-     */
-    void setStopInTracks(boolean stopInTracks);
-
     double getTax();
 
     void setTax(double tax);

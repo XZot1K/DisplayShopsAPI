@@ -69,16 +69,6 @@ public class EconomyCallEvent extends Event implements Cancellable, ECEvent {
     }
 
     @Override
-    public boolean stopInTracks() {
-        return false;
-    }
-
-    @Override
-    public void setStopInTracks(boolean stopInTracks) {
-
-    }
-
-    @Override
     public double getTax() {
         return 0;
     }
