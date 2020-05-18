@@ -11,6 +11,7 @@ import xzot1k.plugins.ds.api.Manager;
 import xzot1k.plugins.ds.api.handlers.DisplayPacket;
 import xzot1k.plugins.ds.api.objects.Shop;
 
+import java.io.File;
 import java.sql.Connection;
 import java.util.HashMap;
 import java.util.List;
@@ -50,11 +51,6 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     }
 
     @Override
-    public void syncBaseBlocks() {
-
-    }
-
-    @Override
     public String getLatestVersion() {
         return null;
     }
@@ -82,6 +78,11 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     @Override
     public DisplayPacket getDisplayPacket(Shop shop, Player player) {
         return null;
+    }
+
+    @Override
+    public void killCurrentShopPacket(Player player) {
+
     }
 
     @Override
@@ -125,13 +126,13 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     }
 
     @Override
-    public boolean isOffHandVersion() {
+    public boolean isPaperSpigot() {
         return false;
     }
 
     @Override
-    public HashMap<UUID, UUID> getShopMemory() {
-        return null;
+    public boolean isOffHandVersion() {
+        return false;
     }
 
     @Override
@@ -140,22 +141,12 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     }
 
     @Override
-    public int getAutoSaveTaskId() {
+    public int getManagementTaskId() {
         return 0;
     }
 
     @Override
-    public void setAutoSaveTaskId(int autoSaveTaskId) {
-
-    }
-
-    @Override
-    public int getShopSyncTaskId() {
-        return 0;
-    }
-
-    @Override
-    public void setShopSyncTaskId(int shopSyncTaskId) {
+    public void setManagementTaskId(int managementTaskId) {
 
     }
 
@@ -170,17 +161,22 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     }
 
     @Override
-    public HashMap<UUID, String> getChunkCoordMap() {
-        return null;
-    }
-
-    @Override
-    public List<UUID> getPacketReceivedDelayedPlayers() {
-        return null;
-    }
-
-    @Override
     public List<UUID> getTeleportingPlayers() {
         return null;
+    }
+
+    @Override
+    public HashMap<UUID, UUID> getShopMemory() {
+        return null;
+    }
+
+    @Override
+    public File getLoggingFile() {
+        return null;
+    }
+
+    @Override
+    public void writeToLog(String text) {
+
     }
 }

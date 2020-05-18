@@ -6,6 +6,7 @@ package xzot1k.plugins.ds.api.objects;
 
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import xzot1k.plugins.ds.api.events.EconomyCallType;
 
 import java.util.List;
 import java.util.UUID;
@@ -90,12 +91,27 @@ public interface Shop {
     void updateTimeStamp();
 
     /**
+     * Updates the shop buy or sell time stamp (Used for the dynamic price changing system).
+     * (Note: Only use BUY or SELL as the economy call type. Defaults to BUY if invalid or improper.)
+     */
+    void updateTransactionTimeStamp(EconomyCallType economyCallType);
+
+    /**
      * Checks if the shop is ready to be purged.
      *
      * @param purgeDuration The duration a shop must be untouched.
-     * @return Whether it is ready or not.
+     * @return Whether it is ready.
      */
     boolean isReadyForPurge(int purgeDuration);
+
+    /**
+     * Checks if the shop is ready to have its dynamic price counter reset for either BUY or SELL.
+     *
+     * @param resetDuration   The duration a shop must go without a transaction in the BUY or SELL field.
+     * @param economyCallType The type to check readiness for (Note: ONLY use BUY or SELL, by default BUY will be used).
+     * @return Whether it is ready.
+     */
+    boolean isReadyForDynamicReset(int resetDuration, EconomyCallType economyCallType);
 
     /**
      * Deletes the shop's data, deletes the base-block, drops the stock, destroys the display packet, and unregisters the object.
@@ -164,13 +180,18 @@ public interface Shop {
     void setBuyCounter(int buyCounter);
 
     /**
-     * This is where the physical currency obtained by the shop is stored, until retrieved.
+     * Obtains the balance of the shop which is used to purchase and store currency collected from invetors.
      *
-     * @return The currency being held.
+     * @return The balance being held (currency).
      */
-    int getPhysicalCurrencyStock();
+    double getStoredBalance();
 
-    void setPhysicalCurrencyStock(int physicalCurrencyStock);
+    /**
+     * Sets the balance of a shop. This balance is used to purchase and store currency collected from investors.
+     *
+     * @param amount The amount to set as the stored balance.
+     */
+    void setStoredBalance(double amount);
 
     boolean isCommandOnlyMode();
 
@@ -192,6 +213,14 @@ public interface Shop {
 
     void setChangeTimeStamp(String changeTimeStamp);
 
+    String getLastBuyTimeStamp();
+
+    void setLastBuyTimeStamp(String buyTimeStamp);
+
+    String getLastSellTimeStamp();
+
+    void setLastSellTimeStamp(String sellTimeStamp);
+
     int getSellLimit();
 
     void setSellLimit(int sellLimit);
@@ -204,16 +233,19 @@ public interface Shop {
 
     void setDescription(String description);
 
-    String getInitialBaseBlockMaterial();
+    String getStoredBaseBlockMaterial();
 
-    void setInitialBaseBlockMaterial(String initialBaseBlockMaterial);
+    void setStoredBaseBlockMaterial(String storedBaseBlockMaterial);
 
     boolean canDynamicPriceChange();
 
     void setDynamicPriceChange(boolean dynamicPriceChange);
 
-    int getDynamicPriceCounter();
+    int getDynamicBuyCounter();
 
-    void setDynamicPriceCounter(int dynamicPriceCounter);
+    void setDynamicBuyCounter(int dynamicPriceCounter);
 
+    int getDynamicSellCounter();
+
+    void setDynamicSellCounter(int dynamicPriceCounter);
 }

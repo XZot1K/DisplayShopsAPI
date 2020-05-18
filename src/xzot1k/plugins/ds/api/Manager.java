@@ -13,7 +13,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionType;
-import org.bukkit.scheduler.BukkitTask;
 import org.bukkit.util.Vector;
 import xzot1k.plugins.ds.api.enums.ChatInteractionType;
 import xzot1k.plugins.ds.api.events.EconomyCallEvent;
@@ -21,16 +20,24 @@ import xzot1k.plugins.ds.api.events.EconomyCallType;
 import xzot1k.plugins.ds.api.handlers.ActionBarHandler;
 import xzot1k.plugins.ds.api.handlers.JItemHandler;
 import xzot1k.plugins.ds.api.handlers.ParticleHandler;
+import xzot1k.plugins.ds.api.objects.DataPack;
 import xzot1k.plugins.ds.api.objects.MarketRegion;
-import xzot1k.plugins.ds.api.objects.Region;
 import xzot1k.plugins.ds.api.objects.Shop;
 
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 public interface Manager {
+
+    /**
+     * Loads the passed player's data pack. If not found, a new data pack module is created.
+     *
+     * @param player The player to load the data pack for.
+     */
+    CompletableFuture<DataPack> loadDataPack(Player player);
 
     /**
      * Ray traces from the provided vectors to obtain a shop from the locations it passes through.
@@ -64,6 +71,14 @@ public interface Manager {
     void initiateChatInteractionOperation(Player player, ChatInteractionType chatInteractionType, String playerEntryValue);
 
     /**
+     * Sends a color translated message to the players as either a normal chat message or action bar message.
+     *
+     * @param player  The player to send the message to.
+     * @param message The message to send (color codes accepted, if the message contains {bar} at the front it will be sent to the action bar).
+     */
+    void sendMessage(Player player, String message);
+
+    /**
      * Gives itemstack to player 'X' amount of times at a specific unit count (stack count)
      *
      * @param player    the player to give items to.
@@ -72,34 +87,6 @@ public interface Manager {
      * @param unitCount the unit count (stack count).
      */
     void giveItem(Player player, ItemStack itemStack, int amount, int unitCount);
-
-    /**
-     * Updates the cooldown id for the passed player.
-     *
-     * @param player     The player to update the cooldown for.
-     * @param cooldownId The cooldown id to update.
-     */
-    void updateCooldown(Player player, String cooldownId);
-
-    /**
-     * Checks if the passed player has a cooldown at the specified id based on the base cooldown value.
-     *
-     * @param player     The player to check.
-     * @param cooldownId The cooldown id.
-     * @param cooldown   The cooldown's amount (normally the configuration value).
-     * @return Whether the cooldown is active (above zero).
-     */
-    boolean isOnCooldown(Player player, String cooldownId, int cooldown);
-
-    /**
-     * Gets the cooldown left for the player at a specified id.
-     *
-     * @param player     The player to get the cooldown from.
-     * @param cooldownId The cooldown id.
-     * @param cooldown   The cooldown value (Usually from configuration).
-     * @return The cooldown time remaining.
-     */
-    long getCooldown(Player player, String cooldownId, int cooldown);
 
     /**
      * Retrieve a market region, if the passed location is inside it.
@@ -262,12 +249,20 @@ public interface Manager {
     void loadMarketRegions();
 
     /**
-     * This method grabs the first permission based base-block material the player can have for a shop.
+     * Obtains the default base material without checking attached durability.
      *
-     * @param player The player to check permissions of.
-     * @return The found material with a backup default of CHEST.
+     * @return The material type.
      */
-    Material getBaseBlockMaterial(Player player);
+    Material getBaseBlockType();
+
+    /**
+     * This method goes through the player's permissions and checks if they have access to the material.
+     *
+     * @param player       The player to check permissions of.
+     * @param materialLine The material name or the format <material>:<durability> to check for.
+     * @return if they have access.
+     */
+    boolean hasAccessToBaseBlock(Player player, String materialLine);
 
     /**
      * Returns a list of all shops owned by the player.
@@ -284,6 +279,14 @@ public interface Manager {
      * @return Whether the player has exceeded their limit or not.
      */
     boolean exceededShopLimit(Player player);
+
+    /**
+     * Gets the player specific shop promotion item modifier.
+     *
+     * @param player The player to check.
+     * @return The modifier for multiplication.
+     */
+    double getPromotionPriceModifier(Player player);
 
     /**
      * Gives the passed item stack to the player the passed amount of times in the form of stacks.
@@ -357,9 +360,21 @@ public interface Manager {
     ItemStack buildShopCurrencyItem(int amount);
 
     /**
-     * Builds and sets the shop edit menu from the configuration to the variable.
+     * Gets the base-block selection GUI and calculates the player's access, current shop base-block, etc.
+     *
+     * @param player The player to use for permission basing.
+     * @param shop   The shop to use to get information from.
+     * @return The complete GUI.
      */
-    void buildShopEditMenu();
+    Inventory getBaseBlockSelectionMenu(Player player, Shop shop);
+
+    /**
+     * Builds and sets the shop edit menu from the configuration to the variable.
+     *
+     * @param player The player the edit menu needs to be built for.
+     * @return The built inventory.
+     */
+    Inventory buildShopEditMenu(Player player);
 
     /**
      * Builds and sets the shop transaction menu from the configuration to the variable.
@@ -382,19 +397,8 @@ public interface Manager {
      */
     boolean isBlockedWorld(World world);
 
-    /**
-     * Updates player's personal chat task values.
-     *
-     * @param player The player to update.
-     */
-    void updatePersonalChatTask(Player player);
-
     // getters & setters
     HashMap<UUID, Shop> getShopMap();
-
-    HashMap<UUID, Shop> getShopInteractionMap();
-
-    HashMap<UUID, String> getChatInteractionMap();
 
     ParticleHandler getParticleHandler();
 
@@ -402,16 +406,9 @@ public interface Manager {
 
     ActionBarHandler getActionBarHandler();
 
-    Inventory getShopEditMenu();
-
     List<MarketRegion> getMarketRegions();
-
-    HashMap<UUID, Region> getRegionSelectionMap();
-
-    List<UUID> getSelectionModePlayers();
 
     SimpleDateFormat getDateFormat();
 
-    HashMap<UUID, BukkitTask> getPersonalChatTasks();
-
+    HashMap<UUID, DataPack> getDataPackMap();
 }

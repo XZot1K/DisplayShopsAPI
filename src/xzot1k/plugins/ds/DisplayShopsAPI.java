@@ -11,6 +11,7 @@ import xzot1k.plugins.ds.api.Manager;
 import xzot1k.plugins.ds.api.handlers.DisplayPacket;
 import xzot1k.plugins.ds.api.objects.Shop;
 
+import java.io.File;
 import java.sql.Connection;
 import java.util.HashMap;
 import java.util.List;
@@ -31,11 +32,6 @@ interface DisplayShopsAPI {
      * Sets up all tasks; however, it doesn't cancel or stop existing tasks.
      */
     void setupTasks();
-
-    /**
-     * Syncs all block materials to their defined shops.
-     */
-    void syncBaseBlocks();
 
     /**
      * Gets latest version text from Spigot.
@@ -82,7 +78,16 @@ interface DisplayShopsAPI {
     DisplayPacket getDisplayPacket(Shop shop, Player player);
 
     /**
+     * Kills the current shop packets in view and removes it from memory for the player.
+     * (Note: This is ONLY used for the shop the player is currently looking at)
+     *
+     * @param player The player to kill the packet for.
+     */
+    void killCurrentShopPacket(Player player);
+
+    /**
      * Clears all display packets for a player on file.
+     * (Note: Does NOT kill packet displays. Use the kill method found in the shop interface.)
      *
      * @param player The player to remove the packets for.
      */
@@ -149,28 +154,41 @@ interface DisplayShopsAPI {
      */
     String getServerVersion();
 
-    boolean isOffHandVersion();
+    /**
+     * Checks if paper spigot methods exist.
+     *
+     * @return Whether paper spigot is detected.
+     */
+    boolean isPaperSpigot();
 
-    HashMap<UUID, UUID> getShopMemory();
+    /**
+     * This gets the logging file.
+     *
+     * @return The file used for plugin logging.
+     */
+    File getLoggingFile();
+
+    /**
+     * Writes to the log file if size does NOT exceed configuration limitations.
+     *
+     * @param text The text to store on the next available line in the file.
+     */
+    void writeToLog(String text);
+
+    boolean isOffHandVersion();
 
     Connection getDatabaseConnection();
 
-    int getAutoSaveTaskId();
+    int getManagementTaskId();
 
-    void setAutoSaveTaskId(int autoSaveTaskId);
-
-    int getShopSyncTaskId();
-
-    void setShopSyncTaskId(int shopSyncTaskId);
+    void setManagementTaskId(int managementTaskId);
 
     int getInSightTask();
 
     void setInSightTask(int inSightTask);
 
-    HashMap<UUID, String> getChunkCoordMap();
-
-    List<UUID> getPacketReceivedDelayedPlayers();
-
     List<UUID> getTeleportingPlayers();
+
+    HashMap<UUID, UUID> getShopMemory();
 
 }
