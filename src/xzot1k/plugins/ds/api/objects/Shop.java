@@ -43,6 +43,11 @@ public interface Shop {
     void dropStock(Player player);
 
     /**
+     * Returns the shop's entire stored balance to the owner. If the owner does NOT exist, currency is sent to the passed player.
+     */
+    void returnBalance(Player player);
+
+    /**
      * Saves the shop to the database.
      *
      * @param async Whether it should be saved on the main thread or not.
@@ -198,6 +203,8 @@ public interface Shop {
     void setCommandOnlyMode(boolean commandOnlyMode);
 
     List<String> getCommands();
+
+    List<UUID> getAssistants();
 
     void setCommands(List<String> commands);
 

@@ -203,6 +203,15 @@ public interface Manager {
     double getMaterialMaxPrice(Material material, boolean isBuy);
 
     /**
+     * Gets the min buy or sell price of a selected material.
+     *
+     * @param material The material to check for.
+     * @param isBuy    Whether it is buy or sell.
+     * @return The found minimum.
+     */
+    double getMaterialMinPrice(Material material, boolean isBuy);
+
+    /**
      * Checks if a shop already exists with the passed id.
      *
      * @param shopId The id to check for.
@@ -226,9 +235,12 @@ public interface Manager {
     Shop getShop(Location location);
 
     /**
-     * Loads all shops from the database and creates a backup.
+     * Attempts to load all available shops from the database.
+     *
+     * @param isAsync   Whether the task is ran on the main thread.
+     * @param tableName The table where the data is located in the database.
      */
-    void loadShops(boolean isAsync);
+    void loadShops(boolean isAsync, String tableName);
 
     /**
      * Checks to see if the material is blocked or not.
