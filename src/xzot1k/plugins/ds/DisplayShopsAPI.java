@@ -177,6 +177,8 @@ interface DisplayShopsAPI {
 
     boolean isOffHandVersion();
 
+    boolean isPrismaInstalled();
+
     Connection getDatabaseConnection();
 
     int getManagementTaskId();

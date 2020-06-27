@@ -136,6 +136,11 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     }
 
     @Override
+    public boolean isPrismaInstalled() {
+        return false;
+    }
+
+    @Override
     public Connection getDatabaseConnection() {
         return null;
     }
