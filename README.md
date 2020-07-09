@@ -1,3 +1,4 @@
+![image](https://imgur.com/SnbAkPG.png)
 <img src="https://imgur.com/mkPfGtg.png" width="150px" height="150px">
 
 # DisplayShops
