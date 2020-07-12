@@ -166,6 +166,16 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     }
 
     @Override
+    public int getCleanupTask() {
+        return 0;
+    }
+
+    @Override
+    public void setCleanupTask(int cleanupTask) {
+
+    }
+
+    @Override
     public List<UUID> getTeleportingPlayers() {
         return null;
     }

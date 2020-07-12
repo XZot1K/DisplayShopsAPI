@@ -5,17 +5,20 @@
 package xzot1k.plugins.ds.api.enums;
 
 public enum ChatInteractionType {
-    SHOP_ITEM_AMOUNT("change-item-amount"), BUY_LIMIT("buy-limit"), SELL_LIMIT("sell-limit"), BUY_PRICE("change-buy-price"),
-    SELL_PRICE("change-sell-price"), WITHDRAW_STOCK("withdraw-stock"), DEPOSIT_STOCK("deposit-stock"), EDIT_DESCRIPTION("edit-description"),
-    DEPOSIT_BALANCE("deposit-balance"), WITHDRAW_BALANCE("withdraw-balance"), ASSISTANTS_ADD("assistants-add"), ASSISTANTS_REMOVE("assistants-add");
+    SHOP_ITEM_AMOUNT(true), BUY_LIMIT(true), SELL_LIMIT(true), BUY_PRICE(true),
+    SELL_PRICE(true), WITHDRAW_STOCK(true), DEPOSIT_STOCK(true), EDIT_DESCRIPTION(false),
+    DEPOSIT_BALANCE(true), WITHDRAW_BALANCE(true), ASSISTANTS_ADD(false), ASSISTANTS_REMOVE(false);
 
-    String interactionId;
+    boolean numericalEntry;
 
-    ChatInteractionType(String interactionId) {
-        this.interactionId = interactionId;
+    ChatInteractionType(boolean numericalEntry) {
+        this.numericalEntry = numericalEntry;
     }
 
-    public String getInteractionId() {
-        return interactionId;
-    }
+    /**
+     * Checks if the chat interaction type requires a numerical entry or not.
+     *
+     * @return whether a numerical entry is required.
+     */
+    public boolean isNumericalEntry() { return numericalEntry; }
 }

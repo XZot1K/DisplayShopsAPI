@@ -6,6 +6,7 @@ package xzot1k.plugins.ds.api.objects;
 
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitTask;
+import xzot1k.plugins.ds.api.enums.ChatInteractionType;
 
 import java.util.HashMap;
 
@@ -85,19 +86,19 @@ public interface DataPack {
     void setSelectedShop(Shop selectedShop);
 
     /**
-     * Gets the current chat interaction identification key in-progress. This is what is used to define what
+     * Gets the current chat interaction type in-progress. This is what is used to define what
      * the player's entry is being used for.
      *
-     * @return The chat interaction identification key. (Returns NULL if no chat interaction is active)
+     * @return The chat interaction type. (Returns NULL if no chat interaction is active)
      */
-    String getChatInteractionKey();
+    ChatInteractionType getChatInteractionType();
 
     /**
-     * Sets the chat interaction identification key.
+     * Sets the chat interaction identification type.
      *
-     * @param chatInteractionKey The key to set as. (Use names 'getInteractionId()' from the 'ChatInteractionType' enumeration)
+     * @param chatInteractionType The type to set as.
      */
-    void setChatInteractionKey(String chatInteractionKey);
+    void setChatInteractionType(ChatInteractionType chatInteractionType);
 
     /**
      * Obtains the selected region of a player, if there is one.

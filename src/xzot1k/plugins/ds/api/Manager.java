@@ -293,6 +293,14 @@ public interface Manager {
     boolean exceededShopLimit(Player player);
 
     /**
+     * Obtains the passed shop's max stock based on owner permissions or administrator bypasses.
+     *
+     * @param shop The shop to get the max stock for (obtains owner for permissions, returns max possible integer if the shop is admin or the owner has the "displayshops.stock.max").
+     * @return The obtained max stock (defaults to configuration value or max possible integer, if the shop is admin).
+     */
+    int getMaxStock(Shop shop);
+
+    /**
      * Gets the player specific shop promotion item modifier.
      *
      * @param player The player to check.
