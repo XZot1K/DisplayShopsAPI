@@ -189,10 +189,6 @@ interface DisplayShopsAPI {
 
     void setInSightTask(int inSightTask);
 
-    int getCleanupTask();
-
-    void setCleanupTask(int cleanupTask);
-
     List<UUID> getTeleportingPlayers();
 
     HashMap<UUID, UUID> getShopMemory();
