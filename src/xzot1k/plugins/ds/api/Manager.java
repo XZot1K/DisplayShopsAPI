@@ -20,6 +20,7 @@ import xzot1k.plugins.ds.api.events.EconomyCallType;
 import xzot1k.plugins.ds.api.handlers.ActionBarHandler;
 import xzot1k.plugins.ds.api.handlers.JItemHandler;
 import xzot1k.plugins.ds.api.handlers.ParticleHandler;
+import xzot1k.plugins.ds.api.handlers.SerializeUtil;
 import xzot1k.plugins.ds.api.objects.DataPack;
 import xzot1k.plugins.ds.api.objects.MarketRegion;
 import xzot1k.plugins.ds.api.objects.Shop;
@@ -28,16 +29,15 @@ import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
 
 public interface Manager {
 
     /**
-     * Loads the passed player's data pack. If not found, a new data pack module is created.
+     * Loads the passed player's data pack. If not found, a new data pack module is created.  (CAN RETURN NULL)
      *
      * @param player The player to load the data pack for.
      */
-    CompletableFuture<DataPack> loadDataPack(Player player);
+    DataPack loadDataPack(Player player);
 
     /**
      * Ray traces from the provided vectors to obtain a shop from the locations it passes through.
@@ -268,15 +268,6 @@ public interface Manager {
     Material getBaseBlockType();
 
     /**
-     * This method goes through the player's permissions and checks if they have access to the material.
-     *
-     * @param player       The player to check permissions of.
-     * @param materialLine The material name or the format <material>:<durability> to check for.
-     * @return if they have access.
-     */
-    boolean hasAccessToBaseBlock(Player player, String materialLine);
-
-    /**
      * Returns a list of all shops owned by the player.
      *
      * @param player The player to check for.
@@ -291,6 +282,14 @@ public interface Manager {
      * @return Whether the player has exceeded their limit or not.
      */
     boolean exceededShopLimit(Player player);
+
+    /**
+     * Gets the shop limit of the passed player.
+     *
+     * @param player The player to check for.
+     * @return The limit they have on shops.
+     */
+    int getShopLimit(Player player);
 
     /**
      * Obtains the passed shop's max stock based on owner permissions or administrator bypasses.
@@ -396,18 +395,23 @@ public interface Manager {
      */
     Inventory buildShopEditMenu(Player player);
 
+
     /**
      * Builds and sets the shop transaction menu from the configuration to the variable.
+     *
+     * @param player The player to personalize the menu for.
+     * @param shop   The shop the interactions should be made for.
      */
-    Inventory buildTransactionMenu(Shop shop);
+    Inventory buildTransactionMenu(Player player, Shop shop);
 
     /**
      * Updates the transaction gui with live information.
      *
      * @param inventory The inventory to update.
      * @param shop      The shop to use the information from.
+     * @parm player The player to personalize the menu for.
      */
-    void updateTransactionMenu(Inventory inventory, Shop shop, int unitCount);
+    void updateTransactionMenu(Inventory inventory, Player player, Shop shop, int unitCount);
 
     /**
      * Checks if the passed world is in the world blacklist.
@@ -417,6 +421,16 @@ public interface Manager {
      */
     boolean isBlockedWorld(World world);
 
+    /**
+     * Obtains the currency balance of the passed player.
+     *
+     * @param player   The player to get the balance of.
+     * @param shop     The shop to get the trade-item from.
+     * @param useVault Whether or not to use Vault methods.
+     * @return The found player balance amount.
+     */
+    double getCurrencyBalance(Player player, Shop shop, boolean useVault);
+
     // getters & setters
     HashMap<UUID, Shop> getShopMap();
 
@@ -425,6 +439,8 @@ public interface Manager {
     JItemHandler getJItemHandler();
 
     ActionBarHandler getActionBarHandler();
+
+    SerializeUtil getSerializeUtil();
 
     List<MarketRegion> getMarketRegions();
 

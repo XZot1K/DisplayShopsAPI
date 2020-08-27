@@ -135,6 +135,14 @@ public interface Shop {
      */
     double getDynamicPriceValue(double originalPrice, boolean isBuy);
 
+    /**
+     * Checks to see if the player is able to edit the shop.
+     *
+     * @param player The player to check access for.
+     * @return Whether the player can or can NOT edit the shop.
+     */
+    boolean canEdit(Player player);
+
     // getters & setters
     ItemStack getShopItem();
 

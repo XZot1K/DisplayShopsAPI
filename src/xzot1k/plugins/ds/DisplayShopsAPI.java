@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.logging.Level;
 
-interface DisplayShopsAPI {
+public interface DisplayShopsAPI {
 
     /**
      * Logs a message with a level to the console under the DisplayShops title.
