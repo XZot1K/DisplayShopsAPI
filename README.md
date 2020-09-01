@@ -10,3 +10,6 @@ Create immersive simplistic shops with animations, efficient transaction handlin
 [Spigot](https://www.spigotmc.org/resources/•-display-shops-•-a-new-approach-to-player-shops-•.69766/) | [Mc-Market](https://www.mc-market.org/resources/11595/) | [Songoda](https://songoda.com/marketplace/product/displayshops-displayshops.269)
 
 For support or general information, including the Developer API please visit the [Wiki](https://github.com/XZot1K/DisplayShopsAPI/wiki)!
+
+### DisplayShops Addons
+https://github.com/bzigus/DisplayShopAddon - `Handles a form of chest-linking allowing users to sync containters to their shops!`
