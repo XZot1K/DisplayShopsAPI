@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import xzot1k.plugins.ds.api.events.EconomyCallType;
 
+import java.sql.Statement;
 import java.util.List;
 import java.util.UUID;
 
@@ -50,9 +51,10 @@ public interface Shop {
     /**
      * Saves the shop to the database.
      *
-     * @param async Whether it should be saved on the main thread or not.
+     * @param async     Whether it should be saved on the main thread or not.
+     * @param statement The database statement to use.
      */
-    void save(boolean async);
+    void save(boolean async, Statement statement);
 
     /**
      * Runs all commands given to the shop.

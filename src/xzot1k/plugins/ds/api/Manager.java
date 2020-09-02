@@ -222,9 +222,17 @@ public interface Manager {
     /**
      * Generates a new ID suited for a new display shop.
      *
-     * @return a long value for the id.
+     * @return a long value for the ID.
      */
     UUID generateNewId();
+
+    /**
+     * Attempts to get a shop object from the shop map by its ID.
+     *
+     * @param shopId The ID to get the shop from
+     * @return the shop object.
+     */
+    Shop getShopById(UUID shopId);
 
     /**
      * Get a shop from the passed chest if possible.

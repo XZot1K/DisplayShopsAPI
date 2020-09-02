@@ -11,11 +11,11 @@
     <orderEntry type="module-library" scope="PROVIDED">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../Dependencies/Server Jars/1.16.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../Dependencies/Server Jars/1.16.2 - Paper.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/../../../Dependencies/Server Jars/1.16.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../Dependencies/Server Jars/1.16.2 - Paper.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>

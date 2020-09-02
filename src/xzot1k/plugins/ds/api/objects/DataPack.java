@@ -60,6 +60,13 @@ public interface DataPack {
     void toggleBBMLock(String unlockId);
 
     /**
+     * Updates all base-block data to either locked aside the default or unlock all.
+     *
+     * @param unlockAll Whether or not to unlock all materials.
+     */
+    void updateAllBaseBlockAccess(boolean unlockAll);
+
+    /**
      * Obtains a full string of cooldowns applied to the player.
      *
      * @return The string full of cooldowns.
