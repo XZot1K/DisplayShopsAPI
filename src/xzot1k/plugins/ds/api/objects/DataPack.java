@@ -5,10 +5,12 @@
 package xzot1k.plugins.ds.api.objects;
 
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitTask;
 import xzot1k.plugins.ds.api.enums.ChatInteractionType;
 
 import java.util.HashMap;
+import java.util.List;
 
 public interface DataPack {
 
@@ -139,6 +141,37 @@ public interface DataPack {
 
     void setCurrentChatTask(BukkitTask currentChatTask);
 
+    /**
+     * Gets the player cooldown map for the player.
+     *
+     * @return The map itself.
+     */
     HashMap<String, Long> getCooldownMap();
+
+    /**
+     * Gets the base-block page map for the player if it exists.
+     *
+     * @return The map itself.
+     */
+    HashMap<Integer, List<ItemStack>> getBaseBlockPageMap();
+
+    /**
+     * Sets the base-block page map for the player.
+     *
+     * @param baseBlockPageMap The map to set it as.
+     */
+    void setBaseBlockPageMap(HashMap<Integer, List<ItemStack>> baseBlockPageMap);
+
+    /**
+     * Gets the current page the player is on from the base block page map.
+     *
+     * @return The current page.
+     */
+    int getCurrentBaseBlockPage();
+
+    /**
+     * Sets the current page the player is on from the base block page map.
+     */
+    void setCurrentBaseBlockPage(int currentBaseBlockPage);
 
 }
