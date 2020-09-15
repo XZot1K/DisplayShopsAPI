@@ -5,5 +5,5 @@
 package xzot1k.plugins.ds.api.enums;
 
 public enum StageType {
-    START, FINISH, TIMEOUT, ENTRY
+    START, FINISH, TIMEOUT, ENTRY, CANCELLED
 }
