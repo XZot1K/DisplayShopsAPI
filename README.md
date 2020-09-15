@@ -1,3 +1,5 @@
+**[Wiki](https://github.com/XZot1K/DisplayShopsAPI/wiki) | [Commands](https://github.com/XZot1K/DisplayShopsAPI/wiki/commands) | [Permissions](https://github.com/XZot1K/DisplayShopsAPI/wiki/permissions) | [How Does It Work?](https://github.com/XZot1K/DisplayShopsAPI/wiki/shop-guide) | [Developer API](https://github.com/XZot1K/DisplayShopsAPI/wiki/developer-api)**
+
 To use the DisplayShops API, navigate to the releases tab and download the JAR file. Once completed, add the jar to your plugin/project's dependency list and access the plugin's main instance using DisplayShops.getPluginInstance()!
 
 ![image](https://imgur.com/SnbAkPG.png)
