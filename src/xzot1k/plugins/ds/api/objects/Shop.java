@@ -22,6 +22,11 @@ public interface Shop {
     void kill(Player player);
 
     /**
+     * Kills the shop's display packets entirely for ALL players.
+     */
+    void killAll();
+
+    /**
      * Shows the shop display to the player.
      *
      * @param player        The player to show the display to.

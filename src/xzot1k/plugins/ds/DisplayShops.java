@@ -106,16 +106,6 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     }
 
     @Override
-    public void sendDisplayPacketToAll(Shop shop, boolean showHolograms) {
-
-    }
-
-    @Override
-    public void sendPossibleDisplayPackets(Player player, boolean showHolograms) {
-
-    }
-
-    @Override
     public Manager getManager() {
         return null;
     }
@@ -143,26 +133,6 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     @Override
     public Connection getDatabaseConnection() {
         return null;
-    }
-
-    @Override
-    public int getManagementTaskId() {
-        return 0;
-    }
-
-    @Override
-    public void setManagementTaskId(int managementTaskId) {
-
-    }
-
-    @Override
-    public int getInSightTask() {
-        return 0;
-    }
-
-    @Override
-    public void setInSightTask(int inSightTask) {
-
     }
 
     @Override

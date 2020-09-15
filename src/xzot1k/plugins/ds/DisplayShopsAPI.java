@@ -87,7 +87,6 @@ public interface DisplayShopsAPI {
 
     /**
      * Clears all display packets for a player on file.
-     * (Note: Does NOT kill packet displays. Use the kill method found in the shop interface.)
      *
      * @param player The player to remove the packets for.
      */
@@ -111,32 +110,13 @@ public interface DisplayShopsAPI {
     void updateDisplayPacket(Shop shop, Player player, DisplayPacket displayPacket);
 
     /**
-     * Sends the entire display to the player. In specific, it will kill existing packets on the MAIN THREAD and create new packets ON ANOTHER THREAD (Async).
-     * (NOTE: The 'showHolograms' parameter will be ignored if the 'always-display' is enabled)
+     * Sends the entire display to the player. (NOTE: The 'showHolograms' parameter will be ignored if the 'always-display' is enabled)
      *
      * @param shop          The shop to create the display for.
      * @param player        The player to send the display packets to.
      * @param showHolograms Whether holograms above the glass and item are visible/created.
      */
     void sendDisplayPacket(@NotNull Shop shop, @NotNull Player player, boolean showHolograms);
-
-    /**
-     * Sends the entire display to all players in the area. In specific, it will kill existing packets on the MAIN THREAD and create new packets ON ANOTHER THREAD (Async).
-     * (NOTE: The 'showHolograms' parameter will be ignored if the 'always-display' is enabled)
-     *
-     * @param shop          The shop to create the display for.
-     * @param showHolograms Whether holograms above the glass and item are visible/created.
-     */
-    void sendDisplayPacketToAll(@NotNull Shop shop, boolean showHolograms);
-
-    /**
-     * Sends the entire display to the player (ALL SHOPS). In specific, it will kill existing packets on the MAIN THREAD and create new packets ON ANOTHER THREAD (Async).
-     * (NOTE: The 'showHolograms' parameter will be ignored if the 'always-display' is enabled)
-     *
-     * @param player        The player to send the display packets to.
-     * @param showHolograms Whether holograms above the glass and item are visible/created.
-     */
-    void sendPossibleDisplayPackets(@NotNull Player player, boolean showHolograms);
 
     // getters & setters
 
@@ -180,14 +160,6 @@ public interface DisplayShopsAPI {
     boolean isPrismaInstalled();
 
     Connection getDatabaseConnection();
-
-    int getManagementTaskId();
-
-    void setManagementTaskId(int managementTaskId);
-
-    int getInSightTask();
-
-    void setInSightTask(int inSightTask);
 
     List<UUID> getTeleportingPlayers();
 
