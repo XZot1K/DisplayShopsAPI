@@ -16,8 +16,10 @@ public interface DataPack {
 
     /**
      * Updates player's personal chat task values by cancelling the previous and cancelling the new after a configurable duration.
+     *
+     * @param player The player to update the chat task for.
      */
-    void updatePersonalChatTask();
+    void updateChatTimeoutTask(Player player);
 
     /**
      * Updates the cooldown id for the player.
