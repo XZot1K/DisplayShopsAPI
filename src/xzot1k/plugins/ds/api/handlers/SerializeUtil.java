@@ -24,4 +24,12 @@ public interface SerializeUtil {
      */
     ItemStack toItem(String itemString);
 
+    /**
+     * Convert an item to a JSON string format for in-game messages.
+     *
+     * @param itemStack The item to convert.
+     * @return The JSON string (can return 'NULL').
+     */
+    String toJSON(ItemStack itemStack);
+
 }

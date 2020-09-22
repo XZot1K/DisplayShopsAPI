@@ -23,15 +23,11 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     private static DisplayShops pluginInstance;
 
     public DisplayShops() {
-        setPluginInstance(this);
+        DisplayShops.pluginInstance = this;
     }
 
     public static DisplayShops getPluginInstance() {
         return pluginInstance;
-    }
-
-    private static void setPluginInstance(DisplayShops pluginInstance) {
-        DisplayShops.pluginInstance = pluginInstance;
     }
 
     @Override

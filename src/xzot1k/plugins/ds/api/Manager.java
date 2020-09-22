@@ -18,7 +18,6 @@ import xzot1k.plugins.ds.api.enums.ChatInteractionType;
 import xzot1k.plugins.ds.api.events.EconomyCallEvent;
 import xzot1k.plugins.ds.api.events.EconomyCallType;
 import xzot1k.plugins.ds.api.handlers.ActionBarHandler;
-import xzot1k.plugins.ds.api.handlers.JItemHandler;
 import xzot1k.plugins.ds.api.handlers.ParticleHandler;
 import xzot1k.plugins.ds.api.handlers.SerializeUtil;
 import xzot1k.plugins.ds.api.objects.DataPack;
@@ -443,8 +442,6 @@ public interface Manager {
     HashMap<UUID, Shop> getShopMap();
 
     ParticleHandler getParticleHandler();
-
-    JItemHandler getJItemHandler();
 
     ActionBarHandler getActionBarHandler();
 

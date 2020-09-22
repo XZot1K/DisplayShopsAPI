@@ -270,4 +270,33 @@ public interface Shop {
     int getDynamicSellCounter();
 
     void setDynamicSellCounter(int dynamicPriceCounter);
+
+    /**
+     * Checks if the shop is being edited.
+     *
+     * @return Whether shop is undergoing edits.
+     */
+    boolean isBeingEdited();
+
+    /**
+     * Sets whether shop is being edited.
+     *
+     * @param beingEdited Whether the shop is being edited.
+     */
+    void setBeingEdited(boolean beingEdited);
+
+    /**
+     * Gets the current editor.
+     *
+     * @return The editor UUID.
+     */
+    UUID getCurrentEditor();
+
+    /**
+     * Sets the current editor.
+     *
+     * @param currentEditor The current editor UUID.
+     */
+    void setCurrentEditor(UUID currentEditor);
+
 }
