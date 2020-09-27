@@ -2,7 +2,6 @@
 
 To use the DisplayShops API, navigate to the releases tab and download the JAR file. Once completed, add the jar to your plugin/project's dependency list and access the plugin's main instance using DisplayShops.getPluginInstance()!
 
-![image](https://imgur.com/SnbAkPG.png)
 <img src="https://imgur.com/mkPfGtg.png" width="150px" height="150px">
 
 # DisplayShops
@@ -15,3 +14,10 @@ For support or general information, including the Developer API please visit the
 
 ### DisplayShops Addons
 https://github.com/bzigus/DisplayShopAddon - `Handles a form of chest-linking allowing users to sync containters to their shops!`
+
+***
+I currently use DedicatedMC as the official ZotWare testing server. If you need something powerful in terms of hardware without digging a hole in your pocket give them a shot and let me know how you like them!
+![image](https://imgur.com/oqEKWO3.png)
+
+I use GGServers for the official ZotWare preview server (Still in Development). They have a nice variety of hosting options alongside a pretty good console with good response times.
+![image](https://imgur.com/SnbAkPG.png)
