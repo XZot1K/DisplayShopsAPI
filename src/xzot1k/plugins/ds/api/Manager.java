@@ -24,6 +24,7 @@ import xzot1k.plugins.ds.api.objects.DataPack;
 import xzot1k.plugins.ds.api.objects.MarketRegion;
 import xzot1k.plugins.ds.api.objects.Shop;
 
+import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
@@ -226,6 +227,14 @@ public interface Manager {
     UUID generateNewId();
 
     /**
+     * Gets the proper offsets based on configuration or defaults.
+     *
+     * @param shop The shop to obtain the offsets for.
+     * @return The array of X, Y, and Z offsets.
+     */
+    Double[] getBaseBlockOffsets(Shop shop);
+
+    /**
      * Attempts to get a shop object from the shop map by its ID.
      *
      * @param shopId The ID to get the shop from
@@ -259,8 +268,10 @@ public interface Manager {
 
     /**
      * Saves all market regions to the database.
+     *
+     * @param statement The SQL statement required to save.
      */
-    void saveMarketRegions();
+    void saveMarketRegions(Statement statement);
 
     /**
      * Loads all market regions into the memory.

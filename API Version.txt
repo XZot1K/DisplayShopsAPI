@@ -1,1 +1,1 @@
-## API-VERSION 1.1.7 ##
+## API-VERSION 1.1.8 ##
