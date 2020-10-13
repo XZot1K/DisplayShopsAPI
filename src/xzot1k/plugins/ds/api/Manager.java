@@ -89,6 +89,15 @@ public interface Manager {
     void giveItem(Player player, ItemStack itemStack, int amount, int unitCount);
 
     /**
+     * Obtains available space for a defined item.
+     *
+     * @param player    The player who's inventory needs to be checked.
+     * @param itemStack The itemstack to check for.
+     * @return The total available item amount space.
+     */
+    int getInventorySpaceForItem(Player player, ItemStack itemStack);
+
+    /**
      * Retrieve a market region, if the passed location is inside it.
      *
      * @param location The location to check.

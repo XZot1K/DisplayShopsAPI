@@ -8,7 +8,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import xzot1k.plugins.ds.api.events.EconomyCallType;
 
-import java.sql.Statement;
 import java.util.List;
 import java.util.UUID;
 
@@ -56,10 +55,9 @@ public interface Shop {
     /**
      * Saves the shop to the database.
      *
-     * @param async     Whether it should be saved on the main thread or not.
-     * @param statement The database statement to use.
+     * @param async Whether it should be saved on the main thread or not.
      */
-    void save(boolean async, Statement statement);
+    void save(boolean async);
 
     /**
      * Runs all commands given to the shop.
@@ -280,6 +278,7 @@ public interface Shop {
 
     /**
      * Gets a list of all players who are editing the shop.
+     *
      * @return The list of player UUIDs who are editing the shop.
      */
     List<UUID> getCurrentEditors();
