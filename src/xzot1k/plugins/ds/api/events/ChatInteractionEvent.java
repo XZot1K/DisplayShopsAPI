@@ -21,6 +21,7 @@ public class ChatInteractionEvent extends Event implements Cancellable {
         setPlayer(player);
         setChatInteractionType(chatInteractionType);
         setPlayerEntryValue(playerEntryValue);
+        setCancelled(false);
     }
 
     public static HandlerList getHandlerList() {

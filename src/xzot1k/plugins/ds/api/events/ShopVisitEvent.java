@@ -21,6 +21,7 @@ public class ShopVisitEvent extends Event implements Cancellable {
         setPlayer(player);
         setShop(shop);
         setChargeAmount(chargeAmount);
+        setCancelled(false);
     }
 
     public static HandlerList getHandlerList() {

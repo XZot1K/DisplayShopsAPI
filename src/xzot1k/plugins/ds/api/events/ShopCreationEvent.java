@@ -1,7 +1,6 @@
 /*
  * Copyright (c) 2020 XZot1K, All rights reserved.
  */
-
 package xzot1k.plugins.ds.api.events;
 
 import org.bukkit.Location;
@@ -13,12 +12,14 @@ import org.bukkit.event.HandlerList;
 public class ShopCreationEvent extends Event implements Cancellable {
     private static final HandlerList handlers = new HandlerList();
     private Player player;
-    private boolean cancelled;
+    private boolean cancelled, cancelBlockPlaceEvent;
     private Location location;
 
     public ShopCreationEvent(Player player, Location location) {
         setPlayer(player);
         setLocation(location);
+        setCancelled(false);
+        setCancelBlockPlaceEvent(false);
     }
 
     public static HandlerList getHandlerList() {
@@ -55,5 +56,13 @@ public class ShopCreationEvent extends Event implements Cancellable {
 
     public void setLocation(Location location) {
         this.location = location;
+    }
+
+    public boolean isCancelBlockPlaceEvent() {
+        return cancelBlockPlaceEvent;
+    }
+
+    public void setCancelBlockPlaceEvent(boolean cancelBlockPlaceEvent) {
+        this.cancelBlockPlaceEvent = cancelBlockPlaceEvent;
     }
 }

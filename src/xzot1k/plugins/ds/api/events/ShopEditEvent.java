@@ -19,6 +19,7 @@ public class ShopEditEvent extends Event implements Cancellable {
     public ShopEditEvent(Player player, Shop shop) {
         this.player = player;
         this.shop = shop;
+        setCancelled(false);
     }
 
     // getters & setters

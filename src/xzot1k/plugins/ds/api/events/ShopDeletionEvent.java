@@ -19,6 +19,7 @@ public class ShopDeletionEvent extends Event implements Cancellable {
     public ShopDeletionEvent(Player player, Location location) {
         setPlayer(player);
         setLocation(location);
+        setCancelled(false);
     }
 
     public static HandlerList getHandlerList() {
