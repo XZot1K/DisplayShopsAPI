@@ -8,6 +8,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.World;
+import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -67,8 +68,9 @@ public interface Manager {
      *
      * @param player           The player of who is in the chat interaction.
      * @param playerEntryValue The value/message the player entered.
+     * @return Returns true if the interaction completes successfully; otherwise, the return is false.
      */
-    void initiateChatInteractionOperation(Player player, ChatInteractionType chatInteractionType, String playerEntryValue);
+    boolean initiateChatInteractionOperation(Player player, ChatInteractionType chatInteractionType, String playerEntryValue);
 
     /**
      * Sends a color translated message to the players as either a normal chat message or action bar message.
@@ -258,6 +260,18 @@ public interface Manager {
      * @return The shop if found.
      */
     Shop getShop(Location location);
+
+    /**
+     * Creates a shop at the passed block owned by the passed player.
+     *
+     * @param player              The player to use as the owner.
+     * @param block               The block to create the shop at.
+     * @param shopItemAmount      The amount used for the shop item.
+     * @param doCreationEffects   Whether to play the effects and sounds.
+     * @param sendCreationMessage Whether to send the creation message.
+     * @return The shop object.
+     */
+    Shop createShop(Player player, Block block, int shopItemAmount, boolean doCreationEffects, boolean sendCreationMessage);
 
     /**
      * Attempts to load all available shops from the database.
