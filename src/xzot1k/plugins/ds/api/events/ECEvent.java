@@ -7,6 +7,7 @@ package xzot1k.plugins.ds.api.events;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.HandlerList;
+import xzot1k.plugins.ds.api.enums.EconomyCallType;
 import xzot1k.plugins.ds.api.objects.Shop;
 
 public interface ECEvent {

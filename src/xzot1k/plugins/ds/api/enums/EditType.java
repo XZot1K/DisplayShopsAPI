@@ -4,6 +4,6 @@
 
 package xzot1k.plugins.ds.api.enums;
 
-public enum StageType {
-    START, FINISH, TIMEOUT, ENTRY, CANCELLED, INCORRECT
+public enum EditType {
+    OPEN_EDIT_MENU, QUICK_WITHDRAW, QUICK_DEPOSIT
 }

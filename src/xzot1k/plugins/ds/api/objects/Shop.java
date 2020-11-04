@@ -6,7 +6,7 @@ package xzot1k.plugins.ds.api.objects;
 
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import xzot1k.plugins.ds.api.events.EconomyCallType;
+import xzot1k.plugins.ds.api.enums.EconomyCallType;
 
 import java.util.List;
 import java.util.UUID;
@@ -270,17 +270,17 @@ public interface Shop {
     void setDynamicSellCounter(int dynamicPriceCounter);
 
     /**
-     * Checks if the shop is being edited.
+     * Gets  the player unique ID of whom is currently editing the shop.
      *
-     * @return Whether shop is undergoing edits.
+     * @return The current editor's unique ID.
      */
-    boolean isBeingEdited();
+    UUID getCurrentEditor();
 
     /**
-     * Gets a list of all players who are editing the shop.
+     * Sets the current editor.
      *
-     * @return The list of player UUIDs who are editing the shop.
+     * @param currentEditor The unique ID of the player editing.
      */
-    List<UUID> getCurrentEditors();
+    void setCurrentEditor(UUID currentEditor);
 
 }

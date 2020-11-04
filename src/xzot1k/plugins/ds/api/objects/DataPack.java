@@ -79,9 +79,8 @@ public interface DataPack {
 
     /**
      * Resets all type of editing a player is doing to a selected shop.
-     * @param player The player to reset.
      */
-    void resetEditData(Player player);
+    void resetEditData();
 
     // getters & setters
     String getBaseBlockUnlocks();
