@@ -4,7 +4,6 @@
 
 package xzot1k.plugins.ds;
 
-import com.sun.istack.internal.NotNull;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import xzot1k.plugins.ds.api.Manager;
@@ -116,7 +115,7 @@ public interface DisplayShopsAPI {
      * @param player        The player to send the display packets to.
      * @param showHolograms Whether holograms above the glass and item are visible/created.
      */
-    void sendDisplayPacket(@NotNull Shop shop, @NotNull Player player, boolean showHolograms);
+    void sendDisplayPacket(Shop shop, Player player, boolean showHolograms);
 
     // getters & setters
 

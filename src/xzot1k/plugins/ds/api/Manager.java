@@ -436,7 +436,6 @@ public interface Manager {
      */
     Inventory buildShopEditMenu(Player player);
 
-
     /**
      * Builds and sets the shop transaction menu from the configuration to the variable.
      *
