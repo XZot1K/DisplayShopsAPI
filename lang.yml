@@ -163,6 +163,18 @@ rented: "&aYou have rented the &e{id} &amarket region for &e${cost}&a! &aThe reg
 rentable-interact: "&cThis shop is within a market region by the name of &e{id}&c. You can rent the market region by using &e/ds rent {id}&c."
 rentable-shop-delete: "&cYou are unable to delete a shop contained within a market region."
 
+## Transaction Buy/Sell Blocked Button Reasons ##
+transaction-reasons:
+  no-buy-price: "&cThe buy price is set at zero (disabled)."
+  no-sell-price: "&cThe sell price is set at zero (disabled)."
+  buy-count-exceeded: "&cThe buy limit has been exceeded."
+  sell-count-exceeded: "&cThe sell limit has been exceeded."
+  insufficient-stock: "&cThe shop does not have enough stock."
+  insufficient-shop-balance: "&cThe shop does not have enough funding."
+  stock-exceeded: "&cThe shop has reached its maximum stock."
+  commands-present: "&cThe shop has commands attached to it."
+
+
 ## Below are JSON messages, it is recommended to include a color code as a prefix for each word due to formatting.
 shop-broadcast: "&c&l[!]&r &aThe player &e{player} &ais inviting you to come see their shop at &6X: &e{x} &6Y: &e{y} &6Z: &e{z} &awhich is selling the &f{item}&a! &e(Click This Message To Visit for &e${charge}&e)"
 shop-id-copy: "&aThe shop currently in focus has the id &e{id}&a. &e(Click To Copy)"
