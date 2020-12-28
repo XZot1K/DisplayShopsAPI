@@ -379,7 +379,6 @@ shop-creation-item:
   flags: [ ]
   # This is for special use of textures. Leave at -1 to avoid.
   model-data: 0
-  unbreakable: false
 
   lore:
     - ""
@@ -402,7 +401,6 @@ shop-currency-item:
   flags: [ ]
   # This is for special use of textures. Leave at -1 to avoid.
   model-data: 0
-  unbreakable: false
 
   # Leave the display name and lore blank for no item meta (Vanilla Item).
   display-name: ""

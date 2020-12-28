@@ -22,7 +22,6 @@ decorative-items:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&c&lSimple Information"
     lore:
@@ -59,7 +58,6 @@ base-block-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&cNext Page"
     lore:
@@ -81,7 +79,6 @@ base-block-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&cPrevious Page"
     lore:
@@ -102,7 +99,6 @@ base-block-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&6"
     lore: [ ]
@@ -123,7 +119,6 @@ base-block-menu:
       - "HIDE_ENCHANTS"
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&b&lCurrent Base-Block"
     lore:
@@ -197,7 +192,6 @@ shop-edit-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&6"
     lore: [ ]
@@ -217,7 +211,6 @@ shop-edit-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&d&l\u2580 &b&lBase Block &d&l\u2580"
     # The placeholder {no-vault} will remove that entire line if the 'use-vault' is disabled.
@@ -241,7 +234,6 @@ shop-edit-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&e&l$ &a&lBalance Management &e&l$"
     # The placeholder {no-vault} will remove that entire line if the 'use-vault' is disabled.
@@ -270,7 +262,6 @@ shop-edit-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&6&l\u25A0 &c&lStock Management &6&l\u25A0"
     # The placeholder {no-vault} will remove that entire line if the 'use-vault' is disabled.
@@ -297,7 +288,6 @@ shop-edit-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&b&l\u2219 &a&lLimit Manager &b&l\u2219"
     lore:
@@ -328,7 +318,6 @@ shop-edit-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&d&l\u2726 &b&lShop Item Management &d&l\u2726"
     lore:
@@ -359,7 +348,6 @@ shop-edit-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&6&l$ &e&lChange Prices &6&l$"
     lore:
@@ -390,7 +378,6 @@ shop-edit-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&e&l! &b&lPromotion Management &e&l!"
     lore:
@@ -421,7 +408,6 @@ shop-edit-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&a&l^ &b&lAssistants &a&l^"
     lore:
@@ -449,7 +435,6 @@ shop-edit-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&c&l\u2716 &4&lDestroy Shop &c&l\u2716"
     lore:
@@ -511,7 +496,6 @@ shop-transaction-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&e&l$ &a&lPurchase &e&l$"
     lore:
@@ -535,7 +519,6 @@ shop-transaction-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&e&l$ &c&lSell &e&l$"
     lore:
@@ -559,7 +542,6 @@ shop-transaction-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&d&l\u2605 &e&lTransaction Unit Count &d&l\u2605"
     lore:
@@ -583,7 +565,6 @@ shop-transaction-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&a&l\u2605 &e&lIncrease Unit Count &a&l\u2605"
     lore:
@@ -607,7 +588,6 @@ shop-transaction-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&c&l\u2605 &e&lDecrease Unit Count &c&l\u2605"
     lore:
@@ -630,7 +610,6 @@ shop-transaction-menu:
     flags: [ ]
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
-    unbreakable: false
 
     display-name: "&c&l\u2716 &4&lAction Blocked &c&l\u2716"
     lore:
