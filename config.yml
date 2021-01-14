@@ -277,13 +277,13 @@ blocked-item-list:
   - "END_PORTAL"
   - "PORTAL"
 
-# This is the list where specific materials can be given direct limitation to the maximum buy and sell price.
+# This is the list where specific materials can be given direct limitation to the maximum buy and sell price (max per one of that material in a stack "outside unit count").
 max-material-prices:
   DIAMOND_SWORD:
     buy: 50000.0
     sell: 25000.0
 
-# This is the list where specific materials can be given direct limitation to the minimum buy and sell price.
+# This is the list where specific materials can be given direct limitation to the minimum buy and sell price (min per one of that material in a stack "outside unit count").
 min-material-prices:
   DIAMOND_SWORD:
     buy: 100.0

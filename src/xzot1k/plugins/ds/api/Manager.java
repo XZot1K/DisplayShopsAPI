@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 XZot1K, All rights reserved.
+ * Copyright (c) 2021 XZot1K, All rights reserved.
  */
 
 package xzot1k.plugins.ds.api;
@@ -25,7 +25,6 @@ import xzot1k.plugins.ds.api.objects.DataPack;
 import xzot1k.plugins.ds.api.objects.MarketRegion;
 import xzot1k.plugins.ds.api.objects.Shop;
 
-import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
@@ -291,10 +290,8 @@ public interface Manager {
 
     /**
      * Saves all market regions to the database.
-     *
-     * @param statement The SQL statement required to save.
      */
-    void saveMarketRegions(Statement statement);
+    void saveMarketRegions();
 
     /**
      * Loads all market regions into the memory.
