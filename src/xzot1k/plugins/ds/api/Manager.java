@@ -466,7 +466,7 @@ public interface Manager {
      * @param useVault Whether or not to use Vault methods.
      * @return The found player balance amount.
      */
-    double getCurrencyBalance(Player player, Shop shop, boolean useVault);
+    double getCurrencyBalance(OfflinePlayer player, Shop shop, boolean useVault);
 
     // getters & setters
     HashMap<UUID, Shop> getShopMap();
