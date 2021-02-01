@@ -72,7 +72,7 @@ no-selection: "&cYou must make a selection while in selection mode first. Use th
 region-exists: "&cA market region with that Id already exists. Please try another Id."
 market-region-created: "&aA new market region with the id &e{id} &ahas been created."
 market-region-deleted: "&cThe market region with the id &e{id} &chas been deleted."
-region-invalid: "&cThere are no market regions with that Id."
+region-invalid: "&cNo market region was able to be found given the conditions."
 market-region-list: "&aCurrent Market Regions: &e{list}"
 shop-not-admin: "&cThis is not an Admin shop."
 shop-commands: "&aCommand List: &e[{commands}]"
@@ -155,6 +155,8 @@ shop-under-edit: "&cThis shop is currently undergoing edits by the owner or an a
 world-cleared: "&aThe world &e{world} &ais now shop free!"
 rent-notification: "&cYour market region at &e{id} &cwill expire in &e{time}&c. Utilize the &e/ds renew {id} &cto renew your rent. &c&l&nUnclaimed shop contents will be lost on expire."
 rent-expired: "&cYour market region at &e{id} &chas expired."
+region-rent-invalid: "&cThe region &e{id} &cis not currently rented."
+rent-time: "&aThe region &e{id} &awill expire in &e{duration}&a. &aUse &e/ds renew {id} &ato extend its rent!"
 shop-description-empty: "&cThe shop description is already non-existent."
 market-region-reset: "&aThe market region &e{id} &ahas been reset."
 not-the-renter: "&cYou are not the renter of the &e{id} &cmarket region."
@@ -162,6 +164,7 @@ rent-extended: "&aYou have extended the rent of the &e{id} &amarket region for &
 rented: "&aYou have rented the &e{id} &amarket region for &e${cost}&a! &aThe region will expire in &e{duration}&a. &aUse &e/ds renew {id} &ato extend your rent!"
 rentable-interact: "&cThis shop is within a market region by the name of &e{id}&c. You can rent the market region by using &e/ds rent {id}&c."
 rentable-shop-delete: "&cYou are unable to delete a shop contained within a market region."
+region-location-fail: "&cThere was no region found at your location."
 
 ## Transaction Buy/Sell Blocked Button Reasons ##
 transaction-reasons:

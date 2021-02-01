@@ -8,22 +8,27 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
+import org.bukkit.inventory.ItemStack;
+import xzot1k.plugins.ds.api.enums.ItemType;
 import xzot1k.plugins.ds.api.objects.Shop;
 
-public class ShopVisitEvent extends Event implements Cancellable {
+public class ShopItemSetEvent extends Event implements Cancellable {
     private static final HandlerList handlers = new HandlerList();
-    private Player player;
-    private Shop shop;
-    private double chargeAmount;
+    private final Player player;
+    private final Shop shop;
+    private final ItemType itemType;
+    private ItemStack itemStack;
     private boolean cancelled;
 
-    public ShopVisitEvent(Player player, Shop shop, double chargeAmount) {
-        setPlayer(player);
-        setShop(shop);
-        setChargeAmount(chargeAmount);
+    public ShopItemSetEvent(Player player, Shop shop, ItemType itemType, ItemStack handItemStack) {
+        this.player = player;
+        this.shop = shop;
+        this.itemType = itemType;
+        this.itemStack = handItemStack;
         setCancelled(false);
     }
 
+    // getters & setters
     public static HandlerList getHandlerList() {
         return handlers;
     }
@@ -33,7 +38,6 @@ public class ShopVisitEvent extends Event implements Cancellable {
         return handlers;
     }
 
-    // getters & setters
     @Override
     public boolean isCancelled() {
         return cancelled;
@@ -48,23 +52,21 @@ public class ShopVisitEvent extends Event implements Cancellable {
         return player;
     }
 
-    private void setPlayer(Player player) {
-        this.player = player;
-    }
-
-    public double getChargeAmount() {
-        return chargeAmount;
-    }
-
-    public void setChargeAmount(double chargeAmount) {
-        this.chargeAmount = chargeAmount;
-    }
-
     public Shop getShop() {
         return shop;
     }
 
-    private void setShop(Shop shop) {
-        this.shop = shop;
+    public ItemType getItemType() {
+        return itemType;
     }
+
+
+    public ItemStack getItemStack() {
+        return itemStack;
+    }
+
+    public void setItemStack(ItemStack itemStack) {
+        this.itemStack = itemStack;
+    }
+
 }

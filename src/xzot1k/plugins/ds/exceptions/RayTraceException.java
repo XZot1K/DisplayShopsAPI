@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 XZot1K, All rights reserved.
+ * Copyright (c) 2021 XZot1K, All rights reserved.
  */
 
 package xzot1k.plugins.ds.exceptions;

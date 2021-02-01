@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 XZot1K, All rights reserved.
+ * Copyright (c) 2021 XZot1K, All rights reserved.
  */
 
 package xzot1k.plugins.ds.api.objects;
@@ -15,6 +15,13 @@ public interface MarketRegion {
      * Resets the region clearing rents and extra data.
      */
     void reset();
+
+    /**
+     * Resets a shop within the market region to a non-rented form.
+     *
+     * @param shop The shop to reset.
+     */
+    void resetHelper(Shop shop);
 
     /**
      * Updates the rented time stamp to the current system time.
