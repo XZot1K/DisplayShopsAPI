@@ -5,5 +5,5 @@
 package xzot1k.plugins.ds.api.enums;
 
 public enum EconomyCallType {
-    SELL, BUY, EDIT_ACTION, RENT, RENT_RENEW
+    SELL, BUY, EDIT_ACTION, RENT, RENT_RENEW, VISIT
 }

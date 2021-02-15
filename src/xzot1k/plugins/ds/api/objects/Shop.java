@@ -67,6 +67,14 @@ public interface Shop {
     void runCommands(Player player);
 
     /**
+     * Attempts to teleport the passed player to this shop.
+     *
+     * @param player The player to teleport.
+     * @param charge Whether the player should be charged.
+     */
+    void visit(Player player, boolean charge);
+
+    /**
      * Deletes the shop from the database if found.
      *
      * @param async Whether the shop should be deleted on the main thread or not.
