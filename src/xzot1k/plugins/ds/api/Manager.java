@@ -40,6 +40,11 @@ public interface Manager {
     DataPack loadDataPack(Player player);
 
     /**
+     * Loads the all player data packs.
+     */
+    void loadAllDataPacks();
+
+    /**
      * Ray traces from the provided vectors to obtain a shop from the locations it passes through.
      *
      * @param worldName       The world to ray trace in.
