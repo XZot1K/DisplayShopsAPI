@@ -19,6 +19,9 @@ log-max-size: -1
 # If this is disabled, Vault will be ignored and the built-in physical item currency will be used.
 use-vault: true
 
+# If this is enabled and Towny is installed, shop plots available to the player will be the only allowed area for shops.
+towny-shop-plots-only: true
+
 # If this is disabled, transactions to shops where the owner is not online will be blocked.
 offline-mode: true
 

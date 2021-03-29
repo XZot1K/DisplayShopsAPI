@@ -167,6 +167,10 @@ rentable-interact: "&cThis shop is within a market region by the name of &e{id}&
 rentable-shop-delete: "&cYou are unable to delete a shop contained within a market region."
 region-location-fail: "&cThere was no region found at your location."
 
+## Hook Messages ##
+towny-no-access: "&cYou do not have access to this shop plot."
+worldguard-no-access: "&cThe &eWorldGuard &cregion does not permit the usage of shops (Associated Flag: &eDS_USE&c)."
+
 ## Transaction Buy/Sell Blocked Button Reasons ##
 transaction-reasons:
   no-buy-price: "&cThe buy price is set at zero (disabled)."

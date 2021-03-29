@@ -85,16 +85,6 @@ public interface Manager {
     void sendMessage(Player player, String message);
 
     /**
-     * Gives itemstack to player 'X' amount of times at a specific unit count (stack count)
-     *
-     * @param player    the player to give items to.
-     * @param itemStack the itemstack to give.
-     * @param amount    the amount of items.
-     * @param unitCount the unit count (stack count).
-     */
-    void giveItem(Player player, ItemStack itemStack, int amount, int unitCount);
-
-    /**
      * Obtains available space for a defined item.
      *
      * @param player    The player who's inventory needs to be checked.
