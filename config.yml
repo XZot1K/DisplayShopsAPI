@@ -244,6 +244,10 @@ max-item-stack-size: 256
 # (Note: This can be change for each player via permissions)
 default-shop-limit: 5
 
+# This is the default market region limit a play can have rented out at one time.
+# (Note: This can be change for each player via permissions)
+default-region-limit: 2
+
 # These are the default prices for shops.
 default-buy-price: 100
 default-sell-price: 25

@@ -201,20 +201,20 @@ public interface Manager {
     /**
      * Gets the max buy or sell price of a selected material.
      *
-     * @param material The material to check for.
-     * @param isBuy    Whether it is buy or sell.
+     * @param itemStack The item stack to check for.
+     * @param isBuy     Whether it is buy or sell.
      * @return The found maximum.
      */
-    double getMaterialMaxPrice(Material material, boolean isBuy);
+    double getMaterialMaxPrice(ItemStack itemStack, boolean isBuy);
 
     /**
      * Gets the min buy or sell price of a selected material.
      *
-     * @param material The material to check for.
-     * @param isBuy    Whether it is buy or sell.
+     * @param itemStack The item stack to check for.
+     * @param isBuy     Whether it is buy or sell.
      * @return The found minimum.
      */
-    double getMaterialMinPrice(Material material, boolean isBuy);
+    double getMaterialMinPrice(ItemStack itemStack, boolean isBuy);
 
     /**
      * Checks if a shop already exists with the passed id.
@@ -323,6 +323,30 @@ public interface Manager {
      * @return The limit they have on shops.
      */
     int getShopLimit(Player player);
+
+    /**
+     * Returns a list of all regions rented by the player.
+     *
+     * @param player The player to check for.
+     * @return The list of rented regions.
+     */
+    List<MarketRegion> getMarketRegions(Player player);
+
+    /**
+     * Gets if the player has reached the maximum amount of rented regions they can have.
+     *
+     * @param player The player to check.
+     * @return Whether the player has exceeded their limit or not.
+     */
+    boolean exceededMarketRegionLimit(Player player);
+
+    /**
+     * Gets the rented region limit of the passed player.
+     *
+     * @param player The player to check for.
+     * @return The limit they have on rented regions.
+     */
+    int getMarketRegionLimit(Player player);
 
     /**
      * Obtains the passed shop's max stock based on owner permissions or administrator bypasses.

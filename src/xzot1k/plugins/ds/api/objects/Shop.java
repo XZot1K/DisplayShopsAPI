@@ -291,4 +291,9 @@ public interface Shop {
      */
     void setCurrentEditor(UUID currentEditor);
 
+    /**
+     * Resets the shop entirely. The time stamp is also updated.
+     */
+    void reset();
+
 }
