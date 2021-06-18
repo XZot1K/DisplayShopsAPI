@@ -120,18 +120,14 @@ public interface DisplayShopsAPI {
     // getters & setters
 
     /**
-     * Returns the manager where most data and API methods are stored.
-     *
-     * @return The manager class.
+     * @return Returns the manager where most data and API methods are stored.
      */
     Manager getManager();
 
     /**
-     * Returns the server version.
-     *
-     * @return Server version.
+     * @return Server version in the format XXX.X where the decimal digit is the 'R' version.
      */
-    String getServerVersion();
+    double getServerVersion();
 
     /**
      * Checks if paper spigot methods exist.
@@ -153,8 +149,6 @@ public interface DisplayShopsAPI {
      * @param text The text to store on the next available line in the file.
      */
     void writeToLog(String text);
-
-    boolean isOffHandVersion();
 
     boolean isPrismaInstalled();
 

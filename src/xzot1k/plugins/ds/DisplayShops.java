@@ -31,10 +31,12 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     }
 
     @Override
-    public void onEnable() {}
+    public void onEnable() {
+    }
 
     @Override
-    public void onDisable() {}
+    public void onDisable() {
+    }
 
     @Override
     public void log(Level level, String message) {
@@ -107,17 +109,12 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     }
 
     @Override
-    public String getServerVersion() {
-        return null;
+    public double getServerVersion() {
+        return 0;
     }
 
     @Override
     public boolean isPaperSpigot() {
-        return false;
-    }
-
-    @Override
-    public boolean isOffHandVersion() {
         return false;
     }
 
