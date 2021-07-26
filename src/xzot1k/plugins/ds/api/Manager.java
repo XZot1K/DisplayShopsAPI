@@ -33,16 +33,16 @@ import java.util.UUID;
 public interface Manager {
 
     /**
-     * Loads the passed player's data pack. If not found, a new data pack module is created.  (CAN RETURN NULL)
+     * Loads the passed player's data pack. If not found, a new data pack module is created. (CAN RETURN NULL)
      *
      * @param player The player to load the data pack for.
      */
     DataPack loadDataPack(Player player);
 
     /**
-     * Loads the all player data packs.
+     * Attempts to remove any player data from the database when the player's last seen exceeds one year.
      */
-    void loadAllDataPacks();
+    void cleanUpDataPacks();
 
     /**
      * Ray traces from the provided vectors to obtain a shop from the locations it passes through.
@@ -270,10 +270,10 @@ public interface Manager {
     /**
      * Attempts to load all available shops from the database.
      *
-     * @param isAsync   Whether the task is ran on the main thread.
-     * @param tableName The table where the data is located in the database.
+     * @param isAsync Whether the task is ran on the main thread.
+     * @param cleanUp Deletes all shops that have invalid data (Example: No longer existing worlds).
      */
-    void loadShops(boolean isAsync, String tableName);
+    void loadShops(boolean isAsync, boolean cleanUp);
 
     /**
      * Checks to see if the material is blocked or not.
@@ -290,8 +290,10 @@ public interface Manager {
 
     /**
      * Loads all market regions into the memory.
+     *
+     * @param cleanUp Deletes all market regions that have invalid data (Example: No longer existing worlds).
      */
-    void loadMarketRegions();
+    void loadMarketRegions(boolean cleanUp);
 
     /**
      * Obtains the default base material without checking attached durability.

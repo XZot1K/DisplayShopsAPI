@@ -1,8 +1,11 @@
 ## Inside this file is where all messages and heavy text related feature can be modified. ##
+## In the event that this configuration is formatted refer to documentation here: ##
+## https://github.com/XZot1K/DisplayShopsAPI/blob/master/lang.yml ##
 
 ## Normal Messages ##
 no-permission: "&cYou do not have permission to use this."
 must-be-player: "&cYou must be a player to use this."
+clean-database: "&aThe database has been cleaned up."
 reload: "&aYou have re-loaded all shops and the configuration file."
 world-invalid: "&cThe world &e{world} &ais invalid."
 player-invalid: "&cThe player entered is either invalid or offline."

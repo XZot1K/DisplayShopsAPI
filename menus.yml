@@ -1,6 +1,9 @@
 ## Inside this file is where each and every GUI can be full customized. ##
 ## If HeadDatabase is installed or you'd like to use normal player heads, You can use "HEAD:<value>" as any of the materials. Where <value> is either an ID or player name. ##
+## In the event that this configuration is formatted refer to documentation here: ##
+## https://github.com/XZot1K/DisplayShopsAPI/blob/master/menus.yml ##
 
+# These are items used to override items found in the original menus as a form of decoration.
 decorative-items:
   # This is the ID of the custom item which should NEVER be identical to another in this section.
   example-item:

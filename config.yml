@@ -1,7 +1,11 @@
 ## Inside this file is where all options and general settings can be modified. ##
+## In the event that this configuration is formatted refer to documentation here: ##
+## https://github.com/XZot1K/DisplayShopsAPI/blob/master/config.yml ##
 
 # All MySQL settings can be set and handled within this section.
 mysql:
+  # This is how often every 6 hours the mysql database will be dumped to a file in seconds (Set to -1 to disable).
+  dump-interval: 21600
   # The "use-ssl" feature enables SSL connection support.
   use-ssl: false
   database: "DisplayShops"
