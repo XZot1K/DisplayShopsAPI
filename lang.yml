@@ -171,6 +171,10 @@ rentable-interact: "&cThis shop is within a market region by the name of &e{id}&
 rentable-shop-delete: "&cYou are unable to delete a shop contained within a market region."
 region-location-fail: "&cThere was no region found at your location."
 region-limit-exceeded: "&cYou may not rent any more regions at this time (Limit exceeded)."
+no-hand-item: "&cThe item in hand is either invalid or already blocked."
+item-blocked: "&aThe item in hand was blocked from being sold in all future shops."
+item-unblocked: "&aThe item in hand was un-blocked and can now be sold in all shops."
+item-not-blocked: "&cThe item in hand is not currently blocked from being sold in shops."
 
 ## Hook Messages ##
 towny-no-access: "&cYou do not have access to this shop plot."

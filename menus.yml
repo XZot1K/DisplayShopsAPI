@@ -31,7 +31,6 @@ decorative-items:
       - ""
       - "&7I am just providing some simple information!"
 
-
 # This is the base block selection menu which adjusts its size based on available materials for selection and
 # allows selection which will adjust their shop's base block to the selected material.
 base-block-menu:
@@ -180,6 +179,9 @@ shop-visit-menu:
   # If this size is above 9, the menu will be displayed as a chest container. Otherwise, it will be shown as a hopper container.
   # (Note: This MUST be divisible by 9 and less than or equal to 54)
   size: 36
+
+  # Determines if admin shops will be shown or not.
+  show-admin-shops: true
 
   # These are the formats that replace the {type} placeholder.
   type-admin: "&cAdmin"

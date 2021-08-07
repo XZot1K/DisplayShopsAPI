@@ -25,7 +25,6 @@ import xzot1k.plugins.ds.api.objects.DataPack;
 import xzot1k.plugins.ds.api.objects.MarketRegion;
 import xzot1k.plugins.ds.api.objects.Shop;
 
-import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
@@ -499,8 +498,6 @@ public interface Manager {
     SerializeUtil getSerializeUtil();
 
     List<MarketRegion> getMarketRegions();
-
-    SimpleDateFormat getDateFormat();
 
     HashMap<UUID, DataPack> getDataPackMap();
 }

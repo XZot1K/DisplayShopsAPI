@@ -6,6 +6,7 @@ package xzot1k.plugins.ds;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import xzot1k.plugins.ds.api.Manager;
 import xzot1k.plugins.ds.api.handlers.DisplayPacket;
 import xzot1k.plugins.ds.api.objects.Shop;
@@ -42,6 +43,14 @@ public interface DisplayShopsAPI {
     // custom configurations
 
     /**
+     * Gets the id associated to the item in the blocked-items.yml.
+     *
+     * @param itemStack The item to check the id for.
+     * @return The id associated to the item in the blocked-items.yml (returns -1 if invalid).
+     */
+    long getBlockedItemId(ItemStack itemStack);
+
+    /**
      * Reloads all configs associated with DisplayShops.
      */
     void reloadConfigs();
@@ -66,6 +75,13 @@ public interface DisplayShopsAPI {
     void saveDefaultConfigs();
 
     // packet methods
+
+    /**
+     * Schedules a general thread-safe refresh for the shop's display.
+     *
+     * @param shop The shop to refresh the display of.
+     */
+    void refreshShop(Shop shop);
 
     /**
      * Gets the display packet a player currently has made for a specific shop (Can return NULL).

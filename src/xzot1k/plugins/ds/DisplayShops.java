@@ -6,6 +6,7 @@ package xzot1k.plugins.ds;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import xzot1k.plugins.ds.api.Manager;
 import xzot1k.plugins.ds.api.handlers.DisplayPacket;
@@ -54,6 +55,11 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     }
 
     @Override
+    public long getBlockedItemId(ItemStack itemStack) {
+        return -1;
+    }
+
+    @Override
     public void reloadConfigs() {
 
     }
@@ -72,6 +78,9 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     public void saveDefaultConfigs() {
 
     }
+
+    @Override
+    public void refreshShop(Shop shop) {}
 
     @Override
     public DisplayPacket getDisplayPacket(Shop shop, Player player) {

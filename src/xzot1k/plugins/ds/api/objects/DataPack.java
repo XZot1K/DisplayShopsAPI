@@ -15,6 +15,33 @@ import java.util.List;
 public interface DataPack {
 
     /**
+     * Updates the transaction limit counter for the shop.
+     *
+     * @param shop   The shop to update.
+     * @param isBuy  Whether the transaction was buy or sell.
+     * @param amount The amount to set.
+     */
+    void updateCurrentTransactionLimitCounter(Shop shop, boolean isBuy, long amount);
+
+    /**
+     * Gets the current transaction limit counter under the shop.
+     *
+     * @param shop  The shop to check for.
+     * @param isBuy Whether the transaction was buy or sell.
+     * @return The current counter for the shop.
+     */
+    long getCurrentTransactionCounter(Shop shop, boolean isBuy);
+
+    /**
+     * Checks if the transaction limit was reached.
+     *
+     * @param shop  The shop to check against.
+     * @param isBuy Whether the transaction was buy or sell.
+     * @return Whether the limit was met.
+     */
+    boolean hasMetTransactionLimit(Shop shop, boolean isBuy);
+
+    /**
      * Updates player's personal chat task values by cancelling the previous and cancelling the new after a configurable duration.
      *
      * @param player The player to update the chat task for.
@@ -76,6 +103,13 @@ public interface DataPack {
      * @return The string full of cooldowns.
      */
     String cooldownsToString();
+
+    /**
+     * Obtains a full string of transaction limits applied to the player.
+     *
+     * @return The string full of transaction limits.
+     */
+    String transactionLimitsToString();
 
     /**
      * Resets all type of editing a player is doing to a selected shop.
