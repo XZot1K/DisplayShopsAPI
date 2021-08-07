@@ -237,17 +237,17 @@ public interface Shop {
 
     void setTradeItem(ItemStack tradeItem);
 
-    String getChangeTimeStamp();
+    long getChangeTimeStamp();
 
-    void setChangeTimeStamp(String changeTimeStamp);
+    void setChangeTimeStamp(long changeTimeStamp);
 
-    String getLastBuyTimeStamp();
+    long getLastBuyTimeStamp();
 
-    void setLastBuyTimeStamp(String buyTimeStamp);
+    void setLastBuyTimeStamp(long buyTimeStamp);
 
-    String getLastSellTimeStamp();
+    long getLastSellTimeStamp();
 
-    void setLastSellTimeStamp(String sellTimeStamp);
+    void setLastSellTimeStamp(long sellTimeStamp);
 
     int getSellLimit();
 

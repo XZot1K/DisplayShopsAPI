@@ -6,6 +6,7 @@ package xzot1k.plugins.ds;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import xzot1k.plugins.ds.api.Manager;
 import xzot1k.plugins.ds.api.handlers.DisplayPacket;
 import xzot1k.plugins.ds.api.objects.Shop;
@@ -40,6 +41,14 @@ public interface DisplayShopsAPI {
     String getLatestVersion();
 
     // custom configurations
+
+    /**
+     * Gets the id associated to the item in the blocked-items.yml.
+     *
+     * @param itemStack The item to check the id for.
+     * @return The id associated to the item in the blocked-items.yml (returns -1 if invalid).
+     */
+    long getBlockedItemId(ItemStack itemStack);
 
     /**
      * Reloads all configs associated with DisplayShops.
