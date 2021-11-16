@@ -10,6 +10,7 @@ import org.bukkit.scheduler.BukkitTask;
 import xzot1k.plugins.ds.api.enums.ChatInteractionType;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public interface DataPack {
@@ -84,11 +85,22 @@ public interface DataPack {
     boolean hasUnlockedBBM(String unlockId);
 
     /**
-     * Toggles a base block appearance from locked to unlocked and vice versa.
+     * Unlocks the base-block appearance.
      *
      * @param unlockId The material followed by a colon and the durability.
      */
-    void toggleBBMLock(String unlockId);
+    void unlockBaseBlock(String unlockId);
+
+    /**
+     * Locks the base-block appearance.
+     *
+     * @param unlockId The material followed by a colon and the durability.
+     */
+    void lockBaseBlock(String unlockId);
+
+    String getBBMString();
+
+    void loadBBM(String loadString);
 
     /**
      * Updates all base-block data to either locked aside the default or unlock all.
@@ -117,9 +129,9 @@ public interface DataPack {
     void resetEditData();
 
     // getters & setters
-    String getBaseBlockUnlocks();
+    LinkedHashMap<String, Boolean> getBaseBlockUnlocks();
 
-    void setBaseBlockUnlocks(String baseBlockUnlocks);
+    void setBaseBlockUnlocks(LinkedHashMap<String, Boolean> baseBlockUnlocks);
 
     /**
      * Gets the shop object the player is currently tethered to from editing or any similar actions.
@@ -240,5 +252,12 @@ public interface DataPack {
      * Sets the current page the player is on from the visit page map.
      */
     void setCurrentVisitPage(int currentBaseBlockPage);
+
+    /**
+     * Determines if player will be notified .
+     */
+    boolean isTransactionNotify();
+
+    void setTransactionNotify(boolean transactionNotify);
 
 }

@@ -188,7 +188,7 @@ shop-visit-menu:
   type-normal: "&bPlayer"
 
   # This is the name used for the shop visit icon.
-  shop-name: "&f&l{item} &e&lShop" # The {item} placeholder will give the player a very brief idea of what the shop sells.
+  shop-name: "&f&l{item} &6&lShop" # The {item} placeholder will give the player a very brief idea of what the shop sells.
 
   # This will be the lore used for the shop visit icon (The {item} and {trade-item} can be used in the lore as well).
   shop-lore:
@@ -203,7 +203,7 @@ shop-visit-menu:
     - "&7Stock: &e{stock}"
     - "&7Balance: &e{balance}"
     - ""
-    - "&aClick &eto visit this shop for &e${cost}&a."
+    - "&eClick &7to visit this shop for &a${cost}&7."
     - ""
     - "&7&m------------------"
 
@@ -462,7 +462,7 @@ shop-edit-menu:
       - ""
       - "&7Usage Cost: &e${price}"
 
-  promotion-item:
+  description-item:
     slot: 6
     material: "BOOK"
     durability: 0
@@ -478,16 +478,13 @@ shop-edit-menu:
     # This is for special use of textures. Leave at -1 to avoid.
     model-data: 0
 
-    display-name: "&e&l! &b&lPromotion Management &e&l!"
+    display-name: "&e&l! &b&lDescription Management &e&l!"
     lore:
       - ""
-      - "&aLeft-Click &7to broadcast this shop to"
-      - "&7all players within the same world."
-      - ""
-      - "&aRight-Click &7to begin the process of"
+      - "&aLeft-Click &7to begin the process of"
       - "&7changing the description of the shop."
       - ""
-      - "&aShift + Click &7to begin to reset the"
+      - "&aRight-Click &7to begin to reset the"
       - "&7description of the shop."
       - ""
       - "&7Usage Cost: &e${price}"

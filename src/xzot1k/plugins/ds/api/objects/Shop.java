@@ -63,8 +63,9 @@ public interface Shop {
      * Runs all commands given to the shop.
      *
      * @param player the player used inside the commands.
+     * @param amount The amount for the {amount} placeholder.
      */
-    void runCommands(Player player);
+    void runCommands(Player player, int amount);
 
     /**
      * Attempts to teleport the passed player to this shop.

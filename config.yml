@@ -70,11 +70,11 @@ visit-charge: 100.0
 # If this is enabled, players will be unable to use the visit command nor any features related to it.
 shop-visiting: true
 
-# If this is enabled, players can broadcast their shop's location and shop item to other players on the server.
-allow-broadcasting: true
+# This is the duration the player must wait in between advertising their shop to other players.
+shop-advertise-cooldown: 60
 
-# This is the duration the player must wait in between broadcasting their shop to other players.
-shop-broadcast-cooldown: 15
+# This is the currency amount that represents the cost for advertising a shop.
+shop-advertise-cost: 120.0
 
 # This is the default color that will be used for the item name in the broadcast JSON message.
 # (Note: If the item has a custom name, that will take priority over this color)
@@ -163,6 +163,9 @@ whole-number-entries: false
 # If this option is enabled, numbers will be formatted into a short manner (e.g 1.2k or 1.4m)
 # (Note: The 'minimum-fraction-digits' option only affects the number before this format, the short format has around three decimal places respectfully)
 short-number-format: false
+
+# If this is enabled and short-number-format is disabled, numbers will be formatted with periods before commas to simulate UK number formatting.
+use-uk-format: false
 
 # This is the message the player must type to exit a chat interaction.
 chat-interaction-cancel: "cancel"

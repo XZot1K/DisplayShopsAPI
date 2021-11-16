@@ -113,7 +113,6 @@ unit-count-min: "&cThe unit count can not be decreased any further."
 unit-item-invalid: "&cUnable to find the unit item in this menu. Please try again."
 set-description-interaction: "&aPlease enter the description you would like to set for this shop (Type &e{cancel} &ato cancel):"
 description-set: "&aThe description for this shop has been set to &e{description}&a."
-broadcast-cooldown: "&cYou are unable to broadcast a shop for another &e{cooldown} &csecond(s)."
 shop-sell-fail: "&cFailed to sell to shop since similar item were unable to be found in the inventory."
 shop-id-invalid: "&cThe shop id &e{id} &cis invalid or no shop was able to be obtained."
 shop-unsafe-location: "&cThe shop with the id &e{id} &chas an unsafe location."
@@ -163,6 +162,7 @@ rent-expired: "&cYour market region at &e{id} &chas expired."
 region-rent-invalid: "&cThe region &e{id} &cis not currently rented."
 rent-time: "&aThe region &e{id} &awill expire in &e{duration}&a. &aUse &e/ds renew {id} &ato extend its rent!"
 shop-description-empty: "&cThe shop description is already non-existent."
+description-no-access: "&cYou don not have access to modify a shop description."
 market-region-reset: "&aThe market region &e{id} &ahas been reset."
 not-the-renter: "&cYou are not the renter of the &e{id} &cmarket region."
 rent-extended: "&aYou have extended the rent of the &e{id} &amarket region for &e${cost}&a! &aThe region will now expire in &e{duration}&a."
@@ -175,6 +175,9 @@ no-hand-item: "&cThe item in hand is either invalid or already blocked."
 item-blocked: "&aThe item in hand was blocked from being sold in all future shops."
 item-unblocked: "&aThe item in hand was un-blocked and can now be sold in all shops."
 item-not-blocked: "&cThe item in hand is not currently blocked from being sold in shops."
+cooldown: "&cYou may not use this for another &e{cooldown} &csecond(s)."
+notify-toggle-on: "&aShop sale notifications have been &eEnabled &afor you."
+notify-toggle-off: "&aShop sale notifications have been &eDisabled &afor you."
 
 ## Hook Messages ##
 towny-no-access: "&cYou do not have access to this shop plot."
@@ -193,8 +196,8 @@ transaction-reasons:
 
 
 ## Below are JSON messages, it is recommended to include a color code as a prefix for each word due to formatting.
-shop-broadcast: "&c&l[!]&r &aThe player &e{player} &ais inviting you to come see their shop at &6X: &e{x} &6Y: &e{y} &6Z: &e{z} &awhich is selling the &f{item}&a! &e(Click This Message To Visit for &e${charge}&e)"
 shop-id-copy: "&aThe shop currently in focus has the id &e{id}&a. &e(Click To Copy)"
+shop-advertise: "&c&l[!]&r &e{player} &7advertised their shop &7(Buy: &e${buy} &7Sell: &e${sell}&7) &a[Click To Visit] &b[Preview]"
 
 ## Enabled and Disabled translations ##
 # These are general translations used throughout the plugin to display the current status of specific features.
