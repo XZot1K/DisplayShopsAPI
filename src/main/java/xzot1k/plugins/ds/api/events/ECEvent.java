@@ -14,7 +14,7 @@ public interface ECEvent {
     /**
      * Takes and gives currency from the players accordingly.
      *
-     * @parm chargeInvestor determines whether the investor will be charged for the transaction or not (If the type is NOT sell).
+     * @param chargeInvestor determines whether the investor will be charged for the transaction or not (If the type is NOT sell).
      */
     void performCurrencyTransfer(boolean chargeInvestor);
 
