@@ -77,16 +77,20 @@ memberSearchIndex = [{
     "c": "CurrencyTransferEvent",
     "l": "CurrencyTransferEvent(DisplayShopsAPI, Shop, EconomyCallType, Player, OfflinePlayer, double, double, boolean, boolean, boolean, EconomyCallEvent)",
     "u": "%3Cinit%3E(xzot1k.plugins.ds.DisplayShopsAPI,xzot1k.plugins.ds.api.objects.Shop,xzot1k.plugins.ds.api.enums.EconomyCallType,org.bukkit.entity.Player,org.bukkit.OfflinePlayer,double,double,boolean,boolean,boolean,xzot1k.plugins.ds.api.events.EconomyCallEvent)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "MarketRegion", "l": "delete(boolean)"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "delete(boolean)"}, {
-    "p": "xzot1k.plugins.ds.api.enums",
-    "c": "ChatInteractionType",
-    "l": "DEPOSIT_BALANCE"
-}, {"p": "xzot1k.plugins.ds.api.enums", "c": "ChatInteractionType", "l": "DEPOSIT_STOCK"}, {
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "MarketRegion", "l": "delete(boolean)"}, {
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "Shop",
-    "l": "display(Player, boolean)",
-    "u": "display(org.bukkit.entity.Player,boolean)"
-}, {"p": "xzot1k.plugins.ds.exceptions", "c": "DisplayFailException", "l": "DisplayFailException(String)", "u": "%3Cinit%3E(java.lang.String)"}, {
+    "l": "delete(boolean)"
+}, {"p": "xzot1k.plugins.ds.api.enums", "c": "ChatInteractionType", "l": "DEPOSIT_BALANCE"}, {
+    "p": "xzot1k.plugins.ds.api.enums",
+    "c": "ChatInteractionType",
+    "l": "DEPOSIT_STOCK"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "display(Player, boolean)", "u": "display(org.bukkit.entity.Player,boolean)"}, {
+    "p": "xzot1k.plugins.ds.exceptions",
+    "c": "DisplayFailException",
+    "l": "DisplayFailException(String)",
+    "u": "%3Cinit%3E(java.lang.String)"
+}, {
     "p": "xzot1k.plugins.ds.api.handlers",
     "c": "ParticleHandler",
     "l": "displayParticle(Player, String, Location, double, double, double, int, int)",
@@ -142,25 +146,24 @@ memberSearchIndex = [{
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "MarketRegion",
     "l": "formattedTimeUntilExpire()"
-}, {"p": "xzot1k.plugins.ds.api", "c": "Manager", "l": "generateNewId()"}, {"p": "xzot1k.plugins.ds.api", "c": "Manager", "l": "getActionBarHandler()"}, {
-    "p": "xzot1k.plugins.ds.api",
-    "c": "PacketManager",
-    "l": "getActionBarHandler()"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "getAssistants()"}, {
-    "p": "xzot1k.plugins.ds.api",
-    "c": "Manager",
-    "l": "getBaseBlockOffsets(Shop)",
-    "u": "getBaseBlockOffsets(xzot1k.plugins.ds.api.objects.Shop)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "DataPack", "l": "getBaseBlockPageMap()"}, {
+}, {"p": "xzot1k.plugins.ds.api", "c": "Manager", "l": "generateNewId()"}, {"p": "xzot1k.plugins.ds.api", "c": "PacketManager", "l": "getActionBarHandler()"}, {
+    "p": "xzot1k.plugins.ds.api.objects",
+    "c": "Shop",
+    "l": "getAssistants()"
+}, {"p": "xzot1k.plugins.ds.api", "c": "Manager", "l": "getBaseBlockOffsets(Shop)", "u": "getBaseBlockOffsets(xzot1k.plugins.ds.api.objects.Shop)"}, {
+    "p": "xzot1k.plugins.ds.api.objects",
+    "c": "DataPack",
+    "l": "getBaseBlockPageMap()"
+}, {
     "p": "xzot1k.plugins.ds.api",
     "c": "Manager",
     "l": "getBaseBlockSelectionMenu(Player, Shop)",
     "u": "getBaseBlockSelectionMenu(org.bukkit.entity.Player,xzot1k.plugins.ds.api.objects.Shop)"
-}, {"p": "xzot1k.plugins.ds.api", "c": "Manager", "l": "getBaseBlockType()"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "DataPack", "l": "getBaseBlockUnlocks()"}, {
+}, {"p": "xzot1k.plugins.ds.api", "c": "Manager", "l": "getBaseBlockType()"}, {
     "p": "xzot1k.plugins.ds.api.objects",
-    "c": "Shop",
-    "l": "getBaseLocation()"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "DataPack", "l": "getBBMString()"}, {
+    "c": "DataPack",
+    "l": "getBaseBlockUnlocks()"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "getBaseLocation()"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "DataPack", "l": "getBBMString()"}, {
     "p": "xzot1k.plugins.ds",
     "c": "DisplayShopsAPI",
     "l": "getBlockedItemId(ItemStack)",
@@ -272,23 +275,23 @@ memberSearchIndex = [{
     "p": "xzot1k.plugins.ds.api.events",
     "c": "CurrencyTransferEvent",
     "l": "getHandlers()"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ECEvent", "l": "getHandlers()"}, {"p": "xzot1k.plugins.ds.api.events", "c": "EconomyCallEvent", "l": "getHandlers()"}, {
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ECEvent", "l": "getHandlers()"}, {
     "p": "xzot1k.plugins.ds.api.events",
-    "c": "MarketRegionRentEvent",
+    "c": "EconomyCallEvent",
     "l": "getHandlers()"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopCreationEvent", "l": "getHandlers()"}, {
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "MarketRegionRentEvent", "l": "getHandlers()"}, {
     "p": "xzot1k.plugins.ds.api.events",
-    "c": "ShopDeletionEvent",
+    "c": "ShopCreationEvent",
     "l": "getHandlers()"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopEditEvent", "l": "getHandlers()"}, {
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopDeletionEvent", "l": "getHandlers()"}, {
     "p": "xzot1k.plugins.ds.api.events",
-    "c": "ShopItemSetEvent",
+    "c": "ShopEditEvent",
     "l": "getHandlers()"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopTransactionEvent", "l": "getHandlers()"}, {
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopItemSetEvent", "l": "getHandlers()"}, {
     "p": "xzot1k.plugins.ds.api.events",
-    "c": "ShopVisitEvent",
+    "c": "ShopTransactionEvent",
     "l": "getHandlers()"
-}, {
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopVisitEvent", "l": "getHandlers()"}, {
     "p": "xzot1k.plugins.ds.api",
     "c": "Manager",
     "l": "getInventorySpaceForItem(Player, ItemStack)",
@@ -361,9 +364,9 @@ memberSearchIndex = [{
     "l": "getOwnerUniqueId()"
 }, {"p": "xzot1k.plugins.ds", "c": "DisplayShops", "l": "getPacketManager()"}, {"p": "xzot1k.plugins.ds", "c": "DisplayShopsAPI", "l": "getPacketManager()"}, {
     "p": "xzot1k.plugins.ds.api",
-    "c": "Manager",
+    "c": "PacketManager",
     "l": "getParticleHandler()"
-}, {"p": "xzot1k.plugins.ds.api", "c": "PacketManager", "l": "getParticleHandler()"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "LocationClone", "l": "getPitch()"}, {
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "LocationClone", "l": "getPitch()"}, {
     "p": "xzot1k.plugins.ds.api.events",
     "c": "ChatInteractionEvent",
     "l": "getPlayer()"
@@ -375,36 +378,40 @@ memberSearchIndex = [{
     "p": "xzot1k.plugins.ds.api.events",
     "c": "ShopDeletionEvent",
     "l": "getPlayer()"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopEditEvent", "l": "getPlayer()"}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopItemSetEvent", "l": "getPlayer()"}, {
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopEditEvent", "l": "getPlayer()"}, {
     "p": "xzot1k.plugins.ds.api.events",
-    "c": "ShopTransactionEvent",
+    "c": "ShopItemSetEvent",
     "l": "getPlayer()"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopVisitEvent", "l": "getPlayer()"}, {
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopTransactionEvent", "l": "getPlayer()"}, {
     "p": "xzot1k.plugins.ds.api.events",
-    "c": "ChatInteractionEvent",
+    "c": "ShopVisitEvent",
+    "l": "getPlayer()"
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ChatInteractionEvent", "l": "getPlayerEntryValue()"}, {
+    "p": "xzot1k.plugins.ds.api.events",
+    "c": "ChatInteractionStageEvent",
     "l": "getPlayerEntryValue()"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ChatInteractionStageEvent", "l": "getPlayerEntryValue()"}, {
+}, {"p": "xzot1k.plugins.ds.api", "c": "Manager", "l": "getPlayerShops(Player)", "u": "getPlayerShops(org.bukkit.entity.Player)"}, {
+    "p": "xzot1k.plugins.ds",
+    "c": "DisplayShops",
+    "l": "getPluginInstance()"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Region", "l": "getPointOne()"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Region", "l": "getPointTwo()"}, {
     "p": "xzot1k.plugins.ds.api",
     "c": "Manager",
-    "l": "getPlayerShops(Player)",
-    "u": "getPlayerShops(org.bukkit.entity.Player)"
-}, {"p": "xzot1k.plugins.ds", "c": "DisplayShops", "l": "getPluginInstance()"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Region", "l": "getPointOne()"}, {
-    "p": "xzot1k.plugins.ds.api.objects",
-    "c": "Region",
-    "l": "getPointTwo()"
-}, {"p": "xzot1k.plugins.ds.api", "c": "Manager", "l": "getPotionLine(ItemStack)", "u": "getPotionLine(org.bukkit.inventory.ItemStack)"}, {
-    "p": "xzot1k.plugins.ds.api.events",
-    "c": "AffordCheckEvent",
-    "l": "getPrice()"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "CurrencyTransferEvent", "l": "getPrice()"}, {"p": "xzot1k.plugins.ds.api.events", "c": "ECEvent", "l": "getPrice()"}, {
-    "p": "xzot1k.plugins.ds.api.events",
-    "c": "EconomyCallEvent",
-    "l": "getPrice()"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "AffordCheckEvent", "l": "getProducer()"}, {
+    "l": "getPotionLine(ItemStack)",
+    "u": "getPotionLine(org.bukkit.inventory.ItemStack)"
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "AffordCheckEvent", "l": "getPrice()"}, {
     "p": "xzot1k.plugins.ds.api.events",
     "c": "CurrencyTransferEvent",
+    "l": "getPrice()"
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ECEvent", "l": "getPrice()"}, {"p": "xzot1k.plugins.ds.api.events", "c": "EconomyCallEvent", "l": "getPrice()"}, {
+    "p": "xzot1k.plugins.ds.api.events",
+    "c": "AffordCheckEvent",
     "l": "getProducer()"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ECEvent", "l": "getProducer()"}, {"p": "xzot1k.plugins.ds.api.events", "c": "EconomyCallEvent", "l": "getProducer()"}, {
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "CurrencyTransferEvent", "l": "getProducer()"}, {
+    "p": "xzot1k.plugins.ds.api.events",
+    "c": "ECEvent",
+    "l": "getProducer()"
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "EconomyCallEvent", "l": "getProducer()"}, {
     "p": "xzot1k.plugins.ds.api",
     "c": "Manager",
     "l": "getPromotionPriceModifier(Player)",
@@ -413,35 +420,35 @@ memberSearchIndex = [{
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "MarketRegion",
     "l": "getRenewCost()"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "MarketRegion", "l": "getRentedTimeStamp()"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "MarketRegion", "l": "getRenter()"}, {
-    "p": "xzot1k.plugins.ds.api",
-    "c": "Manager",
-    "l": "getRomanNumeral(int)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "DataPack", "l": "getSelectedRegion()"}, {
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "MarketRegion", "l": "getRentedTimeStamp()"}, {
+    "p": "xzot1k.plugins.ds.api.objects",
+    "c": "MarketRegion",
+    "l": "getRenter()"
+}, {"p": "xzot1k.plugins.ds.api", "c": "Manager", "l": "getRomanNumeral(int)"}, {
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "DataPack",
-    "l": "getSelectedShop()"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "getSellCounter()"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "getSellLimit()"}, {
+    "l": "getSelectedRegion()"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "DataPack", "l": "getSelectedShop()"}, {
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "Shop",
-    "l": "getSellPrice(boolean)"
-}, {"p": "xzot1k.plugins.ds.api", "c": "PacketManager", "l": "getSerializeUtil()"}, {"p": "xzot1k.plugins.ds", "c": "DisplayShops", "l": "getServerVersion()"}, {
-    "p": "xzot1k.plugins.ds",
-    "c": "DisplayShopsAPI",
-    "l": "getServerVersion()"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "AffordCheckEvent", "l": "getShop()"}, {
+    "l": "getSellCounter()"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "getSellLimit()"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "getSellPrice(boolean)"}, {
+    "p": "xzot1k.plugins.ds.api",
+    "c": "PacketManager",
+    "l": "getSerializeUtil()"
+}, {"p": "xzot1k.plugins.ds", "c": "DisplayShops", "l": "getServerVersion()"}, {"p": "xzot1k.plugins.ds", "c": "DisplayShopsAPI", "l": "getServerVersion()"}, {
     "p": "xzot1k.plugins.ds.api.events",
-    "c": "CurrencyTransferEvent",
+    "c": "AffordCheckEvent",
     "l": "getShop()"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ECEvent", "l": "getShop()"}, {"p": "xzot1k.plugins.ds.api.events", "c": "EconomyCallEvent", "l": "getShop()"}, {
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "CurrencyTransferEvent", "l": "getShop()"}, {"p": "xzot1k.plugins.ds.api.events", "c": "ECEvent", "l": "getShop()"}, {
     "p": "xzot1k.plugins.ds.api.events",
-    "c": "ShopEditEvent",
+    "c": "EconomyCallEvent",
     "l": "getShop()"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopItemSetEvent", "l": "getShop()"}, {
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopEditEvent", "l": "getShop()"}, {
     "p": "xzot1k.plugins.ds.api.events",
-    "c": "ShopTransactionEvent",
+    "c": "ShopItemSetEvent",
     "l": "getShop()"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopVisitEvent", "l": "getShop()"}, {
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopTransactionEvent", "l": "getShop()"}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopVisitEvent", "l": "getShop()"}, {
     "p": "xzot1k.plugins.ds.api",
     "c": "Manager",
     "l": "getShop(Location)",
@@ -498,11 +505,11 @@ memberSearchIndex = [{
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "DataPack",
     "l": "getVisitPageMap()"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "LocationClone", "l": "getWorldName()"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "LocationClone", "l": "getX()"}, {
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "LocationClone", "l": "getWorldName()"}, {
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "LocationClone",
-    "l": "getY()"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "LocationClone", "l": "getYaw()"}, {
+    "l": "getX()"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "LocationClone", "l": "getY()"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "LocationClone", "l": "getYaw()"}, {
     "p": "xzot1k.plugins.ds.api.enums",
     "c": "Direction",
     "l": "getYaw(Player)",
@@ -608,41 +615,44 @@ memberSearchIndex = [{
     "c": "LocationClone",
     "l": "isSameNormal(Location)",
     "u": "isSameNormal(org.bukkit.Location)"
-}, {"p": "xzot1k.plugins.ds.api", "c": "Manager", "l": "isSimilar(ItemStack, ItemStack)", "u": "isSimilar(org.bukkit.inventory.ItemStack,org.bukkit.inventory.ItemStack)"}, {
+}, {
     "p": "xzot1k.plugins.ds.api",
     "c": "Manager",
-    "l": "isTooClose(Location)",
-    "u": "isTooClose(org.bukkit.Location)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "DataPack", "l": "isTransactionNotify()"}, {
+    "l": "isSimilar(ItemStack, ItemStack)",
+    "u": "isSimilar(org.bukkit.inventory.ItemStack,org.bukkit.inventory.ItemStack)"
+}, {"p": "xzot1k.plugins.ds.api", "c": "Manager", "l": "isTooClose(Location)", "u": "isTooClose(org.bukkit.Location)"}, {
+    "p": "xzot1k.plugins.ds.api.objects",
+    "c": "DataPack",
+    "l": "isTransactionNotify()"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "kill(Player)", "u": "kill(org.bukkit.entity.Player)"}, {
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "Shop",
-    "l": "kill(Player)",
-    "u": "kill(org.bukkit.entity.Player)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "killAll()"}, {
-    "p": "xzot1k.plugins.ds",
-    "c": "DisplayShopsAPI",
-    "l": "killCurrentShopPacket(Player)",
-    "u": "killCurrentShopPacket(org.bukkit.entity.Player)"
-}, {"p": "xzot1k.plugins.ds", "c": "DisplayShops", "l": "killCurrentShopPacket(Player)", "u": "killCurrentShopPacket(org.bukkit.entity.Player)"}, {
-    "p": "xzot1k.plugins.ds.api.objects",
-    "c": "DataPack",
-    "l": "loadBBM(String)",
-    "u": "loadBBM(java.lang.String)"
-}, {"p": "xzot1k.plugins.ds.api", "c": "Manager", "l": "loadDataPack(Player)", "u": "loadDataPack(org.bukkit.entity.Player)"}, {
-    "p": "xzot1k.plugins.ds.api",
-    "c": "Manager",
-    "l": "loadMarketRegions(boolean)"
-}, {"p": "xzot1k.plugins.ds.api", "c": "Manager", "l": "loadShops(boolean, boolean)", "u": "loadShops(boolean,boolean)"}, {
-    "p": "xzot1k.plugins.ds.api.objects",
-    "c": "DataPack",
-    "l": "lockBaseBlock(String)",
-    "u": "lockBaseBlock(java.lang.String)"
-}, {"p": "xzot1k.plugins.ds", "c": "DisplayShopsAPI", "l": "log(Level, String)", "u": "log(java.util.logging.Level,java.lang.String)"}, {
+    "l": "killAll()"
+}, {"p": "xzot1k.plugins.ds", "c": "DisplayShopsAPI", "l": "killCurrentShopPacket(Player)", "u": "killCurrentShopPacket(org.bukkit.entity.Player)"}, {
     "p": "xzot1k.plugins.ds",
     "c": "DisplayShops",
+    "l": "killCurrentShopPacket(Player)",
+    "u": "killCurrentShopPacket(org.bukkit.entity.Player)"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "DataPack", "l": "loadBBM(String)", "u": "loadBBM(java.lang.String)"}, {
+    "p": "xzot1k.plugins.ds.api",
+    "c": "Manager",
+    "l": "loadDataPack(Player)",
+    "u": "loadDataPack(org.bukkit.entity.Player)"
+}, {"p": "xzot1k.plugins.ds.api", "c": "Manager", "l": "loadMarketRegions(boolean)"}, {
+    "p": "xzot1k.plugins.ds.api",
+    "c": "Manager",
+    "l": "loadShops(boolean, boolean)",
+    "u": "loadShops(boolean,boolean)"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "DataPack", "l": "lockBaseBlock(String)", "u": "lockBaseBlock(java.lang.String)"}, {
+    "p": "xzot1k.plugins.ds",
+    "c": "DisplayShopsAPI",
     "l": "log(Level, String)",
     "u": "log(java.util.logging.Level,java.lang.String)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "makeAdminShop()"}, {
+}, {"p": "xzot1k.plugins.ds", "c": "DisplayShops", "l": "log(Level, String)", "u": "log(java.util.logging.Level,java.lang.String)"}, {
+    "p": "xzot1k.plugins.ds.api.objects",
+    "c": "Shop",
+    "l": "makeAdminShop()"
+}, {
     "p": "xzot1k.plugins.ds.api.events",
     "c": "MarketRegionRentEvent",
     "l": "MarketRegionRentEvent(Player, MarketRegion, boolean)",
@@ -721,12 +731,12 @@ memberSearchIndex = [{
     "p": "xzot1k.plugins.ds.api.enums",
     "c": "ChatInteractionType",
     "l": "SELL_PRICE"
-}, {"p": "xzot1k.plugins.ds.api.handlers", "c": "ActionBarHandler", "l": "sendActionBar(Player, String)", "u": "sendActionBar(org.bukkit.entity.Player,java.lang.String)"}, {
-    "p": "xzot1k.plugins.ds.api",
-    "c": "PacketManager",
+}, {
+    "p": "xzot1k.plugins.ds.api.handlers",
+    "c": "ActionBarHandler",
     "l": "sendActionBar(Player, String)",
     "u": "sendActionBar(org.bukkit.entity.Player,java.lang.String)"
-}, {
+}, {"p": "xzot1k.plugins.ds.api", "c": "PacketManager", "l": "sendActionBar(Player, String)", "u": "sendActionBar(org.bukkit.entity.Player,java.lang.String)"}, {
     "p": "xzot1k.plugins.ds",
     "c": "DisplayShopsAPI",
     "l": "sendDisplayPacket(Shop, Player, boolean)",
@@ -746,59 +756,60 @@ memberSearchIndex = [{
     "c": "DataPack",
     "l": "setBaseBlockUnlocks(LinkedHashMap<String, Boolean>)",
     "u": "setBaseBlockUnlocks(java.util.LinkedHashMap)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setBaseLocation(LocationClone)", "u": "setBaseLocation(xzot1k.plugins.ds.api.objects.LocationClone)"}, {
+}, {
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "Shop",
-    "l": "setBuyCounter(int)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setBuyLimit(int)"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setBuyPrice(double)"}, {
-    "p": "xzot1k.plugins.ds.api.events",
-    "c": "ShopCreationEvent",
-    "l": "setCancelBlockPlaceEvent(boolean)"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "AffordCheckEvent", "l": "setCancelled(boolean)"}, {
-    "p": "xzot1k.plugins.ds.api.events",
-    "c": "ChatInteractionEvent",
-    "l": "setCancelled(boolean)"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "CurrencyTransferEvent", "l": "setCancelled(boolean)"}, {
-    "p": "xzot1k.plugins.ds.api.events",
-    "c": "ECEvent",
-    "l": "setCancelled(boolean)"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "EconomyCallEvent", "l": "setCancelled(boolean)"}, {
-    "p": "xzot1k.plugins.ds.api.events",
-    "c": "MarketRegionRentEvent",
-    "l": "setCancelled(boolean)"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopCreationEvent", "l": "setCancelled(boolean)"}, {
-    "p": "xzot1k.plugins.ds.api.events",
-    "c": "ShopDeletionEvent",
-    "l": "setCancelled(boolean)"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopEditEvent", "l": "setCancelled(boolean)"}, {
-    "p": "xzot1k.plugins.ds.api.events",
-    "c": "ShopItemSetEvent",
-    "l": "setCancelled(boolean)"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopTransactionEvent", "l": "setCancelled(boolean)"}, {
-    "p": "xzot1k.plugins.ds.api.events",
-    "c": "ShopVisitEvent",
-    "l": "setCancelled(boolean)"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "AffordCheckEvent", "l": "setCanInvestorAfford(boolean)"}, {
-    "p": "xzot1k.plugins.ds.api.events",
-    "c": "ECEvent",
-    "l": "setCanInvestorAfford(boolean)"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "EconomyCallEvent", "l": "setCanInvestorAfford(boolean)"}, {
+    "l": "setBaseLocation(LocationClone)",
+    "u": "setBaseLocation(xzot1k.plugins.ds.api.objects.LocationClone)"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setBuyCounter(int)"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setBuyLimit(int)"}, {
+    "p": "xzot1k.plugins.ds.api.objects",
+    "c": "Shop",
+    "l": "setBuyPrice(double)"
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopCreationEvent", "l": "setCancelBlockPlaceEvent(boolean)"}, {
     "p": "xzot1k.plugins.ds.api.events",
     "c": "AffordCheckEvent",
-    "l": "setCanProducerAfford(boolean)"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ECEvent", "l": "setCanProducerAfford(boolean)"}, {
+    "l": "setCancelled(boolean)"
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ChatInteractionEvent", "l": "setCancelled(boolean)"}, {
+    "p": "xzot1k.plugins.ds.api.events",
+    "c": "CurrencyTransferEvent",
+    "l": "setCancelled(boolean)"
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ECEvent", "l": "setCancelled(boolean)"}, {
     "p": "xzot1k.plugins.ds.api.events",
     "c": "EconomyCallEvent",
-    "l": "setCanProducerAfford(boolean)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setChangeTimeStamp(long)"}, {
+    "l": "setCancelled(boolean)"
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "MarketRegionRentEvent", "l": "setCancelled(boolean)"}, {
     "p": "xzot1k.plugins.ds.api.events",
-    "c": "ShopVisitEvent",
-    "l": "setChargeAmount(double)"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ECEvent", "l": "setChargedInvestor(boolean)"}, {
+    "c": "ShopCreationEvent",
+    "l": "setCancelled(boolean)"
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopDeletionEvent", "l": "setCancelled(boolean)"}, {
+    "p": "xzot1k.plugins.ds.api.events",
+    "c": "ShopEditEvent",
+    "l": "setCancelled(boolean)"
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopItemSetEvent", "l": "setCancelled(boolean)"}, {
+    "p": "xzot1k.plugins.ds.api.events",
+    "c": "ShopTransactionEvent",
+    "l": "setCancelled(boolean)"
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopVisitEvent", "l": "setCancelled(boolean)"}, {
+    "p": "xzot1k.plugins.ds.api.events",
+    "c": "AffordCheckEvent",
+    "l": "setCanInvestorAfford(boolean)"
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ECEvent", "l": "setCanInvestorAfford(boolean)"}, {
     "p": "xzot1k.plugins.ds.api.events",
     "c": "EconomyCallEvent",
+    "l": "setCanInvestorAfford(boolean)"
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "AffordCheckEvent", "l": "setCanProducerAfford(boolean)"}, {
+    "p": "xzot1k.plugins.ds.api.events",
+    "c": "ECEvent",
+    "l": "setCanProducerAfford(boolean)"
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "EconomyCallEvent", "l": "setCanProducerAfford(boolean)"}, {
+    "p": "xzot1k.plugins.ds.api.objects",
+    "c": "Shop",
+    "l": "setChangeTimeStamp(long)"
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "ShopVisitEvent", "l": "setChargeAmount(double)"}, {
+    "p": "xzot1k.plugins.ds.api.events",
+    "c": "ECEvent",
     "l": "setChargedInvestor(boolean)"
-}, {
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "EconomyCallEvent", "l": "setChargedInvestor(boolean)"}, {
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "DataPack",
     "l": "setChatInteractionType(ChatInteractionType)",
@@ -884,50 +895,50 @@ memberSearchIndex = [{
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "Shop",
     "l": "setSellCounter(int)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setSellLimit(int)"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setSellPrice(double)"}, {
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setSellLimit(int)"}, {
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "Shop",
-    "l": "setShopId(UUID)",
-    "u": "setShopId(java.util.UUID)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setShopItem(ItemStack)", "u": "setShopItem(org.bukkit.inventory.ItemStack)"}, {
+    "l": "setSellPrice(double)"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setShopId(UUID)", "u": "setShopId(java.util.UUID)"}, {
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "Shop",
-    "l": "setShopItemAmount(int)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setStock(int)"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setStoredBalance(double)"}, {
+    "l": "setShopItem(ItemStack)",
+    "u": "setShopItem(org.bukkit.inventory.ItemStack)"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setShopItemAmount(int)"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setStock(int)"}, {
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "Shop",
-    "l": "setStoredBaseBlockMaterial(String)",
-    "u": "setStoredBaseBlockMaterial(java.lang.String)"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ECEvent", "l": "setTax(double)"}, {
+    "l": "setStoredBalance(double)"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setStoredBaseBlockMaterial(String)", "u": "setStoredBaseBlockMaterial(java.lang.String)"}, {
     "p": "xzot1k.plugins.ds.api.events",
-    "c": "EconomyCallEvent",
+    "c": "ECEvent",
     "l": "setTax(double)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "setTradeItem(ItemStack)", "u": "setTradeItem(org.bukkit.inventory.ItemStack)"}, {
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "EconomyCallEvent", "l": "setTax(double)"}, {
     "p": "xzot1k.plugins.ds.api.objects",
-    "c": "DataPack",
-    "l": "setTransactionNotify(boolean)"
-}, {"p": "xzot1k.plugins.ds", "c": "DisplayShops", "l": "setupTasks()"}, {"p": "xzot1k.plugins.ds", "c": "DisplayShopsAPI", "l": "setupTasks()"}, {
-    "p": "xzot1k.plugins.ds.api.objects",
-    "c": "DataPack",
-    "l": "setVisitPageMap(HashMap<Integer, List<ItemStack>>)",
-    "u": "setVisitPageMap(java.util.HashMap)"
-}, {"p": "xzot1k.plugins.ds.api.events", "c": "ECEvent", "l": "setWillSucceed(boolean)"}, {
+    "c": "Shop",
+    "l": "setTradeItem(ItemStack)",
+    "u": "setTradeItem(org.bukkit.inventory.ItemStack)"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "DataPack", "l": "setTransactionNotify(boolean)"}, {"p": "xzot1k.plugins.ds", "c": "DisplayShops", "l": "setupTasks()"}, {
+    "p": "xzot1k.plugins.ds",
+    "c": "DisplayShopsAPI",
+    "l": "setupTasks()"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "DataPack", "l": "setVisitPageMap(HashMap<Integer, List<ItemStack>>)", "u": "setVisitPageMap(java.util.HashMap)"}, {
     "p": "xzot1k.plugins.ds.api.events",
-    "c": "EconomyCallEvent",
+    "c": "ECEvent",
     "l": "setWillSucceed(boolean)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "LocationClone", "l": "setWorldName(String)", "u": "setWorldName(java.lang.String)"}, {
+}, {"p": "xzot1k.plugins.ds.api.events", "c": "EconomyCallEvent", "l": "setWillSucceed(boolean)"}, {
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "LocationClone",
-    "l": "setX(double)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "LocationClone", "l": "setY(double)"}, {
+    "l": "setWorldName(String)",
+    "u": "setWorldName(java.lang.String)"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "LocationClone", "l": "setX(double)"}, {
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "LocationClone",
-    "l": "setYaw(double)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "LocationClone", "l": "setZ(double)"}, {"p": "xzot1k.plugins.ds.api.enums", "c": "ItemType", "l": "SHOP"}, {
-    "p": "xzot1k.plugins.ds.api.enums",
-    "c": "ChatInteractionType",
-    "l": "SHOP_ITEM_AMOUNT"
-}, {
+    "l": "setY(double)"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "LocationClone", "l": "setYaw(double)"}, {
+    "p": "xzot1k.plugins.ds.api.objects",
+    "c": "LocationClone",
+    "l": "setZ(double)"
+}, {"p": "xzot1k.plugins.ds.api.enums", "c": "ItemType", "l": "SHOP"}, {"p": "xzot1k.plugins.ds.api.enums", "c": "ChatInteractionType", "l": "SHOP_ITEM_AMOUNT"}, {
     "p": "xzot1k.plugins.ds.api.events",
     "c": "ShopCreationEvent",
     "l": "ShopCreationEvent(Player, Location)",
@@ -985,7 +996,11 @@ memberSearchIndex = [{
     "c": "SerializeUtil",
     "l": "toString(ItemStack)",
     "u": "toString(org.bukkit.inventory.ItemStack)"
-}, {"p": "xzot1k.plugins.ds.api.enums", "c": "ItemType", "l": "TRADE"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "DataPack", "l": "transactionLimitsToString()"}, {
+}, {"p": "xzot1k.plugins.ds.api", "c": "PacketManager", "l": "toString(ItemStack)", "u": "toString(org.bukkit.inventory.ItemStack)"}, {
+    "p": "xzot1k.plugins.ds.api.enums",
+    "c": "ItemType",
+    "l": "TRADE"
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "DataPack", "l": "transactionLimitsToString()"}, {
     "p": "xzot1k.plugins.ds.api.objects",
     "c": "DataPack",
     "l": "unlockBaseBlock(String)",
@@ -1024,7 +1039,11 @@ memberSearchIndex = [{
     "c": "PacketManager",
     "l": "updateNBT(ItemStack, String, String)",
     "u": "updateNBT(org.bukkit.inventory.ItemStack,java.lang.String,java.lang.String)"
-}, {"p": "xzot1k.plugins.ds.api.objects", "c": "MarketRegion", "l": "updateRentedTimeStamp()"}, {"p": "xzot1k.plugins.ds.api.objects", "c": "Shop", "l": "updateTimeStamp()"}, {
+}, {"p": "xzot1k.plugins.ds.api.objects", "c": "MarketRegion", "l": "updateRentedTimeStamp()"}, {
+    "p": "xzot1k.plugins.ds.api.objects",
+    "c": "Shop",
+    "l": "updateTimeStamp()"
+}, {
     "p": "xzot1k.plugins.ds.api",
     "c": "Manager",
     "l": "updateTransactionMenu(Inventory, Player, Shop, int)",
