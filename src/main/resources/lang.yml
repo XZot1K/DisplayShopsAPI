@@ -181,6 +181,7 @@ notify-toggle-off: "&aShop sale notifications have been &eDisabled &afor you."
 visit-filter-prompt: "&aPlease enter the shop's item name and/or material type to find matches (Type &e{cancel} &ato cancel):"
 visit-filter-count: "&aFound &e{count} &ashop results with &e{filter} &ain either the name, description, type, and/or price!"
 visit-filter-none: "&cNo shops contain &e{filter} &cin their name, description, type, and/or price."
+balance-command-usage: "&cUsage: &e/displayshops balance <deposit|withdraw> <amount>"
 
 ## Hook Messages ##
 towny-no-access: "&cYou do not have access to this shop plot."

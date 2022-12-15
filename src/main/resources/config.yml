@@ -20,6 +20,10 @@ mysql:
 # immediately after all packets are sent out and managed. This will resolve the increasing memory usage until garbage collection automates later on.
 run-gc-immediately: true
 
+# When shops are loaded or the cleanup command is executed all shops with owners that have been in-active for
+# this amount of time (in seconds) will be deleted.
+clean-inactive-duration: -1
+
 # These will completely determine how piston protection is handled.
 piston-protection:
   # This option determines if piston protection should even be used (WARNING: base-block will be damaged if pushed/retracted, if disabled).
@@ -145,6 +149,9 @@ empty-shop-item: true
 
 # If this option is enabled, shops will use the owner's balance instead of the stored balance when they are online.
 sync-owner-balance: false
+
+# This cooldown acts as a delay between performing a buy/sell action within the transaction menu as an attempt to prevent auto-clicking.
+transaction-cooldown: 1
 
 # This is the price the player must pay to get a shop creation item.
 creation-item-price: 250

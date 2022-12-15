@@ -16,6 +16,8 @@ public interface PacketManager {
 
     SerializeUtil getSerializeUtil();
 
+    String toString(@NotNull ItemStack itemStack);
+
     ItemStack toItem(@NotNull String itemString);
 
     String toJSON(@NotNull ItemStack itemStack);

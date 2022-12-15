@@ -7,6 +7,7 @@ package xzot1k.plugins.ds.api.objects;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import xzot1k.plugins.ds.api.enums.EconomyCallType;
 
 import java.util.List;
@@ -290,7 +291,7 @@ public interface Shop {
      *
      * @param currentEditor The unique ID of the player editing.
      */
-    void setCurrentEditor(@NotNull UUID currentEditor);
+    void setCurrentEditor(@Nullable UUID currentEditor);
 
     /**
      * Resets the shop entirely. The time stamp is also updated.

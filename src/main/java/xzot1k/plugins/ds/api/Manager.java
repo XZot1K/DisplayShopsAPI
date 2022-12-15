@@ -16,11 +16,10 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionType;
 import org.bukkit.util.Vector;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import xzot1k.plugins.ds.api.enums.ChatInteractionType;
 import xzot1k.plugins.ds.api.enums.EconomyCallType;
 import xzot1k.plugins.ds.api.events.EconomyCallEvent;
-import xzot1k.plugins.ds.api.handlers.ActionBarHandler;
-import xzot1k.plugins.ds.api.handlers.ParticleHandler;
 import xzot1k.plugins.ds.api.objects.DataPack;
 import xzot1k.plugins.ds.api.objects.MarketRegion;
 import xzot1k.plugins.ds.api.objects.Shop;
@@ -427,7 +426,7 @@ public interface Manager {
      * @param amount The amount of the item stack.
      * @return The shop creation physical item stack.
      */
-    ItemStack buildShopCreationItem(@NotNull Player player, int amount);
+    ItemStack buildShopCreationItem(@Nullable Player player, int amount);
 
     /**
      * Builds and returns the shop currency item.
@@ -491,10 +490,6 @@ public interface Manager {
 
     // getters & setters
     Map<UUID, Shop> getShopMap();
-
-    ParticleHandler getParticleHandler();
-
-    ActionBarHandler getActionBarHandler();
 
     List<MarketRegion> getMarketRegions();
 
