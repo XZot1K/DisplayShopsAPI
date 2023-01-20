@@ -232,6 +232,33 @@ shop-visit-menu:
       - "&eand/or price."
 
   # Since the background items can only be set on the bottom row, it is recommended to keep the slot for this item in that same area.
+  type-item:
+    slot: 28
+    material: "MINECART"
+    durability: 0
+    amount: 1
+
+    # Enchantments use the ids from:  https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html
+    # (NOTE: Use the format "<id>:<level starting at 0>")
+    enchantments: [ ]
+    # Flags work similar to the enchantments and pull the ids from: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/ItemFlag.html
+    # (NOTE: You only need to add the id, if the flag is in the list it is just set to true.)
+    flags: [ ]
+    # This is for special use of textures. Leave at -1 to avoid.
+    model-data: 0
+
+    # These types will replace the {type} placeholder in the name.
+    buy-type: "Buy"
+    sell-type: "Sell"
+    both-type: "Buy & Sell"
+
+    display-name: "&eShop Type: &d{type}" # {type} determines whether the shops loaded are for buying, selling, or both.
+    lore:
+      - ""
+      - "&aClick &eto cycle the"
+      - "&eshop filter type."
+
+  # Since the background items can only be set on the bottom row, it is recommended to keep the slot for this item in that same area.
   next-page-item:
     slot: 34
     material: "HEAD:MHF_ArrowRight"
