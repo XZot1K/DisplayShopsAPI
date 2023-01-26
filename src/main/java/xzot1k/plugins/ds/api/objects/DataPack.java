@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitTask;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import xzot1k.plugins.ds.api.enums.ChatInteractionType;
 
 import java.util.HashMap;
@@ -132,7 +133,7 @@ public interface DataPack {
     // getters & setters
     LinkedHashMap<String, Boolean> getBaseBlockUnlocks();
 
-    void setBaseBlockUnlocks(@NotNull LinkedHashMap<String, Boolean> baseBlockUnlocks);
+    void setBaseBlockUnlocks(@Nullable LinkedHashMap<String, Boolean> baseBlockUnlocks);
 
     /**
      * Gets the shop object the player is currently tethered to from editing or any similar actions.
@@ -146,7 +147,7 @@ public interface DataPack {
      *
      * @param selectedShop The shop object to set as.
      */
-    void setSelectedShop(@NotNull Shop selectedShop);
+    void setSelectedShop(@Nullable Shop selectedShop);
 
     /**
      * Gets the current chat interaction type in-progress. This is what is used to define what
@@ -161,7 +162,7 @@ public interface DataPack {
      *
      * @param chatInteractionType The type to set as.
      */
-    void setChatInteractionType(@NotNull ChatInteractionType chatInteractionType);
+    void setChatInteractionType(@Nullable ChatInteractionType chatInteractionType);
 
     /**
      * Obtains the selected region of a player, if there is one.
@@ -175,7 +176,7 @@ public interface DataPack {
      *
      * @param selectedRegion The new region object.
      */
-    void setSelectedRegion(@NotNull Region selectedRegion);
+    void setSelectedRegion(@Nullable Region selectedRegion);
 
     /**
      * Checks if the player is currently in region selection mode.
@@ -193,7 +194,7 @@ public interface DataPack {
 
     BukkitTask getCurrentChatTask();
 
-    void setCurrentChatTask(@NotNull BukkitTask currentChatTask);
+    void setCurrentChatTask(@Nullable BukkitTask currentChatTask);
 
     /**
      * Gets the player cooldown map for the player.
@@ -214,7 +215,7 @@ public interface DataPack {
      *
      * @param baseBlockPageMap The map to set it as.
      */
-    void setBaseBlockPageMap(@NotNull HashMap<Integer, List<ItemStack>> baseBlockPageMap);
+    void setBaseBlockPageMap(@Nullable HashMap<Integer, List<ItemStack>> baseBlockPageMap);
 
     /**
      * Gets the current page the player is on from the base block page map.
@@ -240,7 +241,7 @@ public interface DataPack {
      *
      * @param visitPageMap The map to set it as.
      */
-    void setVisitPageMap(@NotNull HashMap<Integer, List<ItemStack>> visitPageMap);
+    void setVisitPageMap(@Nullable HashMap<Integer, List<ItemStack>> visitPageMap);
 
     /**
      * Gets the current page the player is on from the visit page map.
