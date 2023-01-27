@@ -147,6 +147,7 @@ base-block-menu:
       - ""
       - "&eUnlocked Appearance"
       - ""
+      - "{requirement}"
       - "&aClick &7to select this"
       - "&7as the base block appearance."
 
