@@ -22,3 +22,33 @@ For support or general information, including the Developer API please visit the
 ### DisplayShops Addons
 
 https://github.com/bzigus/DisplayShopAddon - `Handles a form of chest-linking allowing users to sync containters to their shops!`
+
+### Maven Dependency
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>com.github.XZot1K</groupId>
+        <artifactId>DisplayShopsAPI</artifactId>
+        <version>1.4.0</version>
+    </dependency>
+</dependencies>
+```
+### Gradle Dependency
+```gradle
+allprojects {
+   repositories {
+      maven { url 'https://jitpack.io' }
+   }
+}
+
+dependencies {
+   implementation 'com.github.XZot1K:DisplayShopsAPI:1.4.0'
+}
+```
