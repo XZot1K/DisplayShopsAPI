@@ -22,8 +22,3 @@ For support or general information, including the Developer API please visit the
 ### DisplayShops Addons
 
 https://github.com/bzigus/DisplayShopAddon - `Handles a form of chest-linking allowing users to sync containters to their shops!`
-
-***
-I currently use DedicatedMC as the official ZotWare testing server. If you need something powerful in terms of hardware without digging a hole in your pocket give them a shot and let me know how you like
-them!
-[![image](https://imgur.com/oqEKWO3.png)](https://dedimc.promo/XZot1K)
