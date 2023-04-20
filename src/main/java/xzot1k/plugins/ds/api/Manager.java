@@ -22,7 +22,6 @@ import xzot1k.plugins.ds.api.enums.EconomyCallType;
 import xzot1k.plugins.ds.api.events.EconomyCallEvent;
 import xzot1k.plugins.ds.api.objects.DataPack;
 import xzot1k.plugins.ds.api.objects.MarketRegion;
-import xzot1k.plugins.ds.api.objects.Pair;
 import xzot1k.plugins.ds.api.objects.Shop;
 
 import java.util.List;
@@ -496,7 +495,4 @@ public interface Manager {
 
     Map<UUID, DataPack> getDataPackMap();
 
-    List<Pair<Shop, ItemStack>> getShopVisitItemList();
-
-    void setShopVisitItemList(List<Pair<Shop, ItemStack>> shopVisitItemList);
 }

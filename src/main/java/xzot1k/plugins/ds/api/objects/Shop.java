@@ -298,4 +298,16 @@ public interface Shop {
      */
     void reset();
 
+    /**
+     * @return Gets the visit item icon for the visit shop menu.
+     */
+    ItemStack getVisitItemIcon();
+
+    /**
+     * Sets the visit item icon for the visit shop menu.
+     *
+     * @param visitItemIcon The new icon item.
+     */
+    void setVisitItemIcon(ItemStack visitItemIcon);
+
 }

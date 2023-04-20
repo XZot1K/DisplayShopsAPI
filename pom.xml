@@ -7,7 +7,7 @@
     <groupId>xzot1k.plugins.ds</groupId>
     <artifactId>API</artifactId>
     <name>DisplayShopsAPI</name>
-    <version>1.4.0</version>
+    <version>1.4.1</version>
     <packaging>jar</packaging>
 
 
