@@ -24,6 +24,9 @@ run-gc-immediately: true
 # this amount of time (in seconds) will be deleted.
 clean-inactive-duration: -1
 
+# When enabled, the blocks above shops will be cleared to avoid any display conflicts when shops are loaded in from the database.
+fix-above-blocks: true
+
 # These will completely determine how piston protection is handled.
 piston-protection:
   # This option determines if piston protection should even be used (WARNING: base-block will be damaged if pushed/retracted, if disabled).
