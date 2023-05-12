@@ -41,11 +41,11 @@ buttons:
     material: "EMERALD"
     name: "&eSell Price: &a{currency-symbol}{base-sell-price}"
     lore: [ "", "&aClick &7to adjust", "&7the sell price." ]
-  unit-count:
+  shop-item-amount:
     slot: 5
     material: "REDSTONE_TORCH"
-    name: "&eUnit Count: &a{unit-count}"
-    lore: [ "", "&aClick &7to adjust", "&7the unit count." ]
+    name: "&eStack Size: &a{unit-count}"
+    lore: [ "", "&aClick &7to adjust", "&7the shop item's unit", "&7stack size." ]
   stock:
     slot: 12
     material: "CHEST_MINECART"
