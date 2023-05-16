@@ -19,7 +19,7 @@ memberSearchIndex = [{
     "p": "xzot1k.plugins.ds.api.enums",
     "c": "InteractionType",
     "l": "AMOUNT_STOCK"
-}, {"p": "xzot1k.plugins.ds.api.enums", "c": "InteractionType", "l": "AMOUNT_UNIT_COUNT"}, {
+}, {
     "p": "xzot1k.plugins.ds.api",
     "c": "Manager",
     "l": "applyPlaceholders(Player, String, String...)",
@@ -1071,6 +1071,10 @@ memberSearchIndex = [{
     "c": "LocationClone",
     "l": "setZ(double)"
 }, {"p": "xzot1k.plugins.ds.api.enums", "c": "ItemType", "l": "SHOP"}, {
+    "p": "xzot1k.plugins.ds.api.enums",
+    "c": "InteractionType",
+    "l": "SHOP_ITEM_AMOUNT"
+}, {
     "p": "xzot1k.plugins.ds.api.events",
     "c": "ShopCreationEvent",
     "l": "ShopCreationEvent(Player, Location)",
