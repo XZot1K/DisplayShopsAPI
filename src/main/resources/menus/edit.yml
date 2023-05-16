@@ -44,7 +44,7 @@ buttons:
   shop-item-amount:
     slot: 5
     material: "REDSTONE_TORCH"
-    name: "&eStack Size: &a{unit-count}"
+    name: "&eStack Size: &a{shop-item-amount}"
     lore: [ "", "&aClick &7to adjust", "&7the shop item's unit", "&7stack size." ]
   stock:
     slot: 12

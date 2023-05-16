@@ -291,7 +291,7 @@ public interface Shop {
 
     int getShopItemAmount();
 
-    void setShopItemAmount(int shopItemAmount);
+    void setShopItemAmount(int tradeItemAmount);
 
     ItemStack getTradeItem();
 
@@ -311,7 +311,7 @@ public interface Shop {
 
     String getDescription();
 
-    void setDescription(@NotNull String description);
+    void setDescription(@Nullable String description);
 
     String getStoredBaseBlockMaterial();
 

@@ -10,6 +10,7 @@ import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import xzot1k.plugins.ds.DisplayShopsAPI;
 import xzot1k.plugins.ds.api.objects.Shop;
 
@@ -24,7 +25,7 @@ public class AffordCheckEvent extends Event implements Cancellable {
     private final Shop shop;
     private boolean cancelled, canInvestorAfford, canProducerAfford;
 
-    public AffordCheckEvent(@NotNull DisplayShopsAPI pluginInstance, @NotNull Player investor, @NotNull OfflinePlayer producer, boolean canInvestorAfford,
+    public AffordCheckEvent(@NotNull DisplayShopsAPI pluginInstance, @NotNull Player investor, @Nullable OfflinePlayer producer, boolean canInvestorAfford,
                             boolean canProducerAfford, double price, double taxedPrice, @NotNull EconomyCallEvent economyCallEvent, @NotNull Shop shop) {
         this.pluginInstance = pluginInstance;
         this.investor = investor;

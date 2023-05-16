@@ -15,7 +15,7 @@ buttons:
   amount:
     slot: 13
     material: "PAPER"
-    name: "&e{amount}"
+    name: "&a{currency-symbol}&e{amount}"
   add-1:
     slot: 1
     material: "LIME_WOOL"

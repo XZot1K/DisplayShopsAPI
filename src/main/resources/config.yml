@@ -287,7 +287,7 @@ sell-limit-cap: 9999999999
 # This is the maximum stored currency a shop can have as a balance.
 max-stored-currency: 9999999999
 
-# This is the maximum amount size a player can set on the item inside the shop.
+# This is the maximum stack size a player can set on the shop item inside the shop.
 max-item-stack-size: 256
 
 # This is the default shop limit a player can have at one time.
@@ -396,7 +396,7 @@ event-commands:
   # This is the list of commands that will be executed when the shop's player sell limit is changed.
   player-sell-limit: [ ]
 
-  # This is the list of commands that will be executed when the shop's amount is changed.
+  # This is the list of commands that will be executed when the shop's item stack size is changed.
   shop-amount: [ ]
 
   # This is the list of commands that will be executed when the shop's description is changed.

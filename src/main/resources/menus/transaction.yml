@@ -31,8 +31,9 @@ buttons:
     name: "&e&l$ &a&lPurchase &e&l$"
     lore:
       - ""
-      - "&aClick &7to purchase &e{unit-count} &7of this item"
-      - "&7from this shop for &e${buy-price}&7."
+      - "&aClick &7to purchase &e{item-count}"
+      - "&7of this item from this"
+      - "&7shop for &e${buy-price}&7."
   buy-all:
     slot: 11
     material: "REDSTONE_TORCH"
@@ -46,7 +47,7 @@ buttons:
     name: "&e&l$ &c&lSell &e&l$"
     lore:
       - ""
-      - "&aClick &7to sell &e{unit-count} &7of this item"
+      - "&aClick &7to sell &e{item-count} &7of this item"
       - "&7to this shop for &e${sell-price}&7."
   sell-all:
     slot: 15
@@ -73,8 +74,6 @@ buttons:
       - ""
       - "&aClick &7to increase the unit"
       - "&7count by &e1&7."
-      - "&aRight-Click &7to increase the unit"
-      - "&7count by &e{unit-increment}&7."
   unit-increase-more:
     slot: 29
     material: "ORANGE_WOOL"
