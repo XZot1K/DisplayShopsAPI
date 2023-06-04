@@ -290,6 +290,9 @@ require-empty-stock: true
 # If this option is enabled, the transaction interface will close after a transaction is complete.
 close-transaction-gui: true
 
+# If enabled, a shop can not be modified or purchased/sold to/from while undergoing edits by a player.
+editor-prevention: true
+
 # This is the block distance a shop must be from another shop (Regardless another shop is unable to be placed in a one block radius).
 required-shop-distance: 1
 
