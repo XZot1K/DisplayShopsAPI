@@ -24,6 +24,13 @@ run-gc-immediately: true
 # this amount of time (in seconds) will be deleted.
 clean-inactive-duration: -1
 
+# These will completely determine how explosive protection is handled.
+explosive-protection:
+  # If enabled explosives will not destroy shop base-blocks, otherwise shops will be properly deleted when exploded.
+  check: true
+  # If enabled, the alternative (more aggressive) protection will be enabled. When a shop is exploded, the entire explosion will be prevented.
+  alternative-method: false
+
 # These will completely determine how piston protection is handled.
 piston-protection:
   # This option determines if piston protection should even be used (WARNING: base-block will be damaged if pushed/retracted, if disabled).
