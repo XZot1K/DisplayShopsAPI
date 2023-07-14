@@ -186,6 +186,7 @@ balance-command-usage: "&cUsage: &e/displayshops balance <deposit|withdraw> <amo
 sale-item-cleared: "&aThe shop sale item has been cleared."
 trade-item-cleared: "&aThe shop trade item has been cleared."
 limits-cleared: "&aAll global and per-player limit counters were cleared."
+shop-id: "&6Shop ID: &e{id} &a[Click To Copy]"
 
 ## Hook Messages ##
 towny-no-access: "&cYou do not have access to this shop plot."
@@ -203,7 +204,7 @@ duration-format:
 
 ## Below are JSON messages, it is recommended to include a color code as a prefix for each word due to formatting.
 shop-id-copy: "&aThe shop currently in focus has the id &e{id}&a. &e(Click To Copy)"
-shop-advertise: "&c&l[!]&r &e{player} &7advertised their shop &7(Buy: &e${buy} &7Sell: &e${sell}&7) &a[Click To Visit] &b[Preview]"
+shop-advertise: "&c&l[!]&r &e{player} &7advertised their shop &7(Buy: &e${buy} &7Sell: &e${sell}&7) &a[Click To Visit] &b[Hover To Preview]"
 
 ## Enabled and Disabled translations ##
 # These are general translations used throughout the plugin to display the current status of specific features.
