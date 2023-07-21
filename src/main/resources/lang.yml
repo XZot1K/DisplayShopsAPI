@@ -211,7 +211,10 @@ duration-format:
 
 ## Below are JSON messages, it is recommended to include a color code as a prefix for each word due to formatting.
 shop-id-copy: "&aThe shop currently in focus has the id &e{id}&a. &e(Click To Copy)"
-shop-advertise: "&c&l[!]&r &e{player} &7advertised their shop &7(Buy: &e${buy} &7Sell: &e${sell}&7) &a[Click To Visit] &b[Preview]"
+shop-advertisement:
+  message: "&c&l[!]&r &e{player} &7advertised their shop &7(Buy: &e${buy} &7Sell: &e${sell}&7) &b[Hover To Preview] "
+  visit-clickable: "&a[Click To Visit]"
+
 
 ## Enabled and Disabled translations ##
 # These are general translations used throughout the plugin to display the current status of specific features.
