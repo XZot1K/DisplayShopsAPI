@@ -36,7 +36,7 @@ https://github.com/bzigus/DisplayShopAddon - `Handles a form of chest-linking al
     <dependency>
         <groupId>com.github.XZot1K</groupId>
         <artifactId>DisplayShopsAPI</artifactId>
-        <version>1.4.0</version>
+        <version>1.4.2</version>
     </dependency>
 </dependencies>
 ```
@@ -49,6 +49,6 @@ allprojects {
 }
 
 dependencies {
-   implementation 'com.github.XZot1K:DisplayShopsAPI:1.4.0'
+   implementation 'com.github.XZot1K:DisplayShopsAPI:1.4.2'
 }
 ```
