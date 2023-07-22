@@ -208,6 +208,9 @@ duration-format:
   minutes: "&e{amount} &6Minute{plural}"    # Format used for the minute portion
   seconds: "&e{amount} &6Second{plural}"    # Format used for the second portion
 
+## Helper Messages ##
+# This message will be used in places where a value can not be completely removed, but the value needs a replacement to look appealing.
+not-applicable: "N/A"
 
 ## Below are JSON messages, it is recommended to include a color code as a prefix for each word due to formatting.
 shop-id-copy: "&aThe shop currently in focus has the id &e{id}&a. &e(Click To Copy)"
