@@ -142,9 +142,10 @@ public interface Manager {
      * Obtains any translation created for the passed material found in the "lang.yml".
      *
      * @param material The material to obtain the translation for.
+     * @param data     The durability/data value used in older versions (Optional, defaults to 0).
      * @return The translated version.
      */
-    String getTranslatedName(@NotNull Material material);
+    String getTranslatedName(Material material, int... data);
 
     /**
      * Obtains any translation created for the passed enchantment found in the "lang.yml".

@@ -200,10 +200,15 @@ duration-format:
   minutes: "&e{amount} &6Minute{plural}"    # Format used for the minute portion
   seconds: "&e{amount} &6Second{plural}"    # Format used for the second portion
 
+## Helper Messages ##
+# This message will be used in places where a value can not be completely removed, but the value needs a replacement to look appealing.
+not-applicable: "N/A"
 
 ## Below are JSON messages, it is recommended to include a color code as a prefix for each word due to formatting.
 shop-id: "&6Shop ID: &e{id} &a[Click To Copy]"
-shop-advertise: "&c&l[!]&r &e{player} &7advertised their shop &7(Buy: &e${buy} &7Sell: &e${sell}&7) &a[Click To Visit] &b[Hover To Preview]"
+shop-advertisement:
+  message: "&c&l[!]&r &e{player} &7advertised their shop &7(Buy: &e${buy} &7Sell: &e${sell}&7) &b[Hover To Preview] "
+  visit-clickable: "&a[Click To Visit]"
 
 ## Enabled and Disabled translations ##
 # These are general translations used throughout the plugin to display the current status of specific features.
@@ -267,6 +272,23 @@ translated-enchantment-names:
 # Here is where any material names can be placed and given a translated name that will be used in place for material names (No Item Meta) holograms.
 # A list of materials can be found here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
 # (Format: <exact material>: <translated name>)
+# Optionally :<durability> can be added behind the material name for older MineCraft versions.
 translated-material-names:
   DIAMOND_SWORD: "Diamond Sword"
   RED_WOOL: "Red Wool"
+  INK_SACK:0: "Ink Sac"
+  INK_SACK:1: "Red Dye"
+  INK_SACK:2: "Green Dye"
+  INK_SACK:3: "Coca Beans"
+  INK_SACK:4: "Lapis Lazuli"
+  INK_SACK:5: "Purple Dye"
+  INK_SACK:6: "Cyan Dye"
+  INK_SACK:7: "Light Gray Dye"
+  INK_SACK:8: "Gray Dye"
+  INK_SACK:9: "Pink Dye"
+  INK_SACK:10: "Lime Dye"
+  INK_SACK:11: "Yellow Dye"
+  INK_SACK:12: "Light Blue Dye"
+  INK_SACK:13: "Magenta Dye"
+  INK_SACK:14: "Orange Dye"
+  INK_SACK:15: "Bone Meal"
