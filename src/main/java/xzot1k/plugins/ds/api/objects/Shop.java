@@ -161,7 +161,7 @@ public interface Shop {
     // getters & setters
     ItemStack getShopItem();
 
-    void setShopItem(@NotNull ItemStack shopItem);
+    void setShopItem(ItemStack shopItem);
 
     /**
      * Gets the shop's unit buy price.
@@ -185,11 +185,11 @@ public interface Shop {
 
     UUID getOwnerUniqueId();
 
-    void setOwnerUniqueId(@NotNull UUID ownerUniqueId);
+    void setOwnerUniqueId(UUID ownerUniqueId);
 
     LocationClone getBaseLocation();
 
-    void setBaseLocation(@NotNull LocationClone baseLocation);
+    void setBaseLocation(LocationClone baseLocation);
 
     int getStock();
 
@@ -227,7 +227,7 @@ public interface Shop {
 
     List<String> getCommands();
 
-    void setCommands(@NotNull List<String> commands);
+    void setCommands(List<String> commands);
 
     List<UUID> getAssistants();
 
@@ -237,7 +237,7 @@ public interface Shop {
 
     ItemStack getTradeItem();
 
-    void setTradeItem(@NotNull ItemStack tradeItem);
+    void setTradeItem(ItemStack tradeItem);
 
     long getChangeTimeStamp();
 
@@ -261,11 +261,11 @@ public interface Shop {
 
     String getDescription();
 
-    void setDescription(@NotNull String description);
+    void setDescription(String description);
 
     String getStoredBaseBlockMaterial();
 
-    void setStoredBaseBlockMaterial(@NotNull String storedBaseBlockMaterial);
+    void setStoredBaseBlockMaterial(String storedBaseBlockMaterial);
 
     boolean canDynamicPriceChange();
 

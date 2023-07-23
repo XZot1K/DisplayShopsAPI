@@ -63,8 +63,7 @@ public interface Manager {
      * @param price           The price in use.
      * @return the economy call event
      */
-    EconomyCallEvent initiateShopEconomyTransaction(@NotNull Player investor, @NotNull OfflinePlayer producer, @NotNull Shop shop,
-                                                    @NotNull EconomyCallType economyCallType, double price);
+    EconomyCallEvent initiateShopEconomyTransaction(Player investor, OfflinePlayer producer, Shop shop, @NotNull EconomyCallType economyCallType, double price);
 
     /**
      * Runs the chat interaction operation as normal using the given parameters.
