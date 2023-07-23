@@ -273,11 +273,11 @@ max-stored-currency: 9999999999
 max-item-stack-size: 256
 
 # This is the default shop limit a player can have at one time.
-# (Note: This can be change for each player via permissions)
+# (Note: This can be changed for each player via permissions)
 default-shop-limit: 5
 
 # This is the default market region limit a play can have rented out at one time.
-# (Note: This can be change for each player via permissions)
+# (Note: This can be changed for each player via permissions)
 default-region-limit: 2
 
 # These are the default prices for shops.
