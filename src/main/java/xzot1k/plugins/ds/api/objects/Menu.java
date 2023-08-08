@@ -3,6 +3,7 @@ package xzot1k.plugins.ds.api.objects;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -64,12 +65,13 @@ public interface Menu {
     /**
      * Load pages based on specific attributes alongside filter text.
      *
-     * @param player     The player to create pages for.
-     * @param dataPack   The player's datapack.
-     * @param shop       The shop the player has currently selected.
-     * @param searchText The filter text to filter the items by.
+     * @param player             The player to create pages for.
+     * @param dataPack           The player's datapack.
+     * @param shop               The shop the player has currently selected.
+     * @param searchText         The filter text to filter the items by.
+     * @param typeItem           The type item used to filter shops by what actions can be performed.
      */
-    void loadPages(@NotNull Player player, @NotNull DataPack dataPack, @Nullable Shop shop, @Nullable String searchText);
+    void loadPages(@NotNull Player player, @NotNull DataPack dataPack, @Nullable Shop shop, @Nullable String searchText, @Nullable ItemStack typeItem);
 
     /**
      * Update the button based on specific attributes.

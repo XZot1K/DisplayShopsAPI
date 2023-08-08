@@ -4,7 +4,6 @@
 
 package xzot1k.plugins.ds;
 
-import net.milkbowl.vault.economy.Economy;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -12,6 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 import xzot1k.plugins.ds.api.Manager;
 import xzot1k.plugins.ds.api.PacketManager;
+import xzot1k.plugins.ds.api.eco.EcoHandler;
 import xzot1k.plugins.ds.api.handlers.DisplayPacket;
 import xzot1k.plugins.ds.api.objects.Menu;
 import xzot1k.plugins.ds.api.objects.Shop;
@@ -44,7 +44,7 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     }
 
     @Override
-    public void log(Level level, String message) {
+    public void log(@NotNull Level level, @NotNull String message) {
     }
 
     @Override
@@ -72,7 +72,7 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     }
 
     @Override
-    public long getBlockedItemId(ItemStack itemStack) {
+    public long getBlockedItemId(@NotNull ItemStack itemStack) {
         return -1;
     }
 
@@ -90,32 +90,32 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     }
 
     @Override
-    public void refreshShop(Shop shop) {
+    public void refreshShop(@NotNull Shop shop) {
     }
 
     @Override
-    public DisplayPacket getDisplayPacket(Shop shop, Player player) {
+    public DisplayPacket getDisplayPacket(@NotNull Shop shop, @NotNull Player player) {
         return null;
     }
 
     @Override
-    public void killCurrentShopPacket(Player player) {
+    public void killCurrentShopPacket(@NotNull Player player) {
     }
 
     @Override
-    public void clearDisplayPackets(Player player) {
+    public void clearDisplayPackets(@NotNull Player player) {
     }
 
     @Override
-    public void removeDisplayPacket(Shop shop, Player player) {
+    public void removeDisplayPacket(@NotNull Shop shop, @NotNull Player player) {
     }
 
     @Override
-    public void updateDisplayPacket(Shop shop, Player player, DisplayPacket displayPacket) {
+    public void updateDisplayPacket(@NotNull Shop shop, @NotNull Player player, @NotNull DisplayPacket displayPacket) {
     }
 
     @Override
-    public void sendDisplayPacket(Shop shop, Player player, boolean showHolograms) {
+    public void sendDisplayPacket(@NotNull Shop shop, @NotNull Player player, boolean showHolograms) {
     }
 
     @Override
@@ -154,12 +154,10 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     }
 
     @Override
-    public Economy getVaultEconomy() {
-        return null;
-    }
+    public PacketManager getPacketManager() {return null;}
 
     @Override
-    public PacketManager getPacketManager() {return null;}
+    public EcoHandler getEconomyHandler() {return null;}
 
     @Override
     public File getLoggingFile() {
@@ -167,7 +165,7 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     }
 
     @Override
-    public void writeToLog(String text) {
+    public void writeToLog(@NotNull String text) {
 
     }
 

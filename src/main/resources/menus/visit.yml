@@ -11,6 +11,8 @@ filler-material: "BLACK_STAINED_GLASS_PANE"
 search-entry:
   title: "&8Enter Search Text:"
 
+empty-search: "None"
+
 show-admin-shops: true
 
 visit-charge: 50.0
@@ -35,6 +37,11 @@ visit-icon:
     - ""
     - "&7&m------------------"
 
+visit-types:
+  buy: "Buy"
+  sell: "Sell"
+  both: "Buy & Sell"
+
 buttons:
   previous:
     slot: 36
@@ -44,10 +51,15 @@ buttons:
     slot: 37
     material: "HEAD:ArrowRight"
     name: "&eNext Page"
+  type:
+    slot: 39
+    material: "MINECART"
+    name: "&eShop Type: &d{type}"
   search:
     slot: 40
     material: "OAK_SIGN"
     name: "&dSearch"
+    lore: [ "", "&7Current Search: &e{search-text}" ]
   close:
     slot: 44
     material: "HEAD:ArrowLeft"

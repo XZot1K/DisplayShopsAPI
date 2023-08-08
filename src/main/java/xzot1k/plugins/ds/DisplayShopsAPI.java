@@ -4,13 +4,13 @@
 
 package xzot1k.plugins.ds;
 
-import net.milkbowl.vault.economy.Economy;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 import xzot1k.plugins.ds.api.Manager;
 import xzot1k.plugins.ds.api.PacketManager;
+import xzot1k.plugins.ds.api.eco.EcoHandler;
 import xzot1k.plugins.ds.api.handlers.DisplayPacket;
 import xzot1k.plugins.ds.api.objects.Menu;
 import xzot1k.plugins.ds.api.objects.Shop;
@@ -191,16 +191,10 @@ public interface DisplayShopsAPI {
     HashMap<UUID, UUID> getShopMemory();
 
     /**
-     * Returns the vault economy hook.
-     *
-     * @return Economy class.
-     */
-    Economy getVaultEconomy();
-
-    /**
      * @return Returns the packet manager.
      */
     PacketManager getPacketManager();
 
+    EcoHandler getEconomyHandler();
 
 }

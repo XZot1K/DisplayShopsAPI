@@ -50,6 +50,13 @@ public interface Shop {
     void returnBalance();
 
     /**
+     * Obtains the passed shop's max stock based on owner permissions or administrator bypasses.
+     *
+     * @return The obtained max stock (defaults to configuration value or max possible integer, if the shop is admin).
+     */
+    int getMaxStock();
+
+    /**
      * Drops the shop's entire stock onto the ground after calculating stacks.
      */
     void dropStock();
@@ -191,7 +198,7 @@ public interface Shop {
 
     UUID getOwnerUniqueId();
 
-    void setOwnerUniqueId(@NotNull UUID ownerUniqueId);
+    void setOwnerUniqueId(@Nullable UUID ownerUniqueId);
 
     LocationClone getBaseLocation();
 
@@ -347,5 +354,9 @@ public interface Shop {
      * Resets the shop entirely. The time stamp is also updated.
      */
     void reset();
+
+    String getCurrencyType();
+
+    void setCurrencyType(@NotNull String currencyType);
 
 }

@@ -48,6 +48,13 @@ log-max-size: -1
 # If this is disabled, Vault will be ignored and the built-in physical item currency will be used.
 use-vault: true
 
+# This is the default Economy each shop will utilize upon creation or reset.
+default-currency-type: "Vault"
+
+# Economy currencies within this list will be unavailable for player's to select in their shop's edit menu without permission.
+# Preset economy IDs: [ "vault", "item-for-item", "playerpoints" ]
+currency-blacklist: [ ]
+
 # If this is enabled and Towny is installed, shop plots available to the player will be the only allowed area for shops.
 towny-shop-plots-only: true
 
@@ -324,6 +331,12 @@ close-transaction-gui: true
 
 # If enabled, a shop can not be modified or purchased/sold to/from while undergoing edits by a player.
 editor-prevention: false
+
+# If enabled, the stock deposit menu will automatically use the amount selector instead of the vanilla-like menu.
+use-stock-amount-selectors: false
+
+# If enabled, the balance deposit menu will automatically use the amount selector instead of the vanilla-like menu.
+use-balance-amount-selectors: false
 
 # This is the block distance a shop must be from another shop (Regardless another shop is unable to be placed in a one block radius).
 required-shop-distance: 1

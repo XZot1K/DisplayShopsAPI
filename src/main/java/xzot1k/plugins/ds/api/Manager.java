@@ -131,6 +131,16 @@ public interface Manager {
     boolean isTooClose(@NotNull Location location);
 
     /**
+     * Finds the value a specific placeholder was replaced with given the original format, placeholder, and the ItemStack.
+     *
+     * @param itemStack   The ItemStack containing the formatted placeholder.
+     * @param textFormat  The format with the non-replaced placeholder.
+     * @param placeHolder The placeholder to get the value from.
+     * @return The value found in the placeholders place (can return NULL).
+     */
+    String getValueFromPlaceholder(@NotNull ItemStack itemStack, @NotNull Object textFormat, @NotNull String placeHolder);
+
+    /**
      * Gets the name of the item. If the item name is not custom, then either the original or translated name will be used.
      *
      * @param itemStack The item to get the name of.
@@ -357,14 +367,6 @@ public interface Manager {
     int getMarketRegionLimit(@NotNull Player player);
 
     /**
-     * Obtains the passed shop's max stock based on owner permissions or administrator bypasses.
-     *
-     * @param shop The shop to get the max stock for (obtains owner for permissions, returns max possible integer if the shop is admin or the owner has the "displayshops.stock.max").
-     * @return The obtained max stock (defaults to configuration value or max possible integer, if the shop is admin).
-     */
-    int getMaxStock(@NotNull Shop shop);
-
-    /**
      * Gets the player specific shop promotion item modifier.
      *
      * @param player The player to check.
@@ -450,16 +452,6 @@ public interface Manager {
      * @return Whether the world is blocked or not.
      */
     boolean isBlockedWorld(@NotNull World world);
-
-    /**
-     * Obtains the currency balance of the passed player.
-     *
-     * @param player   The player to get the balance of.
-     * @param shop     The shop to get the trade-item from.
-     * @param useVault Whether to use Vault methods.
-     * @return The found player balance amount.
-     */
-    double getCurrencyBalance(@NotNull OfflinePlayer player, @NotNull Shop shop, boolean useVault);
 
     // getters & setters
     Map<UUID, Shop> getShopMap();
