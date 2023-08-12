@@ -10,7 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 import xzot1k.plugins.ds.api.Manager;
-import xzot1k.plugins.ds.api.PacketManager;
+import xzot1k.plugins.ds.api.VersionUtil;
 import xzot1k.plugins.ds.api.eco.EcoHandler;
 import xzot1k.plugins.ds.api.handlers.DisplayPacket;
 import xzot1k.plugins.ds.api.objects.Menu;
@@ -154,10 +154,12 @@ public class DisplayShops extends JavaPlugin implements DisplayShopsAPI {
     }
 
     @Override
-    public PacketManager getPacketManager() {return null;}
+    public EcoHandler getEconomyHandler() {return null;}
 
     @Override
-    public EcoHandler getEconomyHandler() {return null;}
+    public VersionUtil getVersionUtil() {
+        return null;
+    }
 
     @Override
     public File getLoggingFile() {

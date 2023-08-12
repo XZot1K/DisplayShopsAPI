@@ -62,6 +62,13 @@ public interface Shop {
     void dropStock();
 
     /**
+     * Gets the name of the shop's trade currency item (if NULL or "force-use" is enabled in the config.yml, the name of the default currency item will be used).
+     *
+     * @return The shop's currency itemstack name.
+     */
+    String getTradeItemName();
+
+    /**
      * Saves the shop to the database.
      *
      * @param async Whether it should be saved on the main thread or not.

@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 import xzot1k.plugins.ds.api.Manager;
-import xzot1k.plugins.ds.api.PacketManager;
+import xzot1k.plugins.ds.api.VersionUtil;
 import xzot1k.plugins.ds.api.eco.EcoHandler;
 import xzot1k.plugins.ds.api.handlers.DisplayPacket;
 import xzot1k.plugins.ds.api.objects.Menu;
@@ -190,11 +190,8 @@ public interface DisplayShopsAPI {
 
     HashMap<UUID, UUID> getShopMemory();
 
-    /**
-     * @return Returns the packet manager.
-     */
-    PacketManager getPacketManager();
-
     EcoHandler getEconomyHandler();
+
+    VersionUtil getVersionUtil();
 
 }

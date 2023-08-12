@@ -33,7 +33,7 @@ visit-icon:
     - "&7Stock: &e{stock}"
     - "&7Balance: &e{balance}"
     - ""
-    - "&eClick &7to visit this shop for &a${cost}&7."
+    - "&eClick &7to visit this shop for &a{cost}&7."
     - ""
     - "&7&m------------------"
 

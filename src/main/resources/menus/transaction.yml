@@ -33,7 +33,7 @@ buttons:
       - ""
       - "&aClick &7to purchase &e{item-count}"
       - "&7of this item from this"
-      - "&7shop for &e${buy-price}&7."
+      - "&7shop for &e{buy-price}&7."
   buy-all:
     slot: 11
     material: "REDSTONE_TORCH"
@@ -48,11 +48,11 @@ buttons:
     lore:
       - ""
       - "&aClick &7to sell &e{item-count} &7of this item"
-      - "&7to this shop for &e${sell-price}&7."
+      - "&7to this shop for &e{sell-price}&7."
   sell-all:
     slot: 15
     material: "REDSTONE_TORCH"
-    name: "&e&l$ &c&lSell All &e&l$"
+    name: "&c&lSell All"
     lore:
       - ""
       - "&aClick &7to sell all possible."

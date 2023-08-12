@@ -55,6 +55,29 @@ default-currency-type: "Vault"
 # Preset economy IDs: [ "vault", "item-for-item", "playerpoints" ]
 currency-blacklist: [ ]
 
+# This section can contain all the economy names found within the edit menu in-game alongside an alternate name to be used.
+currency-settings:
+  item-for-item:
+    name: ""
+    symbol: ""
+    decimal-placement: 0
+  CMIEconomy:
+    name: "CMI ({symbol})"
+    symbol: "€"
+    decimal-placement: 2
+  Essentials:
+    name: "Essentials ({symbol})"
+    symbol: "$"
+    decimal-placement: 2
+  Vault:
+    name: "Money ({symbol})"
+    symbol: "$"
+    decimal-placement: 2
+  PlayerPoints:
+    name: "Points ({symbol})"
+    symbol: ""
+    decimal-placement: 0
+
 # If this is enabled and Towny is installed, shop plots available to the player will be the only allowed area for shops.
 towny-shop-plots-only: true
 
@@ -205,9 +228,6 @@ dynamic-sell-percentage: 0.05
 # This is used to enhance the format of the numbers displayed throughout the plugin. (Note: Set this to 0 for whole numbers)
 minimum-fraction-digits: 2
 
-# This is the symbol used to prefix currency-related values.
-currency-symbol: "$"
-
 # If this option is enabled, numerical entries must all be whole numbers. Decimals and non-numerals will send the "invalid-amount" message to the player.
 whole-number-entries: false
 
@@ -267,8 +287,8 @@ invalid-item-format:
 valid-item-format:
   - "{item}&r &7x&a{amount}"
   - "&b{description}"
-  - "&7Buy from shop for &e${buy-price}"
-  - "&7Sell to shop for &e${sell-price}"
+  - "&7Buy from shop for &e{buy-price}"
+  - "&7Sell to shop for &e{sell-price}"
   - "&7Stock: &e{stock} &7Owner: &e{owner}"
 
 # This is the hologram format that is used when a shop has a unlimited stock amount and has no owner.
@@ -276,8 +296,8 @@ valid-item-format:
 admin-shop-format:
   - "{item}&r &7x&a{amount}"
   - "&b{description}"
-  - "&7Buy from shop for &e${buy-price}"
-  - "&7Sell to shop for &e${sell-price}"
+  - "&7Buy from shop for &e{buy-price}"
+  - "&7Sell to shop for &e{sell-price}"
   - "&cAdmin Shop &7(Stock: &e{stock}&7)"
 
 # This is the hologram format that is used when a shop has a unlimited stock amount and has no owner,
@@ -333,7 +353,7 @@ close-transaction-gui: true
 editor-prevention: false
 
 # If enabled, the stock deposit menu will automatically use the amount selector instead of the vanilla-like menu.
-use-stock-amount-selectors: false
+use-stock-amount-selectors: true
 
 # If enabled, the balance deposit menu will automatically use the amount selector instead of the vanilla-like menu.
 use-balance-amount-selectors: false

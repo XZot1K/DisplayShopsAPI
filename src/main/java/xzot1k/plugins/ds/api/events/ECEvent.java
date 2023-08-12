@@ -4,9 +4,9 @@
 
 package xzot1k.plugins.ds.api.events;
 
-import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.HandlerList;
+import org.jetbrains.annotations.NotNull;
 import xzot1k.plugins.ds.api.enums.EconomyCallType;
 import xzot1k.plugins.ds.api.objects.Shop;
 
@@ -23,21 +23,39 @@ public interface ECEvent {
      */
     void reverseCurrencyTransfer();
 
-    /**
-     * Gets the price with the tax added to it.
-     *
-     * @return The result price value.
-     */
-    double getTaxedPrice();
-
     // getters & setters
     boolean isCancelled();
 
     void setCancelled(boolean cancelled);
 
-    double getPrice();
+    /**
+     * @return The player who initiated the economy call event.
+     */
+    Player getPlayer();
 
-    void setPrice(double price);
+    /**
+     * Sets the player who initiated the economy call event.
+     *
+     * @param player The player who initiated the event.
+     */
+    void setPlayer(@NotNull Player player);
+
+    /**
+     * @return The base amount of currency (without tax applied).
+     */
+    double getRawAmount();
+
+    /**
+     * @return The amount of currency the transaction is handling (Tax, defined in the config.yml, is applied automatically).
+     */
+    double getAmount();
+
+    /**
+     * Sets the amount of currency the transaction is handling (Does NOT include tax).
+     *
+     * @param amount The raw amount of currency.
+     */
+    void setAmount(double amount);
 
     EconomyCallType getEconomyCallType();
 
@@ -50,20 +68,6 @@ public interface ECEvent {
     void setTax(double tax);
 
     /**
-     * The person investing into a shop.
-     *
-     * @return The player buying/selling to/from a shop.
-     */
-    Player getInvestor();
-
-    /**
-     * This is the shop owner/seller. This value can return null for admin shops.
-     *
-     * @return The shop owner/seller.
-     */
-    OfflinePlayer getProducer();
-
-    /**
      * Tells if the transaction will succeed based on if the investor and producer can both complete it.
      *
      * @return If the transaction succeeded.
@@ -72,20 +76,21 @@ public interface ECEvent {
 
     void setWillSucceed(boolean willSucceed);
 
-    boolean canInvestorAfford();
-
-    void setCanInvestorAfford(boolean canInvestorAfford);
-
-    boolean canProducerAfford();
-
-    void setCanProducerAfford(boolean canProducerAfford);
-
     boolean performedCurrencyTransfer();
 
     void setPerformedCurrencyTransfer(boolean performedCurrencyTransfer);
 
-    boolean chargedInvestor();
+    boolean playerHasEnough();
 
-    void setChargedInvestor(boolean chargedInvestor);
+    void setPlayerHasEnough(boolean playerHasEnough);
+
+    boolean hasChargedPlayer();
+
+    void setChargedPlayer(boolean chargedPlayer);
+
+    /**
+     * @return Whether the event's checks failed or not.
+     */
+    boolean failed();
 
 }

@@ -1,5 +1,6 @@
 package xzot1k.plugins.ds.api.objects;
 
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -38,6 +39,27 @@ public interface Menu {
     Inventory build(@NotNull Player player, @Nullable String... searchText);
 
     /**
+     * Builds a particular button in a specific location given some parameters.
+     *
+     * @param mainSection  The buttons section of the menus config.
+     * @param buttonAction The button name.
+     * @param player       The player to associate placeholders to.
+     * @param inventory    The inventory to build the button into.
+     * @param shop         The shop to base placeholders on.
+     * @param emptySlots   The slots that are restricted from usage.
+     */
+    void buildButton(@NotNull ConfigurationSection mainSection, @NotNull String buttonAction, @NotNull Player player,
+                     @NotNull Inventory inventory, @Nullable Shop shop, @Nullable List<Integer> emptySlots);
+
+    /**
+     * Compares an itemstack to the menu's filler item.
+     *
+     * @param itemStack The item to compare.
+     * @return Whether the itemstack is similar to the filler item.
+     */
+    boolean isFillerItem(@NotNull ItemStack itemStack);
+
+    /**
      * Checks if a title matches the title of the menu.
      *
      * @param title The title to compare.
@@ -65,11 +87,11 @@ public interface Menu {
     /**
      * Load pages based on specific attributes alongside filter text.
      *
-     * @param player             The player to create pages for.
-     * @param dataPack           The player's datapack.
-     * @param shop               The shop the player has currently selected.
-     * @param searchText         The filter text to filter the items by.
-     * @param typeItem           The type item used to filter shops by what actions can be performed.
+     * @param player     The player to create pages for.
+     * @param dataPack   The player's datapack.
+     * @param shop       The shop the player has currently selected.
+     * @param searchText The filter text to filter the items by.
+     * @param typeItem   The type item used to filter shops by what actions can be performed.
      */
     void loadPages(@NotNull Player player, @NotNull DataPack dataPack, @Nullable Shop shop, @Nullable String searchText, @Nullable ItemStack typeItem);
 

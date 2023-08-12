@@ -34,12 +34,12 @@ buttons:
   buy-price:
     slot: 3
     material: "GOLD_INGOT"
-    name: "&eBuy Price: &a{currency-symbol}{base-buy-price}"
+    name: "&eBuy Price: &a{base-buy-price}"
     lore: [ "", "&aClick &7to adjust", "&7the buy price." ]
   sell-price:
     slot: 4
     material: "EMERALD"
-    name: "&eSell Price: &a{currency-symbol}{base-sell-price}"
+    name: "&eSell Price: &a{sell-price}"
     lore: [ "", "&aClick &7to adjust", "&7the sell price." ]
   shop-item-amount:
     slot: 5
@@ -54,7 +54,7 @@ buttons:
   balance:
     slot: 13
     material: "HOPPER_MINECART"
-    name: "&eBalance: &a{currency-symbol}{balance}"
+    name: "&eBalance: &a{balance}"
     lore: [ "", "&aClick &7to manage", "&7the balance of", "&7the shop." ]
   appearance:
     slot: 27
@@ -84,28 +84,28 @@ buttons:
   global-buy-limit:
     slot: 7
     material: "HOPPER"
-    name: "&dBuy Player Limit"
-    lore: [ "", "&aClick &7to adjust", "&7the per-player", "&7buy transaction", "&7limit." ]
+    name: "&dGlobal Buy Limit"
+    lore: [ "", "&aClick &7to adjust", "&7the global buy", "&7transaction limit." ]
   global-sell-limit:
     slot: 8
     material: "HOPPER"
-    name: "&dSell Player Limit"
-    lore: [ "", "&aClick &7to adjust", "&7the per-player", "&7sell transaction", "&7limit." ]
+    name: "&dGlobal Sell Limit"
+    lore: [ "", "&aClick &7to adjust", "&7the global sell", "transaction limit." ]
   player-buy-limit:
     slot: 16
     material: "HOPPER"
     name: "&dBuy Player Limit"
-    lore: [ "", "&aClick &7to adjust", "&7the per-player", "&7buy transaction", "&7limit." ]
+    lore: [ "", "&aClick &7to adjust", "&7the per-player buy", "transaction limit." ]
   player-sell-limit:
     slot: 17
     material: "HOPPER"
     name: "&dSell Player Limit"
-    lore: [ "", "&aClick &7to adjust", "&7the per-player", "&7sell transaction", "&7limit." ]
+    lore: [ "", "&aClick &7to adjust", "&7the per-player sell", "transaction limit." ]
   currency-type:
-    slot: 18
+    slot: 14
     material: "DIAMOND"
-    name: "&6\uD83E\uDE99 &eCurrency Type: &b{currency}"
-    lore: [ "", "&aClick &7to adjust", "&7the per-player", "&7sell transaction", "&7limit." ]
+    name: "&6\uD83E\uDE99 &eCurrency Type: &b{type}"
+    lore: [ "", "&aClick &7to change", "&7the currency type", "&7the shop can", "&7accept." ]
   close:
     slot: 33
     material: "HEAD:MHF_ArrowDown"

@@ -24,7 +24,7 @@ locked-format:
     - "&7base block appearance."
     - ""
     - "{requirement}"
-    - "&7Cost: &e${price}"
+    - "&7Cost: &e{price}"
 
 unlocked-format:
   name: "&e{material}"

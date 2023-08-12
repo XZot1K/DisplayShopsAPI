@@ -7,6 +7,15 @@ import java.util.UUID;
 
 public abstract class EcoHook {
 
+    private String altName, symbol;
+    private int decimalPlacement;
+
+    public EcoHook() {
+        setAltName(null);
+        setSymbol("$");
+        setDecimalPlacement(2);
+    }
+
     public abstract String getSingularName();
 
     public abstract String getPluralName();
@@ -22,5 +31,26 @@ public abstract class EcoHook {
     public abstract double getBalance(@NotNull UUID playerUniqueId);
 
     public abstract double getBalance(@NotNull OfflinePlayer player);
+
+    /**
+     * @return The economy name based on available options.
+     */
+    public String getName() {
+        return ((getAltName() != null && !getAltName().isEmpty()) ? getAltName()
+                : ((getPluralName() != null && !getPluralName().isEmpty()) ? getPluralName() : getSingularName()))
+                .replace("{symbol}", (getSymbol() != null ? getSymbol() : ""));
+    }
+
+    public String getAltName() {return altName;}
+
+    public void setAltName(String altName) {this.altName = altName;}
+
+    public String getSymbol() {return symbol;}
+
+    public void setSymbol(String symbol) {this.symbol = symbol;}
+
+    public int getDecimalPlacement() {return decimalPlacement;}
+
+    public void setDecimalPlacement(int decimalPlacement) {this.decimalPlacement = decimalPlacement;}
 
 }

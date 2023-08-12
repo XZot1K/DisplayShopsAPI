@@ -6,7 +6,6 @@ package xzot1k.plugins.ds.api;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.OfflinePlayer;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
@@ -17,8 +16,6 @@ import org.bukkit.potion.PotionType;
 import org.bukkit.util.Vector;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import xzot1k.plugins.ds.api.enums.EconomyCallType;
-import xzot1k.plugins.ds.api.events.EconomyCallEvent;
 import xzot1k.plugins.ds.api.objects.DataPack;
 import xzot1k.plugins.ds.api.objects.MarketRegion;
 import xzot1k.plugins.ds.api.objects.Shop;
@@ -51,19 +48,6 @@ public interface Manager {
      * @return The found shop, returns NULL if NOT found.
      */
     Shop getShopRayTraced(@NotNull String worldName, @NotNull Vector eyeVector, @NotNull Vector directionVector, double distance);
-
-    /**
-     * Initiates a withdraw/deposit transaction directed at an investor and owner automating messages, taxing, and more (The stopInTacks() method must be called still).
-     *
-     * @param investor        The buyer.
-     * @param producer        The seller.
-     * @param shop            The shop in use.
-     * @param economyCallType The economy type being processed Buy, Sell, etc.
-     * @param price           The price in use.
-     * @return the economy call event
-     */
-    EconomyCallEvent initiateShopEconomyTransaction(@NotNull Player investor, @Nullable OfflinePlayer producer, @Nullable Shop shop,
-                                                    @NotNull EconomyCallType economyCallType, double price);
 
     /**
      * Sends a color translated message to the players as either a normal chat message or action bar message.

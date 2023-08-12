@@ -4,138 +4,98 @@
 
 package xzot1k.plugins.ds.api.events;
 
-import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import xzot1k.plugins.ds.api.enums.EconomyCallType;
 import xzot1k.plugins.ds.api.objects.Shop;
 
 public class EconomyCallEvent extends Event implements Cancellable, ECEvent {
     private static final HandlerList handlers = new HandlerList();
 
-    public static HandlerList getHandlerList() {
-        return handlers;
-    }
+    public static HandlerList getHandlerList() {return handlers;}
+
+    /**
+     * Initiates a withdrawal/deposit transaction directed at a player for a specific economy call type based on a passed shop.
+     *
+     * @param player          The player who initiated the economy call event.
+     * @param shop            The shop in use.
+     * @param economyCallType The economy type being processed Buy, Sell, etc.
+     * @param price           The price in use.
+     * @return the economy call event
+     */
+    public static EconomyCallEvent call(@NotNull Player player, @Nullable Shop shop, @NotNull EconomyCallType economyCallType, double price) {return null;}
 
     @Override
-    public void performCurrencyTransfer(boolean chargeInvestor) {
-
-    }
+    public void performCurrencyTransfer(boolean chargeInvestor) {}
 
     @Override
-    public void reverseCurrencyTransfer() {
-
-    }
+    public void reverseCurrencyTransfer() {}
 
     @Override
-    public double getTaxedPrice() {
-        return 0;
-    }
+    public boolean isCancelled() {return false;}
 
     @Override
-    public boolean isCancelled() {
-        return false;
-    }
+    public void setCancelled(boolean b) {}
 
     @Override
-    public void setCancelled(boolean b) {
-
-    }
+    public Player getPlayer() {return null;}
 
     @Override
-    public double getPrice() {
-        return 0;
-    }
+    public void setPlayer(@NotNull Player player) {}
 
     @Override
-    public void setPrice(double price) {
-
-    }
+    public double getRawAmount() {return 0;}
 
     @Override
-    public EconomyCallType getEconomyCallType() {
-        return null;
-    }
+    public double getAmount() {return 0;}
 
     @Override
-    public HandlerList getHandlers() {
-        return null;
-    }
+    public void setAmount(double amount) {}
 
     @Override
-    public Shop getShop() {
-        return null;
-    }
+    public EconomyCallType getEconomyCallType() {return null;}
 
     @Override
-    public double getTax() {
-        return 0;
-    }
+    public @NotNull HandlerList getHandlers() {return handlers;}
 
     @Override
-    public void setTax(double tax) {
-
-    }
+    public Shop getShop() {return null;}
 
     @Override
-    public Player getInvestor() {
-        return null;
-    }
+    public double getTax() {return 0;}
 
     @Override
-    public OfflinePlayer getProducer() {
-        return null;
-    }
+    public void setTax(double tax) {}
 
     @Override
-    public boolean willSucceed() {
-        return false;
-    }
+    public boolean willSucceed() {return false;}
 
     @Override
-    public void setWillSucceed(boolean willSucceed) {
-
-    }
+    public void setWillSucceed(boolean willSucceed) {}
 
     @Override
-    public boolean canInvestorAfford() {
-        return false;
-    }
+    public boolean performedCurrencyTransfer() {return false;}
 
     @Override
-    public void setCanInvestorAfford(boolean canInvestorAfford) {
-
-    }
+    public void setPerformedCurrencyTransfer(boolean performedCurrencyTransfer) {}
 
     @Override
-    public boolean canProducerAfford() {
-        return false;
-    }
+    public boolean playerHasEnough() {return false;}
 
     @Override
-    public void setCanProducerAfford(boolean canProducerAfford) {
-
-    }
+    public void setPlayerHasEnough(boolean playerHasEnough) {}
 
     @Override
-    public boolean performedCurrencyTransfer() {
-        return false;
-    }
+    public boolean hasChargedPlayer() {return false;}
 
     @Override
-    public void setPerformedCurrencyTransfer(boolean performedCurrencyTransfer) {
-
-    }
+    public void setChargedPlayer(boolean chargedPlayer) {}
 
     @Override
-    public boolean chargedInvestor() {
-        return false;
-    }
+    public boolean failed() {return false;}
 
-    @Override
-    public void setChargedInvestor(boolean chargedInvestor) {
-
-    }
 }
