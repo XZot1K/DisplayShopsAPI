@@ -7,6 +7,7 @@ package xzot1k.plugins.ds.api.events;
 import org.bukkit.entity.Player;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import xzot1k.plugins.ds.api.enums.EconomyCallType;
 import xzot1k.plugins.ds.api.objects.Shop;
 
@@ -92,5 +93,9 @@ public interface ECEvent {
      * @return Whether the event's checks failed or not.
      */
     boolean failed();
+
+    String getErrorMessage();
+
+    void setErrorMessage(@Nullable String message);
 
 }

@@ -47,9 +47,10 @@ public interface Menu {
      * @param inventory    The inventory to build the button into.
      * @param shop         The shop to base placeholders on.
      * @param emptySlots   The slots that are restricted from usage.
+     * @param extraPlaceHolders   Additional placeholders that will be replaced in the format "{placeholder}:{text}".
      */
     void buildButton(@NotNull ConfigurationSection mainSection, @NotNull String buttonAction, @NotNull Player player,
-                     @NotNull Inventory inventory, @Nullable Shop shop, @Nullable List<Integer> emptySlots);
+                     @NotNull Inventory inventory, @Nullable Shop shop, @Nullable List<Integer> emptySlots, @Nullable String... extraPlaceHolders);
 
     /**
      * Compares an itemstack to the menu's filler item.
@@ -103,9 +104,10 @@ public interface Menu {
      * @param slot       The slot to update the button at.
      * @param shop       The shop to update the button for, if available.
      * @param emptySlots The empty slots to base it around.
+     * @param extraPlaceHolders   Additional placeholders that will be replaced in the format "{placeholder}:{text}".
      */
     void updateButton(@NotNull Player player, @NotNull Inventory inventory, int slot,
-                      @Nullable Shop shop, @Nullable List<Integer> emptySlots);
+                      @Nullable Shop shop, @Nullable List<Integer> emptySlots, @Nullable String... extraPlaceHolders);
 
     /**
      * @return The configuration file associated to the menu.

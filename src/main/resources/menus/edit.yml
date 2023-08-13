@@ -85,22 +85,22 @@ buttons:
     slot: 7
     material: "HOPPER"
     name: "&dGlobal Buy Limit"
-    lore: [ "", "&aClick &7to adjust", "&7the global buy", "&7transaction limit." ]
+    lore: [ "", "&7Current Limit: &e{global-buy-limit}", "", "&aClick &7to adjust", "&7the global buy", "&7transaction limit." ]
   global-sell-limit:
     slot: 8
     material: "HOPPER"
     name: "&dGlobal Sell Limit"
-    lore: [ "", "&aClick &7to adjust", "&7the global sell", "transaction limit." ]
+    lore: [ "", "&7Current Limit: &e{global-sell-limit}", "", "&aClick &7to adjust", "&7the global sell", "&7transaction limit." ]
   player-buy-limit:
     slot: 16
     material: "HOPPER"
     name: "&dBuy Player Limit"
-    lore: [ "", "&aClick &7to adjust", "&7the per-player buy", "transaction limit." ]
+    lore: [ "", "&7Current Limit: &e{player-buy-limit}", "", "&aClick &7to adjust", "&7the per-player buy", "&7transaction limit." ]
   player-sell-limit:
     slot: 17
     material: "HOPPER"
     name: "&dSell Player Limit"
-    lore: [ "", "&aClick &7to adjust", "&7the per-player sell", "transaction limit." ]
+    lore: [ "", "&7Current Limit: &e{player-sell-limit}", "", "&aClick &7to adjust", "&7the per-player sell", "&7transaction limit." ]
   currency-type:
     slot: 14
     material: "DIAMOND"

@@ -98,4 +98,10 @@ public class EconomyCallEvent extends Event implements Cancellable, ECEvent {
     @Override
     public boolean failed() {return false;}
 
+    @Override
+    public String getErrorMessage() {return null;}
+
+    @Override
+    public void setErrorMessage(@Nullable String message) {}
+
 }
