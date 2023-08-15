@@ -65,10 +65,6 @@ currency-settings:
     name: "CMI ({symbol})"
     symbol: "€"
     decimal-placement: 2
-  Essentials:
-    name: "Essentials ({symbol})"
-    symbol: "$"
-    decimal-placement: 2
   Vault:
     name: "Money ({symbol})"
     symbol: "$"
