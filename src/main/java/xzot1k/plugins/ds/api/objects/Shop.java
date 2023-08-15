@@ -366,4 +366,9 @@ public interface Shop {
 
     void setCurrencyType(@NotNull String currencyType);
 
+    /**
+     * @return Gets the item used for Item-For-Item trading.
+     */
+    ItemStack getCurrencyItem();
+
 }

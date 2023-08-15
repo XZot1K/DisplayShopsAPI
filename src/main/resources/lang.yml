@@ -100,7 +100,6 @@ withdrawn-stock: "&aYou have withdrawn &e{amount} &aof the shop item from this s
 chat-interaction-cancelled: "&cYou have cancelled the chat interaction."
 trade-item-invalid: "&cThe item in your hand seems to be invalid."
 trade-item-set: "&aThe trade item for this shop has been set to &e{name}&r&a."
-trade-item-similar: "&cYour hand item is identical to the current trade item of this shop."
 creative-blocked: "&cYou are unable to do this while in creative mode."
 blocked-world: "&cShop creation is blocked in this world."
 shop-delete-fail: "&cYou do not have access to delete this shop."
@@ -187,7 +186,10 @@ balance-command-usage: "&cUsage: &e/displayshops balance <deposit|withdraw> <amo
 sale-item-cleared: "&aThe shop sale item has been cleared."
 trade-item-cleared: "&aThe shop trade item has been cleared."
 limits-cleared: "&aAll global and per-player limit counters were cleared."
-shop-balance-exists: "&cThe balance of the must be cleared before changing the accepted currency."
+shop-balance-exists: "&cThe balance of the must be cleared before performing this action."
+missing-bbm-requirement: "&cYou do not meet the requirements to use this appearance."
+sale-item-similar: "&cThe selected item is too similar to the current shop item."
+trade-item-similar: "&cThe selected item is too similar to the current shop trade/currency item."
 
 ## Hook Messages ##
 towny-no-access: "&cYou do not have access to this shop plot."

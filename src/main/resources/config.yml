@@ -339,8 +339,11 @@ max-shop-stock: 1000
 maximum-buy-all: 36
 maximum-sell-all: 36
 
-# If this option is enabled, shops will require the stock to be at zero before allowing actions such as shop deletion.
+# If this option is enabled, shops will require the stock to be at zero before allowing actions such as shop deletion or changing the item for sale.
 require-empty-stock: true
+
+# If this option is enabled, shops will require the balance to be at zero before allowing actions such as changing the trade/currency item.
+require-empty-balance: true
 
 # If this option is enabled, the transaction interface will close after a transaction is complete.
 close-transaction-gui: true
