@@ -74,6 +74,14 @@ public interface Manager {
     String applyPlaceholders(@NotNull Player player, @Nullable String text, @Nullable String... placeholders);
 
     /**
+     * @param text       The text to apply placeholders to.
+     * @param shop       The shop to obtain placeholder values from.
+     * @param unitValues The unit count and unit item max stack values.
+     * @return The text with placeholders applied.
+     */
+    String applyShopBasedPlaceholders(@Nullable String text, @NotNull Shop shop, int... unitValues);
+
+    /**
      * Obtains available space for a defined item.
      *
      * @param player    The player who's inventory needs to be checked.

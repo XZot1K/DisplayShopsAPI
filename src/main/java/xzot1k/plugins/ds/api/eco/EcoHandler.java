@@ -51,8 +51,8 @@ public interface EcoHandler {
     /**
      * Gets the balance the player has based on a shop (determines currency item automatically).
      *
-     * @param player The player to check.
-     * @param shop   The shop to obtain information from.
+     * @param player          The player to check.
+     * @param shop            The shop to obtain information from.
      * @param economyCallType If provided "SELL", the shop's item will be checked instead of the currency item.
      * @return The determined amount the player has (returns -1 if the shop uses the wrong currency or another issue occurs).
      */
@@ -61,8 +61,8 @@ public interface EcoHandler {
     /**
      * Obtains the currency balance of the passed player.
      *
-     * @param player The player to get the balance of.
-     * @param shop   The shop to base currency on (NULL will retrieve the default economy from configuration).
+     * @param player          The player to get the balance of.
+     * @param shop            The shop to base currency on (NULL will retrieve the default economy from configuration).
      * @param economyCallType If provided "SELL", the shop's item will be checked instead of the currency item.
      * @return The found player balance amount.
      */
@@ -71,9 +71,9 @@ public interface EcoHandler {
     /**
      * Withdraw currency from the player's balance (If a shop is provided, the shop's selected currency will be used).
      *
-     * @param player The player to withdraw currency from.
-     * @param shop   The shop to base currency on.
-     * @param amount The amount to withdraw.
+     * @param player          The player to withdraw currency from.
+     * @param shop            The shop to base currency on.
+     * @param amount          The amount to withdraw.
      * @param economyCallType If provided "SELL", the shop's item will be checked instead of the currency item.
      * @return Whether the withdrawal was successful.
      */
@@ -82,9 +82,9 @@ public interface EcoHandler {
     /**
      * Deposits currency into the player's balance (If a shop is provided, the shop's selected currency will be used).
      *
-     * @param player The player to deposit currency to.
-     * @param shop   The shop to base currency on.
-     * @param amount The amount to deposit.
+     * @param player          The player to deposit currency to.
+     * @param shop            The shop to base currency on.
+     * @param amount          The amount to deposit.
      * @param economyCallType If provided "SELL", the shop's item will be checked instead of the currency item.
      * @return Whether the deposit was successful.
      */
@@ -93,9 +93,9 @@ public interface EcoHandler {
     /**
      * Check if the player has enough of a currency (If a shop is provided, the shop's selected currency will be used).
      *
-     * @param player The player to check the balance against.
-     * @param shop   The shop to base currency on.
-     * @param amount The amount to check for.
+     * @param player          The player to check the balance against.
+     * @param shop            The shop to base currency on.
+     * @param amount          The amount to check for.
      * @param economyCallType If provided "SELL", the shop's item will be checked instead of the currency item.
      * @return Whether the player has enough currency.
      */
@@ -111,5 +111,11 @@ public interface EcoHandler {
      * @return The formatted currency string.
      */
     String format(@Nullable Shop shop, @NotNull String currencyType, double amount, @Nullable EconomyCallType... economyCallType);
+
+    /**
+     * @param currencyType The currency to get the value from.
+     * @return The decimal placement value.
+     */
+    int getCurrencyDecimalPlacement(@NotNull String currencyType);
 
 }

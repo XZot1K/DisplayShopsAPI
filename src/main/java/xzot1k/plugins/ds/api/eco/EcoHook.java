@@ -9,11 +9,13 @@ public abstract class EcoHook {
 
     private String altName, symbol;
     private int decimalPlacement;
+    private boolean rawPlaceholderValue;
 
     public EcoHook() {
         setAltName(null);
         setSymbol("$");
         setDecimalPlacement(2);
+        setRawPlaceholderValue(false);
     }
 
     public abstract String getSingularName();
@@ -52,5 +54,9 @@ public abstract class EcoHook {
     public int getDecimalPlacement() {return decimalPlacement;}
 
     public void setDecimalPlacement(int decimalPlacement) {this.decimalPlacement = decimalPlacement;}
+
+    public boolean isRawPlaceholderValue() {return rawPlaceholderValue;}
+
+    public void setRawPlaceholderValue(boolean rawPlaceholderValue) {this.rawPlaceholderValue = rawPlaceholderValue;}
 
 }

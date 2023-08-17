@@ -52,7 +52,7 @@ use-vault: true
 default-currency-type: "Vault"
 
 # Economy currencies within this list will be unavailable for player's to select in their shop's edit menu without permission.
-# Preset economy IDs: [ "vault", "item-for-item", "playerpoints" ]
+# Preset economy IDs: [ "Vault", "item-for-item", "PlayerPoints" ]
 currency-blacklist: [ ]
 
 # This section can contain all the economy names found within the edit menu in-game alongside an alternate name to be used.
@@ -61,18 +61,17 @@ currency-settings:
     name: ""
     symbol: ""
     decimal-placement: 0
-  CMIEconomy:
-    name: "CMI ({symbol})"
-    symbol: "€"
-    decimal-placement: 2
+    raw-placeholder-value: false
   Vault:
     name: "Money ({symbol})"
     symbol: "$"
     decimal-placement: 2
+    raw-placeholder-value: false
   PlayerPoints:
     name: "Points ({symbol})"
     symbol: ""
     decimal-placement: 0
+    raw-placeholder-value: false
 
 # If this is enabled and Towny is installed, shop plots available to the player will be the only allowed area for shops.
 towny-shop-plots-only: true
