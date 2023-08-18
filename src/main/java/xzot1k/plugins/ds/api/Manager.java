@@ -23,6 +23,7 @@ import xzot1k.plugins.ds.api.objects.Shop;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.regex.Pattern;
 
 public interface Manager {
 
@@ -451,4 +452,6 @@ public interface Manager {
     List<MarketRegion> getMarketRegions();
 
     Map<UUID, DataPack> getDataPackMap();
+
+    Pattern getUUIDPattern();
 }

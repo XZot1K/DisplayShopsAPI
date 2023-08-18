@@ -13,6 +13,9 @@ filler-model-data: 0
 search-entry:
   title: "&8Enter Search Text:"
 
+assistant-entry:
+  title: "&8Enter Name or UUID:"
+
 active-color: "&a"
 inactive-color: "&c"
 head-lore: [ "", "&eClick &7to toggle", "&7assistant access for", "&7this player." ]
@@ -26,10 +29,21 @@ buttons:
     slot: 37
     material: "HEAD:MHF_ArrowRight"
     name: "&eNext Page"
+  add:
+    slot: 39
+    material: "LIME_WOOL"
+    name: "&eAdd Assistant"
+    lore: [ "", "&7Adds an assistant by name or UUID." ]
+  remove:
+    slot: 41
+    material: "RED_WOOL"
+    name: "&eRemove Assistant"
+    lore: [ "", "&7Removes an assistant by name or UUID." ]
   search:
     slot: 40
     material: "OAK_SIGN"
     name: "&dSearch"
+    lore: [ "", "&7Current Search: &e{search-text}" ]
   return:
     slot: 44
     material: "HEAD:MHF_ArrowLeft"

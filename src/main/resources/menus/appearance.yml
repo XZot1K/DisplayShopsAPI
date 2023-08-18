@@ -69,6 +69,7 @@ buttons:
     slot: 40
     material: "OAK_SIGN"
     name: "&dSearch"
+    lore: [ "", "&7Current Search: &e{search-text}" ]
   return:
     slot: 44
     material: "HEAD:MHF_ArrowLeft"
