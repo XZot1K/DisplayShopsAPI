@@ -10,11 +10,15 @@ filler-model-data: 0
 sale-item-slot: 1
 trade-item-slot: 10
 
-item-change:
+sale-item-change:
   material: "BARRIER"
-  name: "&dItem Selection"
-  lore: [ "", "&eInfo: &7Select an item", "&7from your inventory", "&7then reselect this",
-          "&7item to set it.", "", "&aClick &7to cancel", "&7the item change", "&7process." ]
+  name: "&dSale Item Selection"
+  lore: [ "", "&eInfo: &7Select an item from", "&7your inventory to set it", "&7as your shop sale item.", "", "&aClick &7to cancel the", "&7item change process." ]
+
+trade-item-change:
+  material: "BARRIER"
+  name: "&dTrade/Currency Item Selection"
+  lore: [ "", "&eInfo: &7Select an item from", "&7your inventory to set it", "&7as your shop trade/currency item.", "", "&aClick &7to cancel the", "&7item change process." ]
 
 description-entry:
   title: "&8Enter The Description:"

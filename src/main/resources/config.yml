@@ -259,6 +259,9 @@ view-distance: 10
 # (NOTE: This feature has a distance calculation based on chunks)
 always-display: false
 
+# If enabled, when the shop's hologram line contains a sell/buy price that is disabled the line will be hidden.
+price-disabled-hide: true
+
 # If broadcasting is allowed, the worlds in the list below will be where the shop is broadcast.
 broadcasting-worlds:
   - "world"
