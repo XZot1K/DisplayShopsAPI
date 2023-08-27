@@ -118,4 +118,5 @@ public interface EcoHandler {
      */
     int getCurrencyDecimalPlacement(@NotNull String currencyType);
 
+    void loadExtraData(@NotNull String currencyType, @NotNull EcoHook ecoHook);
 }

@@ -2,20 +2,30 @@ package xzot1k.plugins.ds.api.eco;
 
 import org.bukkit.OfflinePlayer;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import xzot1k.plugins.ds.DisplayShops;
 
 import java.util.UUID;
 
 public abstract class EcoHook {
-
+    private final String currencyName;
     private String altName, symbol;
     private int decimalPlacement;
     private boolean rawPlaceholderValue;
 
-    public EcoHook() {
+    public EcoHook(@NotNull String currencyName, @Nullable EcoHandler... ecoHandler) {
+        this.currencyName = currencyName;
         setAltName(null);
         setSymbol("$");
         setDecimalPlacement(2);
         setRawPlaceholderValue(false);
+        loadAndRegister((ecoHandler != null && ecoHandler.length > 0 && ecoHandler[0] != null)
+                ? ecoHandler[0] : DisplayShops.getPluginInstance().getEconomyHandler());
+    }
+
+    private void loadAndRegister(@NotNull EcoHandler ecoHandler) {
+        ecoHandler.loadExtraData(getCurrencyName(), this);
+        ecoHandler.getEconomyRegistry().put(getCurrencyName(), this);
     }
 
     public abstract String getSingularName();
@@ -59,4 +69,5 @@ public abstract class EcoHook {
 
     public void setRawPlaceholderValue(boolean rawPlaceholderValue) {this.rawPlaceholderValue = rawPlaceholderValue;}
 
+    public String getCurrencyName() {return currencyName;}
 }
