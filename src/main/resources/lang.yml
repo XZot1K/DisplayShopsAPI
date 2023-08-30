@@ -177,6 +177,7 @@ shop-balance-exists: "&cThe balance of the must be cleared before performing thi
 missing-bbm-requirement: "&cYou do not meet the requirements to use this appearance."
 sale-item-similar: "&cThe selected item is too similar to the current shop item."
 trade-item-similar: "&cThe selected item is too similar to the current shop trade/currency item."
+appearance-unlocked: "&aThe &e{appearance} &aappearance is now &eUnlocked&a!"
 
 ## Hook Messages ##
 towny-no-access: "&cYou do not have access to this shop plot."

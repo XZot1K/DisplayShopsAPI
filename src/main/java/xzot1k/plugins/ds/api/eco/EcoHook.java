@@ -9,9 +9,9 @@ import java.util.UUID;
 
 public abstract class EcoHook {
     private final String currencyName;
-    private String altName, symbol;
+    private String altName, symbol, format;
     private int decimalPlacement;
-    private boolean rawPlaceholderValue;
+    private boolean rawPlaceholderValue, useFormat;
 
     public EcoHook(@NotNull String currencyName, @Nullable EcoHandler... ecoHandler) {
         this.currencyName = currencyName;
@@ -19,6 +19,8 @@ public abstract class EcoHook {
         setSymbol("$");
         setDecimalPlacement(2);
         setRawPlaceholderValue(false);
+        setUseFormat(false);
+        setFormat(null);
         loadAndRegister((ecoHandler != null && ecoHandler.length > 0 && ecoHandler[0] != null)
                 ? ecoHandler[0] : DisplayShops.getPluginInstance().getEconomyHandler());
     }
@@ -70,4 +72,12 @@ public abstract class EcoHook {
     public void setRawPlaceholderValue(boolean rawPlaceholderValue) {this.rawPlaceholderValue = rawPlaceholderValue;}
 
     public String getCurrencyName() {return currencyName;}
+
+    public boolean useFormat() {return useFormat;}
+
+    public void setUseFormat(boolean useFormat) {this.useFormat = useFormat;}
+
+    public String getFormat() {return format;}
+
+    public void setFormat(String format) {this.format = format;}
 }

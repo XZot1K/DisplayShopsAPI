@@ -56,22 +56,29 @@ default-currency-type: "Vault"
 currency-blacklist: [ ]
 
 # This section can contain all the economy names found within the edit menu in-game alongside an alternate name to be used.
+# Note: The "format" option will override the "raw-placeholder-value". Available Placeholders: {amount}, {symbol}, and {name}
 currency-settings:
   item-for-item:
     name: ""
     symbol: ""
     decimal-placement: 0
     raw-placeholder-value: false
+    use-format: false
+    format: "&6{symbol}&e{amount}"
   Vault:
     name: "Money ({symbol})"
     symbol: "$"
     decimal-placement: 2
     raw-placeholder-value: false
+    use-format: false
+    format: "&6{symbol}&e{amount}"
   PlayerPoints:
     name: "Points ({symbol})"
     symbol: ""
     decimal-placement: 0
     raw-placeholder-value: false
+    use-format: false
+    format: "&6{symbol}&e{amount}"
 
 # If this is enabled and Towny is installed, shop plots available to the player will be the only allowed area for shops.
 towny-shop-plots-only: true

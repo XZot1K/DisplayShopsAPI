@@ -74,14 +74,14 @@ buttons:
       - ""
       - "&aClick &7to increase the unit"
       - "&7count by &e1&7."
-  unit-increase-more:
+  unit-increase-16:
     slot: 29
     material: "ORANGE_WOOL"
     name: "&a&l\u2605 &e&lIncrease Unit Count &a&l\u2605"
     lore:
       - ""
       - "&aClick &7to increase the unit"
-      - "&7count by &e{unit-increment}&7."
+      - "&7count by &e16&7."
   unit-decrease:
     slot: 34
     material: "RED_WOOL"
@@ -90,11 +90,11 @@ buttons:
       - ""
       - "&aClick &7to decrease the unit"
       - "&7count by &e1&7."
-  unit-decrease-more:
+  unit-decrease-16:
     slot: 33
     material: "ORANGE_WOOL"
     name: "&c&l\u2605 &e&lDecrease Unit Count &c&l\u2605"
     lore:
       - ""
       - "&aClick &7to decrease the unit"
-      - "&7count by &e{unit-increment}&7."
+      - "&7count by &e16&7."
