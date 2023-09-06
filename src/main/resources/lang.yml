@@ -141,8 +141,6 @@ shop-edit-too-similar: "&cThe value entered is too similar to the existing value
 invalid-item-symbol: "&cThe item you are attempting to select has a incompatible symbol within its meta. Please avoid things like double quotes."
 shop-visiting-disabled: "&cShop visiting is currently unavailable and unable to be used at this time."
 shop-visit-charge: "&cYou were charged &e{charge} &cfor visiting a shop."
-bbm-unlocked: "&aAll base-block materials have been &eunlocked &afor the player &e{player}&a."
-bbm-locked: "&aAll base-block materials have been &clocked &afor the player &e{player}&a."
 shop-under-edit: "&cThis shop is currently undergoing edits by the owner or an assistant."
 world-cleared: "&aThe world &e{world} &ais now shop free!"
 rent-notification: "&cYour market region at &e{id} &cwill expire in &e{time}&c. Utilize the &e/ds renew {id} &cto renew your rent. &c&l&nUnclaimed shop contents will be lost on expire."
@@ -174,10 +172,14 @@ sale-item-cleared: "&aThe shop sale item has been cleared."
 trade-item-cleared: "&aThe shop trade item has been cleared."
 limits-cleared: "&aAll global and per-player limit counters were cleared."
 shop-balance-exists: "&cThe balance of the must be cleared before performing this action."
-missing-bbm-requirement: "&cYou do not meet the requirements to use this appearance."
+missing-appearance-requirement: "&cYou do not meet the requirements to use this appearance."
 sale-item-similar: "&cThe selected item is too similar to the current shop item."
 trade-item-similar: "&cThe selected item is too similar to the current shop trade/currency item."
-appearance-unlocked: "&aThe &e{appearance} &aappearance is now &eUnlocked&a!"
+appearance-access: "&aThe &e{appearance} &aappearance is now {status}&a!"
+appearance-access-admin: "&aThe &e{appearance} &aappearance has been {status} &afor &e{player}&a."
+appearance-all-admin: "&aAll appearances are now {status} &afor &e{player}&a."
+invalid-appearance: "&cThe entered appearance is invalid. &eAvailable Appearances: &b{appearances}"
+empty-shop: "&cThis shop is currently empty."
 
 ## Hook Messages ##
 towny-no-access: "&cYou do not have access to this shop plot."
@@ -202,10 +204,12 @@ shop-advertisement:
   message: "&c&l[!]&r &e{player} &7advertised their shop &7(Buy: &e{buy} &7Sell: &e{sell}&7) &b[Hover To Preview] "
   visit-clickable: "&a[Click To Visit]"
 
-## Enabled and Disabled translations ##
+## General Translations ##
 # These are general translations used throughout the plugin to display the current status of specific features.
 enabled: "&aEnabled"
 disabled: "&cDisabled"
+unlocked: "&eUnlocked"
+locked: "&cLocked"
 
 ## Administrator Help Message ##
 admin-help-message: "&eClick &ato view all available &cAdmin &acommands."

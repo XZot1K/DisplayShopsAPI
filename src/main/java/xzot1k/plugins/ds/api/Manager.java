@@ -241,14 +241,6 @@ public interface Manager {
     UUID generateNewId();
 
     /**
-     * Gets the proper offsets based on configuration or defaults.
-     *
-     * @param shop The shop to obtain the offsets for.
-     * @return The array of X, Y, and Z offsets.
-     */
-    Double[] getBaseBlockOffsets(@NotNull Shop shop);
-
-    /**
      * Attempts to get a shop object from the shop map by its ID.
      *
      * @param shopId The ID to get the shop from

@@ -189,6 +189,12 @@ creation-item-drop: true
 # If this is enabled, empty shops will display with a barrier block as the floating item instead of nothing.
 empty-shop-item: true
 
+# If this is enabled, the player can edit the shop when no shop item is set. This is an alternative process for setting up shops.
+empty-shop-edit: false
+
+# If this is enabled, the player can quick-withdraw and quick-deposit to/from a shop.
+quick-actions: true
+
 # If this option is enabled, shops will use the owner's balance instead of the stored balance when they are online.
 sync-owner-balance: false
 
@@ -247,10 +253,6 @@ chat-interaction-cancel: "cancel"
 # (Note: Setting this to "wiki" will use the default GitHub page link. Setting it to "" will disable it completely.)
 help-command-link: "wiki"
 
-# This is the DEFAULT base material of the shop itself. This material MUST be a block and will ONLY be used when the player has no permission based base-block or an invalid one.
-# (Note: The format used can either be just the material name or <material>:<durability> for older versions and damaged items)
-shop-block-material: "END_PORTAL_FRAME:0"
-
 # If this is enabled, the glass display will be ignored.
 hide-glass: false
 
@@ -274,13 +276,6 @@ broadcasting-worlds:
   - "world"
   - "world_nether"
   - "world_the_end"
-
-# These are the offsets for each material that allow you to mess with the entire display of shops to make them look
-# better on the base material.
-material-based-offsets:
-  - "END_PORTAL_FRAME:0.5,-0.4,0.5"
-  - "ENDER_PORTAL_FRAME:0.5,-0.4,0.5"
-  - "CHEST:0.5,-0.2,0.5"
 
 # This is the hologram format that is used when a shop is created or when the shop item is invalid.
 invalid-item-format:
@@ -364,20 +359,15 @@ editor-prevention: false
 required-shop-distance: 1
 
 # Worlds in this list will not allow shop creations.
-blocked-worlds:
-  - "creative_world"
+blocked-worlds: [ "creative_world" ]
 
 # Materials in this list will block shops from being created on them.
-blocked-material-list:
-  - "LAVA"
-  - "STATIONARY_LAVA"
+blocked-material-list: [ "LAVA", "STATIONARY_LAVA" ]
 
 # Item materials in this list are unable to be sold in the shops.
 # (Please not that shops whom already contain these items will NOT be affected.)
 # Format: <material:durability> (Don't put a durability if it doesn't matter)
-blocked-item-list:
-  - "END_PORTAL"
-  - "PORTAL"
+blocked-item-list: [ "END_PORTAL", "PORTAL" ]
 
 # This is the list where specific materials can be given direct limitation to the maximum buy and sell price (max per one of that material in a stack "outside unit count").
 max-material-prices:
@@ -463,22 +453,17 @@ immersion-section:
 # Here is where the shop creation item can be fully configured.
 # (Note: The material is the 'shop-block-material' defined under the 'shop-options' section)
 shop-creation-item:
-
   # Tells the plugin if the player can craft it or not.
   craftable: true
-
   # This option is the recipe for this creation item, 3 slots per row. Each material may have a durability if the material is followed with
   # a colon. To separate slots simply use a comma (Use -1 as the durability for it to not matter).
   recipe:
     line-one: "AIR:-1,GLASS:-1,AIR:-1"
     line-two: "END_STONE:-1,CHEST:-1,END_STONE:-1"
     line-three: "OBSIDIAN:-1,OBSIDIAN:-1,OBSIDIAN:-1"
-
   # This determines if the creation item will glow.
   enchanted: false
-
   display-name: "&b&lDisplay Shop"
-
   # Enchantments use the ids from:  https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html
   # (NOTE: Use the format "<id>:<level starting at 0>")
   enchantments: [ ]
@@ -487,20 +472,15 @@ shop-creation-item:
   flags: [ ]
   # This is for special use of textures. Leave at -1 to avoid.
   model-data: 0
-
-  lore:
-    - ""
-    - "&aPlace &7to create a new empty shop."
+  lore: [ "", "&aPlace &7to create a new empty shop." ]
 
 # Here is where the shop currency item can be fully configured.
 # (Note: This is only used as the currency if Vault is disabled)
 shop-currency-item:
-
   # If this is enabled, shop owners will not be able to change the trade item and this item will be used.
   force-use: false
   material: "GOLD_INGOT"
   durability: 0
-
   # Enchantments use the ids from:  https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html
   # (NOTE: Use the format "<id>:<level starting at 0>")
   enchantments: [ ]
@@ -509,7 +489,6 @@ shop-currency-item:
   flags: [ ]
   # This is for special use of textures. Leave at -1 to avoid.
   model-data: 0
-
   # Leave the display name and lore blank for no item meta (Vanilla Item).
   display-name: ""
   lore: [ ]

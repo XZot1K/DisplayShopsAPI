@@ -327,10 +327,6 @@ public interface Shop {
 
     void setDescription(@Nullable String description);
 
-    String getStoredBaseBlockMaterial();
-
-    void setStoredBaseBlockMaterial(@NotNull String storedBaseBlockMaterial);
-
     boolean canDynamicPriceChange();
 
     void setDynamicPriceChange(boolean dynamicPriceChange);
@@ -371,4 +367,7 @@ public interface Shop {
      */
     ItemStack getCurrencyItem();
 
+    String getAppearanceId();
+
+    void setAppearanceId(String appearanceId);
 }

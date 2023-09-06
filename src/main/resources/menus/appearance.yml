@@ -38,73 +38,102 @@ unlocked-format:
 # NOTE: Sorting alphabetically will override the default appearance order.
 sort-alphabetically: true
 
+# If enabled, appearances will be unlocked simply by having their associated permission.
+permission-unlock-mode: false
+
+# This is the default appearance a shop will use.
+default-appearance: "Default"
+
+# Ensure to always have at least one appearance.
 appearances:
   Default:
     material: "END_PORTAL_FRAME"
+    offset: "0.5,-0.4,0.5"
   Traditional:
     material: "CHEST"
     price: 75.0
+    offset: "0.5,-0.4,0.5"
   Security:
     material: "LOCKED_CHEST"
     price: 125.0
+    offset: "0.5,-0.4,0.5"
   Aged:
     material: "BARREL"
     price: 125.0
+    offset: "0.5,-0.25,0.5"
   Worker:
-    material: "CRAFTING_BENCH"
+    material: "CRAFTING_TABLE"
     price: 150.0
+    offset: "0.5,-0.25,0.5"
   Cooker:
     material: "FURNACE"
     price: 100.0
+    offset: "0.5,-0.25,0.5"
   Ender:
     material: "ENDER_CHEST"
     price: 300.0
+    offset: "0.5,-0.4,0.5"
     permission: "displayshops.appearance.ender"
     requirement: [ "&7Requires the &e{permission} &7permission." ]
   Musical:
     material: "JUKEBOX"
     price: 200.0
+    offset: "0.5,-0.25,0.5"
     permission: "displayshops.appearance.musical"
     requirement: [ "&7Requires the &e{permission} &7permission." ]
   Sound:
     material: "NOTE_BLOCK"
     price: 160.0
+    offset: "0.5,-0.25,0.5"
     permission: "displayshops.appearance.sound"
     requirement: [ "&7Requires the &e{permission} &7permission." ]
   Rich:
     material: "DIAMOND_BLOCK"
     price: 500.0
+    offset: "0.5,-0.25,0.5"
     permission: "displayshops.appearance.rich"
     requirement: [ "&7Requires the &e{permission} &7permission." ]
   Golden:
     material: "GOLD_BLOCK"
     price: 450.0
+    offset: "0.5,-0.25,0.5"
     permission: "displayshops.appearance.golden"
     requirement: [ "&7Requires the &e{permission} &7permission." ]
   Tough:
     material: "IRON_BLOCK"
     price: 300.0
+    offset: "0.5,-0.25,0.5"
     permission: "displayshops.appearance.tough"
     requirement: [ "&7Requires the &e{permission} &7permission." ]
   Miner:
     material: "COAL_BLOCK"
     price: 250.0
+    offset: "0.5,-0.25,0.5"
     permission: "displayshops.appearance.miner"
     requirement: [ "&7Requires the &e{permission} &7permission." ]
   Rare:
     material: "LAPIS_BLOCK"
     price: 400.0
+    offset: "0.5,-0.25,0.5"
     permission: "displayshops.appearance.rare"
     requirement: [ "&7Requires the &e{permission} &7permission." ]
   Banker:
     material: "EMERALD_BLOCK"
     price: 600.0
+    offset: "0.5,-0.25,0.5"
     permission: "displayshops.appearance.banker"
     requirement: [ "&7Requires the &e{permission} &7permission." ]
   Fancy:
     material: "QUARTZ_BLOCK"
     price: 350.0
+    offset: "0.5,-0.25,0.5"
     permission: "displayshops.appearance.fancy"
+    requirement: [ "&7Requires the &e{permission} &7permission." ]
+  Useful:
+    material: "HOPPER"
+    price: 415.0
+    offset: "0.5,-0.25,0.5"
+    permission: "displayshops.appearance.useful"
     requirement: [ "&7Requires the &e{permission} &7permission." ]
 
 buttons:

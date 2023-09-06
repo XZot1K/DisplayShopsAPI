@@ -7,28 +7,41 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public abstract class Appearance implements Comparable<Appearance> {
     private static final List<Appearance> appearances = new ArrayList<>();
     private String id, material, permission;
     private List<String> requirement;
     private double price;
+    private double[] offset;
 
-    public Appearance(@NotNull String id, @NotNull String material, double price, @Nullable String permission, @Nullable String... requirement) {
+    public Appearance(@NotNull String id, @NotNull String material, double price, @Nullable String permission,
+                      double @Nullable [] offset, @Nullable String... requirement) {
         setId(id);
         setMaterial(material);
         setPrice(price);
         setPermission(permission);
         setRequirement(new ArrayList<>(requirement.length));
+        setOffset(offset);
     }
 
     public static void registerAppearance(@NotNull Appearance appearance) {
         if (!doesAppearanceExist(appearance.getId())) getAppearances().add(appearance);
     }
 
-    public static Appearance getAppearance(@NotNull String id) {
+    public static Appearance getAppearance(@Nullable String id) {
+        if (id == null || id.isEmpty()) return null;
         return getAppearances().parallelStream().filter(appearance -> appearance.getId().equalsIgnoreCase(id)).findFirst().orElse(null);
     }
+
+    public static String findAppearance(@NotNull String materialString) {
+        Optional<Appearance> appearanceIdOptional = getAppearances().parallelStream().filter(appearance ->
+                (materialString.equalsIgnoreCase(appearance.getMaterial()))).findFirst();
+        return appearanceIdOptional.map(Appearance::getId).orElse(null);
+    }
+
+    public void apply(@NotNull Shop shop, @NotNull Player player) {}
 
     public static boolean doesAppearanceExist(@NotNull String id) {return (getAppearance(id) != null);}
 
@@ -55,4 +68,8 @@ public abstract class Appearance implements Comparable<Appearance> {
     public List<String> getRequirement() {return requirement;}
 
     public void setRequirement(@NotNull List<String> requirement) {this.requirement = requirement;}
+
+    public double[] getOffset() {return (offset == null ? new double[]{0.5, -0.25, 0.5} : offset);}
+
+    public void setOffset(double[] offset) {this.offset = offset;}
 }

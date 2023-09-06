@@ -73,37 +73,41 @@ public interface DataPack {
     int getCooldown(@NotNull Player player, @NotNull String cooldownId, int cooldown);
 
     /**
-     * Checks to see if the player has purchased and unlocked the base block material.
+     * Checks to see if the player can unlock the appearance.
      *
-     * @param unlockId The material followed by a colon and its durability which is normally set to -1 or 0.
+     * @param player       The player to check permissions of.
+     * @param appearanceId The appearance ID.
      * @return Whether the appearance is unlocked.
      */
-    boolean hasUnlockedBBM(@NotNull String unlockId);
+    boolean canUnlockAppearance(@NotNull Player player, @NotNull String appearanceId);
 
     /**
-     * Unlocks the base-block appearance.
+     * Checks to see if the player has unlocked the appearance.
      *
-     * @param unlockId The material followed by a colon and the durability.
+     * @param player       The player to check permissions of.
+     * @param appearanceId The appearance ID.
+     * @return Whether the appearance is unlocked.
      */
-    void unlockBaseBlock(@NotNull String unlockId);
+    boolean hasUnlockedAppearance(@NotNull Player player, @NotNull String appearanceId);
 
     /**
-     * Locks the base-block appearance.
+     * Unlocks the appearance.
      *
-     * @param unlockId The material followed by a colon and the durability.
+     * @param appearanceId The material followed by a colon and the durability.
+     * @param unlocked Updates the appearance status to be unlocked or locked.
      */
-    void lockBaseBlock(@NotNull String unlockId);
+    void updateAppearance(@NotNull String appearanceId, boolean unlocked);
 
-    String getBBMString();
+    String getAppearanceData();
 
-    void loadBBM(String loadString);
+    void loadAppearanceData(@Nullable String appearanceData);
 
     /**
      * Updates all base-block data to either locked aside the default or unlock all.
      *
      * @param unlockAll Whether to unlock all materials.
      */
-    void updateAllBaseBlockAccess(boolean unlockAll);
+    void updateUnlocks(boolean unlockAll);
 
     /**
      * Obtains a full string of cooldowns applied to the player.
@@ -125,9 +129,9 @@ public interface DataPack {
     void resetEditData();
 
     // getters & setters
-    LinkedHashMap<String, Boolean> getBaseBlockUnlocks();
+    LinkedHashMap<String, Boolean> getAppearanceDataMap();
 
-    void setBaseBlockUnlocks(@Nullable LinkedHashMap<String, Boolean> baseBlockUnlocks);
+    void setAppearanceDataMap(@Nullable LinkedHashMap<String, Boolean> appearanceDataMap);
 
     /**
      * Gets the shop object the player is currently tethered to from editing or any similar actions.
