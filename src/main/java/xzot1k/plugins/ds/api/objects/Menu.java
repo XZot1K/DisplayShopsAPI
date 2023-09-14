@@ -30,24 +30,23 @@ public interface Menu {
     String getMenuName();
 
     /**
-     * Builds the menu using a defined search text alongside the player.
+     * Builds and opens the menu using a defined search text alongside the player.
      *
      * @param player     The player to base properties around.
      * @param searchText The searched text, if applicable.
-     * @return The created menu.
      */
-    Inventory build(@NotNull Player player, @Nullable String... searchText);
+    void build(@NotNull Player player, @Nullable String... searchText);
 
     /**
      * Builds a particular button in a specific location given some parameters.
      *
-     * @param mainSection  The buttons section of the menus config.
-     * @param buttonAction The button name.
-     * @param player       The player to associate placeholders to.
-     * @param inventory    The inventory to build the button into.
-     * @param shop         The shop to base placeholders on.
-     * @param emptySlots   The slots that are restricted from usage.
-     * @param extraPlaceHolders   Additional placeholders that will be replaced in the format "{placeholder}:{text}".
+     * @param mainSection       The buttons section of the menus config.
+     * @param buttonAction      The button name.
+     * @param player            The player to associate placeholders to.
+     * @param inventory         The inventory to build the button into.
+     * @param shop              The shop to base placeholders on.
+     * @param emptySlots        The slots that are restricted from usage.
+     * @param extraPlaceHolders Additional placeholders that will be replaced in the format "{placeholder}:{text}".
      */
     void buildButton(@NotNull ConfigurationSection mainSection, @NotNull String buttonAction, @NotNull Player player,
                      @NotNull Inventory inventory, @Nullable Shop shop, @Nullable List<Integer> emptySlots, @Nullable String... extraPlaceHolders);
@@ -93,18 +92,20 @@ public interface Menu {
      * @param shop       The shop the player has currently selected.
      * @param searchText The filter text to filter the items by.
      * @param typeItem   The type item used to filter shops by what actions can be performed.
+     * @param inventory  The inventory to load the page into.
      */
-    void loadPages(@NotNull Player player, @NotNull DataPack dataPack, @Nullable Shop shop, @Nullable String searchText, @Nullable ItemStack typeItem);
+    void loadPages(@NotNull Player player, @NotNull DataPack dataPack, @Nullable Shop shop, @Nullable String searchText, @Nullable ItemStack typeItem,
+                   @NotNull Inventory inventory);
 
     /**
      * Update the button based on specific attributes.
      *
-     * @param player     The player to update the button for.
-     * @param inventory  The inventory (menu) to update it in.
-     * @param slot       The slot to update the button at.
-     * @param shop       The shop to update the button for, if available.
-     * @param emptySlots The empty slots to base it around.
-     * @param extraPlaceHolders   Additional placeholders that will be replaced in the format "{placeholder}:{text}".
+     * @param player            The player to update the button for.
+     * @param inventory         The inventory (menu) to update it in.
+     * @param slot              The slot to update the button at.
+     * @param shop              The shop to update the button for, if available.
+     * @param emptySlots        The empty slots to base it around.
+     * @param extraPlaceHolders Additional placeholders that will be replaced in the format "{placeholder}:{text}".
      */
     void updateButton(@NotNull Player player, @NotNull Inventory inventory, int slot,
                       @Nullable Shop shop, @Nullable List<Integer> emptySlots, @Nullable String... extraPlaceHolders);
