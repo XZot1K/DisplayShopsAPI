@@ -6,7 +6,7 @@
 no-permission: "&cYou do not have permission to use this."
 must-be-player: "&cYou must be a player to use this."
 clean-database: "&aThe database has been cleaned up."
-reload: "&aYou have re-loaded all shops and the configuration file."
+reload: "&aYou have reloaded all configurations, menus, and refreshed all shops."
 world-invalid: "&cThe world &e{world} &ais invalid."
 player-invalid: "&cThe player entered is either invalid or offline."
 shop-invalid: "&cThere is no shop at this location. Please look directly at the base block of the shop."
