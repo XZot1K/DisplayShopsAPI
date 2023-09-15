@@ -25,15 +25,14 @@ visit-icon:
   name: "&f&l{item} &6&lShop"
   lore:
     - "&7&m------------------"
-    - ""
-    - "&7Description: &f{description}"
-    - ""
+    - "{description}"
     - "&7Type: &b{type}"
     - "&7Owner: &e{owner}"
     - ""
     - "&7Location: &e{x} &e{y} &e{z}"
     - "&7Stock: &e{stock}"
     - "&7Balance: &e{balance}"
+    - "&7Buy/Sell Price: &e{buy} &7/ &e{sell}"
     - ""
     - "&eClick &7to visit this shop for &a{cost}&7."
     - ""
@@ -47,11 +46,11 @@ visit-types:
 buttons:
   previous:
     slot: 36
-    material: "HEAD:ArrowLeft"
+    material: "TEXTURE:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ2OWUwNmU1ZGFkZmQ4NGU1ZjNkMWMyMTA2M2YyNTUzYjJmYTk0NWVlMWQ0ZDcxNTJmZGM1NDI1YmMxMmE5In19fQ=="
     name: "&ePrevious Page"
   next:
     slot: 37
-    material: "HEAD:ArrowRight"
+    material: "TEXTURE:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTliZjMyOTJlMTI2YTEwNWI1NGViYTcxM2FhMWIxNTJkNTQxYTFkODkzODgyOWM1NjM2NGQxNzhlZDIyYmYifX19"
     name: "&eNext Page"
   type:
     slot: 39
@@ -64,5 +63,5 @@ buttons:
     lore: [ "", "&7Current Search: &e{search-text}" ]
   close:
     slot: 44
-    material: "HEAD:ArrowLeft"
+    material: "TEXTURE:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWE2Nzg3YmEzMjU2NGU3YzJmM2EwY2U2NDQ5OGVjYmIyM2I4OTg0NWU1YTY2YjVjZWM3NzM2ZjcyOWVkMzcifX19"
     name: "&cReturn"

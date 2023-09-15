@@ -21,8 +21,8 @@ import xzot1k.plugins.ds.api.objects.MarketRegion;
 import xzot1k.plugins.ds.api.objects.Shop;
 
 import java.util.List;
-import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Pattern;
 
 public interface Manager {
@@ -439,11 +439,11 @@ public interface Manager {
     boolean isBlockedWorld(@NotNull World world);
 
     // getters & setters
-    Map<UUID, Shop> getShopMap();
+    ConcurrentHashMap<UUID, Shop> getShopMap();
 
     List<MarketRegion> getMarketRegions();
 
-    Map<UUID, DataPack> getDataPackMap();
+    ConcurrentHashMap<UUID, DataPack> getDataPackMap();
 
     Pattern getUUIDPattern();
 }

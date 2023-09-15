@@ -337,7 +337,7 @@ default-buy-price: 100
 default-sell-price: 25
 
 # This is the overall maximum stock a single shop can have at one time.
-max-shop-stock: 1000
+max-shop-stock: 100000
 
 # These are the maximum unit counts a player can buy or sell from the buy/sell all feature in one transaction.
 maximum-buy-all: 36

@@ -51,7 +51,7 @@ buttons:
     name: "&cReset"
   return:
     slot: 30
-    material: "HEAD:MHF_ArrowLeft"
+    material: "TEXTURE:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWE2Nzg3YmEzMjU2NGU3YzJmM2EwY2U2NDQ5OGVjYmIyM2I4OTg0NWU1YTY2YjVjZWM3NzM2ZjcyOWVkMzcifX19"
     name: "&cReturn"
     lore: [ "", "&aClick &7to return", "&7to the previous", "&7menu." ]
   custom-amount:
