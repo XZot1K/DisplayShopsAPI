@@ -144,8 +144,11 @@ assistants-cap: 5
 # (Note: This basically just forces the unit count of a shop to always be 1 instead of any value. DOES NOT EFFECT EXISTING SHOPS)
 force-single-items: false
 
+# This is the string/color used for each line that doesn't contain a color code with a shop's description.
+default-description-color: "&f"
+
 # This is the word limit for all shop descriptions.
-description-character-limit: 30
+description-character-limit: 45
 
 # This is the description wrapping mechanic that will wrap the text to a new line based on word size.
 description-long-word-wrap: 16
@@ -153,7 +156,7 @@ description-long-word-wrap: 16
 # This is how many words a description can have per line.
 description-word-line-limit: 5
 
-# Strings within this filter will be remove from all shop's descriptions.
+# Strings within this filter will be removed from all shop's descriptions.
 # (Note: Phrases can be implemented into this list as well. The list can also be changed to a vertical format like other lists in the configuration.)
 description-filter: [ "fuck", "shit", "cunt", "fag", "faggot", "bitch", "dick", "damn", "www.", ".com", ".net" ]
 

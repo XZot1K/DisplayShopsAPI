@@ -38,7 +38,9 @@ public enum ShopActionType {
         return new ShopActionType[]{this};
     }
 
-    public String getName(@NotNull Menu visitMenu) {return visitMenu.getConfiguration().getString("visit-types." + name().toLowerCase().replace("_", "-"));}
+    public String getName(@NotNull Menu visitMenu) {
+        return visitMenu.getConfiguration().getString("visit-types." + name().toLowerCase().replace("_", "-"));
+    }
 
     public ShopActionType getNext() {
         for (int i = -1; ++i < values().length; ) {
@@ -50,22 +52,28 @@ public enum ShopActionType {
 
     public boolean failsCheck(@NotNull Shop shop) {
         switch (this) {
-            case BUY: {return (failsBuy(shop));}
+            case BUY: {
+                return (failsBuy(shop));
+            }
 
-            case SELL: {return failsSell(shop);}
+            case SELL: {
+                return failsSell(shop);
+            }
 
-            default: {return (failsBuy(shop) && failsSell(shop));}
+            default: {
+                return (failsBuy(shop) && failsSell(shop));
+            }
         }
     }
 
     private boolean failsBuy(@NotNull Shop shop) {
         final double buyPrice = shop.getBuyPrice(shop.canDynamicPriceChange());
-        return (buyPrice < 0 || shop.getStock() <= 0 || shop.getStock() < shop.getShopItemAmount());
+        return (buyPrice < 0 || (!shop.isAdminShop() && (shop.getStock() <= 0 || shop.getStock() < shop.getShopItemAmount())));
     }
 
     private boolean failsSell(@NotNull Shop shop) {
         final double sellPrice = shop.getSellPrice(shop.canDynamicPriceChange());
-        return (sellPrice < 0 || shop.getStoredBalance() <= 0 || shop.getStock() >= shop.getMaxStock());
+        return (sellPrice < 0 || (!shop.isAdminShop() && shop.getStoredBalance() <= 0) || shop.getStock() >= shop.getMaxStock());
     }
 
 }

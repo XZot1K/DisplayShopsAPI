@@ -370,4 +370,8 @@ public interface Shop {
     String getAppearanceId();
 
     void setAppearanceId(String appearanceId);
+
+    ItemStack getVisitIcon();
+
+    void setVisitIcon(ItemStack visitIcon);
 }

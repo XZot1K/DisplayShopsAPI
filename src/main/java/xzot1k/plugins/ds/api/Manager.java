@@ -408,10 +408,9 @@ public interface Manager {
      * Wraps a string into multiple lines based on a word count.
      *
      * @param text          The long string to wrap.
-     * @param wordLineLimit The line size in terms of word count.
      * @return wraps the string to multiple lines
      */
-    List<String> wrapString(@NotNull String text, int wordLineLimit);
+    List<String> wrapString(@NotNull String text);
 
     /**
      * Builds and returns the shop creation item.
