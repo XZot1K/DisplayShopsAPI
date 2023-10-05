@@ -7,6 +7,7 @@ package xzot1k.plugins.ds.api.objects;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.UUID;
 
@@ -98,7 +99,7 @@ public interface MarketRegion {
      *
      * @param renter The new renter unique ID.
      */
-    void setRenter(@NotNull UUID renter);
+    void setRenter(@Nullable UUID renter);
 
     /**
      * Gets the exact date and time when the renter began renting the region.
@@ -112,7 +113,7 @@ public interface MarketRegion {
      *
      * @param rentedTimeStamp The time stamp in the format "yyyy.MM.dd.HH.mm.ss".
      */
-    void setRentedTimeStamp(@NotNull String rentedTimeStamp);
+    void setRentedTimeStamp(@Nullable String rentedTimeStamp);
 
     /**
      * Gets the duration extension add to the rent expire time (in seconds).
