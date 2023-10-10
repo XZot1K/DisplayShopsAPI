@@ -68,6 +68,13 @@ public interface MarketRegion {
     void delete(boolean async);
 
     /**
+     * Saves the market region to the database.
+     *
+     * @param async Whether the shop should be saved on the main thread or not.
+     */
+    void save(boolean async);
+
+    /**
      * Checks if the passed location is located within the market region.
      *
      * @param location The location to check for.

@@ -41,7 +41,7 @@ public abstract class Appearance implements Comparable<Appearance> {
         return appearanceIdOptional.map(Appearance::getId).orElse(null);
     }
 
-    public void apply(@NotNull Shop shop, @NotNull Player player) {}
+    public void apply(@NotNull Shop shop, @Nullable Player player) {}
 
     public static boolean doesAppearanceExist(@NotNull String id) {return (getAppearance(id) != null);}
 
