@@ -405,9 +405,17 @@ public interface Manager {
     boolean isNotNumeric(@NotNull String string);
 
     /**
+     * See if a string is NOT a numerical value.
+     *
+     * @param string The string to check.
+     * @return Whether it is numerical or not.
+     */
+    boolean isNotRawNumeric(@NotNull String string);
+
+    /**
      * Wraps a string into multiple lines based on a word count.
      *
-     * @param text          The long string to wrap.
+     * @param text The long string to wrap.
      * @return wraps the string to multiple lines
      */
     List<String> wrapString(@NotNull String text);
