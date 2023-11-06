@@ -228,6 +228,7 @@ prices:
   player-sell-limit: 0.0
 
 # If this is greater than zero, the defined percentage will be taken from the buy/sell transaction value before it reaches a player in the form of tax.
+# Note: Use decimal values 0.0 - 1.0
 transaction-tax: 0
 
 # If this is enabled, dynamic prices will be usable and vice-versa.
