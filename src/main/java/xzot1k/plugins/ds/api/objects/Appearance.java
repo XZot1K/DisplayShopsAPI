@@ -6,6 +6,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,7 +23,7 @@ public abstract class Appearance implements Comparable<Appearance> {
         setMaterial(material);
         setPrice(price);
         setPermission(permission);
-        setRequirement(new ArrayList<>(requirement.length));
+        setRequirement(new ArrayList<String>() {{Collections.addAll(this, requirement);}});
         setOffset(offset);
     }
 

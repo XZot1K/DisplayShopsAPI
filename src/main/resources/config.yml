@@ -57,6 +57,10 @@ currency-blacklist: [ ]
 
 # This section can contain all the economy names found within the edit menu in-game alongside an alternate name to be used.
 # Note: The "format" option will override the "raw-placeholder-value". Available Placeholders: {amount}, {symbol}, and {name}
+#
+# Economy calls (events) defined within the "forced-economy-calls" list will be forced to use the economy it is defined under.
+# For example, when a player unlocks an Appearance or Visits a shop, Vault will be forced as the currency (if defined under Vault).
+# Available economy call types: https://github.com/XZot1K/DisplayShopsAPI/blob/recode/src/main/java/xzot1k/plugins/ds/api/enums/EconomyCallType.java
 currency-settings:
   item-for-item:
     name: ""
@@ -65,6 +69,7 @@ currency-settings:
     raw-placeholder-value: false
     use-format: false
     format: "&6{symbol}&e{amount}"
+    forced-economy-calls: [ ]
   Vault:
     name: "Money ({symbol})"
     symbol: "$"
@@ -72,6 +77,7 @@ currency-settings:
     raw-placeholder-value: false
     use-format: false
     format: "&6{symbol}&e{amount}"
+    forced-economy-calls: [ "APPEARANCE", "VISIT" ]
   PlayerPoints:
     name: "Points ({symbol})"
     symbol: ""
@@ -79,6 +85,7 @@ currency-settings:
     raw-placeholder-value: false
     use-format: false
     format: "&6{symbol}&e{amount}"
+    forced-economy-calls: [ ]
 
 # If this is enabled and Towny is installed, shop plots available to the player will be the only allowed area for shops.
 towny-shop-plots-only: true
