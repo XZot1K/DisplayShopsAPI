@@ -152,13 +152,13 @@ assistants-cap: 5
 force-single-items: false
 
 # This is the string/color used for each line that doesn't contain a color code with a shop's description.
-default-description-color: "&f"
+default-description-color: "&b"
 
 # This is the word limit for all shop descriptions.
 description-character-limit: 45
 
 # This is the description wrapping mechanic that will wrap the text to a new line based on word size.
-description-long-word-wrap: 16
+description-long-word-wrap: 45
 
 # This is how many words a description can have per line.
 description-word-line-limit: 5

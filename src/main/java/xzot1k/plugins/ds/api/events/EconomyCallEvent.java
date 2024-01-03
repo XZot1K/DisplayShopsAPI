@@ -29,9 +29,18 @@ public class EconomyCallEvent extends Event implements Cancellable, ECEvent {
      */
     public static EconomyCallEvent call(@NotNull Player player, @Nullable Shop shop, @NotNull EconomyCallType economyCallType, double price) {return null;}
 
+    /**
+     * Takes and gives currency from the players accordingly.
+     *
+     * @parm canNotBypass determines whether the investor will be charged for the transaction or not (If the type is NOT sell).
+     */
     @Override
-    public void performCurrencyTransfer(boolean chargeInvestor) {}
+    public void performCurrencyTransfer(boolean canNotBypass) {}
 
+
+    /**
+     * Reverses all transactions and returns all modified currency balanced to their original state before it was taken/given.
+     */
     @Override
     public void reverseCurrencyTransfer() {}
 
@@ -71,6 +80,11 @@ public class EconomyCallEvent extends Event implements Cancellable, ECEvent {
     @Override
     public void setTax(double tax) {}
 
+    /**
+     * Tells if the transaction will succeed based on if the investor and producer can both complete it.
+     *
+     * @return If the transaction succeeded.
+     */
     @Override
     public boolean willSucceed() {return false;}
 
@@ -95,6 +109,9 @@ public class EconomyCallEvent extends Event implements Cancellable, ECEvent {
     @Override
     public void setChargedPlayer(boolean chargedPlayer) {}
 
+    /**
+     * @return Whether the event's checks failed or not.
+     */
     @Override
     public boolean failed() {return false;}
 
