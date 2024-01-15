@@ -154,11 +154,11 @@ force-single-items: false
 # This is the string/color used for each line that doesn't contain a color code with a shop's description.
 default-description-color: "&b"
 
-# This is the word limit for all shop descriptions.
+# This is the word limit for all shop descriptions (45 is max for the packet name tag).
 description-character-limit: 45
 
 # This is the description wrapping mechanic that will wrap the text to a new line based on word size.
-description-long-word-wrap: 45
+description-long-word-wrap: 4
 
 # This is how many words a description can have per line.
 description-word-line-limit: 5
