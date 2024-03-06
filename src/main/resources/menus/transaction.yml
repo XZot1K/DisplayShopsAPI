@@ -9,6 +9,9 @@ filler-model-data: 0
 
 preview-slot: 13
 
+# determines if the preview slot can be clicked to see the trade item
+allow-preview: true
+
 trade-item-lore:
   - "&e&m-----------------------------"
   - ""

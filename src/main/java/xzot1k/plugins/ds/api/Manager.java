@@ -446,7 +446,7 @@ public interface Manager {
     boolean isBlockedWorld(@NotNull World world);
 
     // getters & setters
-    ConcurrentHashMap<UUID, Shop> getShopMap();
+    ConcurrentHashMap<String, Shop> getShopMap();
 
     List<MarketRegion> getMarketRegions();
 
